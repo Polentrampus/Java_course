@@ -1,40 +1,82 @@
 package hotel;
 
 import hotel.model.Hotel;
-import hotel.model.room.RoomCategory;
-import hotel.model.room.RoomStatus;
-import hotel.model.room.RoomType;
+import hotel.model.service.Services;
+import hotel.model.controller.AdminController;
+import hotel.model.controller.manager.ClientManager;
+import hotel.model.controller.manager.RoomManager;
+import hotel.model.controller.manager.ServicesManager;
 import hotel.personal.client.Client;
-import hotel.personal.employee.admin.Admin;
-import hotel.personal.employee.reception.Reception;
-import hotel.personal.employee.service.Maid;
-import hotel.personal.employee.service.Mender;
-import hotel.personal.employee.service.ServicePersonnelHotel;
-
+import hotel.personal.employee.Employee;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         Hotel hotel = Hotel.getInstance();
 
-        Admin admin = new Admin("Вася", "Васин", "Васильевич", 27, 4, 2005);
-        Reception reception = new Reception("Иван", "Иванов", "Иванович", 17, 3, 1990);
-        ServicePersonnelHotel maid_1 = new Maid("Лена", "Рыжова", "Еленина", 2, 7, 2001);
-        ServicePersonnelHotel maid_2 = new Mender("Петя", "Кек", "Кекович", 4, 2, 1998);
+        List<Employee> employees = new ArrayList<>();
 
-        admin.addPersonal(Arrays.asList(reception, maid_1, maid_2));
-        admin.addRoom(RoomCategory.ECONOMY, RoomStatus.AVAILABLE, RoomType.STANDARD, 203, 13000);
-        admin.addService("Мини бар", "В стоимость номера будет включен мини бар", 100.3);
-        admin.changeRoomPrice(100, 2500);
-        admin.changeServicePrice("Трансфер", 2000);
+        employees.add(Employee.createEmployee(1, "Иван", "Петров", "Сергеевич",
+                LocalDate.of(1985, 5, 15), "admin"));
+        employees.add(Employee.createEmployee(2, "Мария", "Иванова", "Александровна",
+                LocalDate.of(1990, 8, 22), "maid"));
+        employees.add(Employee.createEmployee(3, "Алексей", "Сидоров", "Викторович",
+                LocalDate.of(1988, 3, 10), "mender"));
+        employees.add(Employee.createEmployee(4, "Елена", "Кузнецова", "Дмитриевна",
+                LocalDate.of(1992, 11, 5), "admin"));
+        employees.add(Employee.createEmployee(5, "Ольга", "Васильева", "Николаевна",
+                LocalDate.of(1995, 7, 30), "maid"));
 
-        Client client_1 = new Client("Володя","Лол","Лолович", 12, 12, 1987);
-        reception.addClient(client_1);
-        reception.settle(client_1.getId(), 202);
-        reception.settle(client_1.getId(), 203);
+        Employee admin = null;
+        for (Employee employee: employees){
+            hotel.getEmployeeMap().put(employee.getId(), employee);
+            if(employee.getPosition().equals("admin")){
+                admin = employee;
+            }
+        }
 
-        reception.evict(client_1.getId());
-        reception.repairRequest(102);
+        Client client1 = new Client(1, "Анна", "Смирнова", "Игоревна",
+                LocalDate.of(1990, 3, 12),
+                List.of(Services.LAUNDRY),
+                101, LocalDate.of(2024, 1, 15), LocalDate.of(2024, 1, 20));
 
+        Client client2 = new Client(2, "Дмитрий", "Козлов", "Анатольевич",
+                LocalDate.of(1985, 7, 25),
+                Arrays.asList(Services.CONCIERGE, Services.SPA, Services.LAUNDRY, Services.BAGGAGE_STORAGE),
+                205, LocalDate.of(2024, 1, 16), LocalDate.of(2024, 1, 22));
+
+        Client client3 = new Client(3, "Светлана", "Попова", "Владимировна",
+                LocalDate.of(1993, 11, 8),
+                Arrays.asList(),
+                312, LocalDate.of(2024, 1, 18), LocalDate.of(2024, 1, 21));
+
+        Client client4 = new Client(4, "Михаил", "Орлов", "Сергеевич",
+                LocalDate.of(1978, 5, 30),
+                Arrays.asList(Services.BAGGAGE_STORAGE, Services.LAUNDRY, Services.SPA, Services.TRANSFER),
+                0, LocalDate.of(2024, 1, 20), LocalDate.of(2024, 1, 27));
+
+        Client client5 = new Client(5, "Екатерина", "Новикова", "Александровна",
+                LocalDate.of(1988, 9, 14),
+                Arrays.asList(Services.LAUNDRY, Services.TRANSFER, Services.BAGGAGE_STORAGE,
+                        Services.SPA, Services.FITNESS_CENTER, Services.MINI_BAR),
+                301, LocalDate.of(2024, 1, 22), LocalDate.of(2024, 1, 29));
+        List<Client> clients = Arrays.asList(client1,client2,client3,client4,client5);
+
+        ClientManager clientManager = new ClientManager();
+        ServicesManager servicesManager = new ServicesManager(admin);
+        RoomManager roomManager = new RoomManager();
+        AdminController adminController = new AdminController(clientManager, servicesManager, employees, roomManager);
+
+        for (Client client:clients){
+            adminController.settle(client, client.getIdRoom());
+        }
+
+        adminController.getInfoAboutClient(2);
+        adminController.addClientServices(2, Arrays.asList(Services.MINI_BAR, Services.SPA));
+        adminController.evict(2);
+        adminController.evict(3);
     }
 }

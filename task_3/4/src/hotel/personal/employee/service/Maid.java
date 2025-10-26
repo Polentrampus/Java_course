@@ -3,21 +3,29 @@ package hotel.personal.employee.service;
 import hotel.model.Hotel;
 import hotel.model.room.Room;
 import hotel.model.room.RoomStatus;
+import hotel.personal.employee.Employee;
 
-public class Maid extends ServicePersonnelHotel{
+import java.time.LocalDate;
+
+public class Maid extends Employee implements Observer{
     private boolean isCleaning = false;
 
-    public Maid(String name, String surname, String patronymic, int date_of_birth, int month_of_birth, int year_of_birth) {
-        super(name, surname, patronymic, date_of_birth, month_of_birth, year_of_birth);
+    public Maid(int id, String name, String surname, String patronymic, LocalDate date_of_birth) {
+        super(id, name, surname, patronymic, date_of_birth);
         System.out.println("Вы пригласили горничную" );
+    }
+
+    @Override
+    public String getPosition() {
+        return "maid";
     }
 
     @Override
     public String toString() {
         return "Maid{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", patronymic='" + patronymic + '\'' +
+                "name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
+                ", patronymic='" + getPatronymic() + '\'' +
                 '}';
     }
 
@@ -36,11 +44,6 @@ public class Maid extends ServicePersonnelHotel{
     private void cleanRoom(int roomId) {
         System.out.printf("Горничная %s начала уборку номера %d\n",
                 toString(), roomId);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
         System.out.printf("Горничная %s закончила уборку номера %d\n",
                 toString(), roomId);
         this.isCleaning = false;

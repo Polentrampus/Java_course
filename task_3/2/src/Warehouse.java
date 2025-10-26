@@ -1,62 +1,63 @@
 import Furniture.Furniture;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Warehouse {
-    private String location;
-    private final double capacity = (double)95.0F;
-    private double current_volume = (double)0.0F;
-    private List<Furniture> furniture_list = new ArrayList();
-    private static final AtomicInteger idGenerator = new AtomicInteger(0);
-
-    public Warehouse() {
-    }
+    private final double capacity = 100.0F;
+    private double currentVolume = 0.0F;
+    private List<Furniture> furnitureList = new ArrayList();
+    private static int currentId = 0;
 
     public double getCurrent_volume() {
-        return (double)95.0F - this.current_volume;
+        return capacity - this.currentVolume;
     }
 
-    public void add_furniture(Furniture furniture) {
-        double volume = (double)furniture.calculateVolume();
-        if (this.current_volume + volume > (double)95.0F) {
-            throw new IllegalStateException("Недостаточно места на складе!");
+    public boolean addFurniture(Furniture furniture) {
+        double volume = furniture.calculateVolume();
+        if (this.currentVolume + volume > 95.0F) {
+            System.out.println("Недостаточно места на складе!");
+            return false;
         } else {
-            furniture.setId(idGenerator.getAndIncrement());
-            this.furniture_list.add(furniture);
-            this.current_volume += volume;
+            furniture.setId(currentId++);
+            this.furnitureList.add(furniture);
+            this.currentVolume += volume;
+            return true;
         }
     }
 
-    public void remove_furniture(int id) {
-        Optional<Furniture> furniture = Optional.ofNullable(this.find_furniture_by_id(id));
+    public void removeFurniture(int id) {
+        Optional<Furniture> furniture = findFurnitureById(id);
         if (furniture.isPresent()) {
-            this.current_volume -= (double)((Furniture)furniture.get()).calculateVolume();
-            this.furniture_list.remove(furniture.get());
+            this.currentVolume -= (furniture.get()).calculateVolume();
+            this.furnitureList.remove(furniture.get());
         } else {
             throw new IllegalArgumentException("Мебель с ID " + id + " не найдена!");
         }
     }
 
-    public Furniture find_furniture_by_id(int id) {
-        for(Furniture furniture : this.furniture_list) {
+    //использую find, потому что в реальности у каждого товара будет свой уникальный айди
+    //не порядковый, а хэшрованный, и вероятность return null существует
+    public Optional<Furniture> findFurnitureById(int id) {
+        for (Furniture furniture : this.furnitureList) {
             if (furniture.getId() == id) {
-                return furniture;
+                return Optional.of(furniture);
             }
         }
-
-        return null;
+        return Optional.empty();
     }
 
-    public boolean check_available_space() {
-        return this.current_volume < (double)95.0F;
+    public boolean checkAvailableSpace() {
+        return this.currentVolume < 95.0F;
     }
 
-    public int check_total_weight() {
+    //мы можем проверять/рассчитывать вес для разных задач, считаю уместным любое имя метода
+    public int checkTotalWeight() {
         int total_weight = 0;
 
-        for(Furniture cur_fur : this.furniture_list) {
+        for (Furniture cur_fur : this.furnitureList) {
             total_weight += cur_fur.getWeight();
         }
 

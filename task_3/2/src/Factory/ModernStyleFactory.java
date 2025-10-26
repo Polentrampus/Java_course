@@ -12,7 +12,7 @@ public class ModernStyleFactory implements StyleFurnitureFactory {
     }
 
     public Chair createChair() {
-        return new Chair(FurnitureStyle.MODERN, FurnitureMaterial.METALL, Color.BLACK, 10000, new int[]{5, 4, 3}, 45);
+        return new Chair(FurnitureStyle.MODERN, FurnitureMaterial.METALL, Color.BLACK, 10000, new int[]{5, 4, 3}, 1);
     }
 
     public Sofa createSofa() {

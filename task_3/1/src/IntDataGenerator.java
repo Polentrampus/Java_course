@@ -9,23 +9,26 @@ public class IntDataGenerator {
         System.out.println("Сгенерировано число: " + this.value);
     }
 
-    public int maxNumber() {
-        int num = -1;
+    //заменила цикл for
+    public int getMaxDigit() {
+        int num = this.value % 100;
+        int max_num = -1;
 
-        for(int i = 0; i < 3; ++i) {
-            if (num < this.value / 100) {
-                num = this.value / 100;
-            } else if (num < this.value / 10 - this.value / 100 * 10) {
-                num = this.value / 10 - this.value / 100 * 10;
-            } else if (num < this.value - this.value / 10 * 10) {
-                num = this.value - this.value / 10 * 10;
-            }
+        if (this.value/100 > max_num){
+            max_num = this.value/100;
+        }
+        if(num/10 > max_num)
+        {
+            max_num = num/10;
+        }
+        if (num%10>max_num) {
+            max_num = num % 10;
         }
 
-        return num;
+        return max_num;
     }
 
-    public Integer getValue() {
+    public int getValue() {
         return this.value;
     }
 }
