@@ -14,7 +14,7 @@ public class EmployeeManager {
 
     public void addPersonal(Collection<Employee> persons){
         for(Employee person : persons){
-            Hotel.getInstance().getEmployeeMap().put(person.getId(), person);
+            Hotel.getInstance().getEmployeeMap().get().put(person.getId(), person);
             System.out.println(employee.getPosition() + " нового члена команды: " + person.toString());
         }
     }

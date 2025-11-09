@@ -49,7 +49,7 @@ public class Maid extends Employee implements Observer{
         this.isCleaning = false;
 
         // Обновляем статус комнаты
-        Room room = Hotel.getInstance().getRoomMap().get(roomId);
+        Room room = Hotel.getInstance().getRoomMap().get().get(roomId);
         if (room != null) {
             room.setStatus(RoomStatus.AVAILABLE);
             System.out.printf("Номер %d теперь доступен\n", roomId);

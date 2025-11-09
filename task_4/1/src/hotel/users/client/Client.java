@@ -4,21 +4,23 @@ import hotel.model.service.Services;
 import hotel.users.employee.Person;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Client extends Person {
     private List<Services> servicesList;
     private int numberRoom;
-    LocalDate checkOutDate, departureDate;
+    private final LocalDate checkOutDate;
+    private final LocalDate departureDate;
 
     public Client(int id, String name, String surname, String patronymic,
-                  LocalDate date_of_birth, List<Services> servicesList, int idRoom,
+                  LocalDate dateOfBirth, List<Services> servicesList, int idRoom,
                   LocalDate checkOutDate, LocalDate departureDate)
     {
-        super(id, name, surname, patronymic, date_of_birth);
+        super(id, name, surname, patronymic, dateOfBirth);
         System.out.println("Вы пригласили клиента");
         this.numberRoom = idRoom;
-        this.servicesList = servicesList;
+        this.servicesList = servicesList != null ? new ArrayList<>(servicesList) : new ArrayList<>();
         this.checkOutDate = checkOutDate;
         this.departureDate = departureDate;
     }

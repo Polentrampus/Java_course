@@ -31,7 +31,7 @@ public class Mender extends Employee implements Observer {
                 toString(), roomId);
         this.isFixing = false;
 
-        Room room = Hotel.getInstance().getRoomMap().get(roomId);
+        Room room = Hotel.getInstance().getRoomMap().get().get(roomId);
         if (room != null) {
             room.setStatus(RoomStatus.AVAILABLE);
             System.out.printf("Номер %d теперь доступен\n", roomId);

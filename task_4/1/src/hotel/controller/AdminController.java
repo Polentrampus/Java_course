@@ -5,9 +5,9 @@ import hotel.model.Hotel;
 import hotel.controller.manager.ClientManager;
 import hotel.controller.manager.RoomManager;
 import hotel.controller.manager.ServicesManager;
-import hotel.model.filter.FilterClient;
-import hotel.model.filter.FilterRoom;
-import hotel.model.filter.FilterServices;
+import hotel.model.filter.ClientFilter;
+import hotel.model.filter.RoomFilter;
+import hotel.model.filter.ServicesFilter;
 import hotel.model.room.Room;
 import hotel.model.room.RoomCategory;
 import hotel.model.room.RoomStatus;
@@ -18,12 +18,9 @@ import hotel.users.employee.Employee;
 import hotel.users.employee.service.Observer;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-public class AdminController  {
+public class AdminController {
     private final Hotel hotel = Hotel.getInstance();
     private final ClientManager clientManager;
     private final ServicesManager servicesManager;
@@ -41,19 +38,19 @@ public class AdminController  {
         this.roomManager = roomManager;
         this.employeeManager = employeeManager;
 
-        for(Employee employee:employees){
-            if(employee.getPosition().equals("admin")){
+        for (Employee employee : employees) {
+            if (employee.getPosition().equals("admin")) {
                 this.employee = employee;
             }
-            if(employee.getPosition().equals("maid")){
+            if (employee.getPosition().equals("maid")) {
                 addObserverMaid((Observer) employee);
             }
-            if(employee.getPosition().equals("mender")){
+            if (employee.getPosition().equals("mender")) {
                 addObserverMender((Observer) employee);
             }
         }
         addPersonal(employees);
-        if (this.employee == null){
+        if (this.employee == null) {
             throw new IllegalStateException("В вашем отеле не существует " +
                     "администратора! Назначьте администратора перед использованием системы.");
         }
@@ -67,71 +64,87 @@ public class AdminController  {
         observersMender.add(observer);
     }
 
-    public void changeRoomPrice(int idRoom, int newPrice){
+    public void changeRoomPrice(int idRoom, int newPrice) {
         roomManager.changeRoomPrice(idRoom, newPrice);
     }
 
-    public void addRoom(RoomCategory category, RoomStatus status, RoomType type, int roomNumber, int price, int capacity){
+    public void addRoom(RoomCategory category, RoomStatus status, RoomType type, int roomNumber, int price, int capacity) {
         roomManager.addRoom(category, status, type, capacity, roomNumber, price);
     }
 
-    public List<Room> getListAvailableRooms(FilterRoom filter){
+    public List<Room> getListAvailableRooms(RoomFilter filter) {
         List<Room> availableRooms = roomManager.listAvailableRooms(filter);
+        System.out.println("список свободных комнат: ");
         availableRooms.stream().toList().forEach(room -> System.out.println(room.toString()));
         return availableRooms;
     }
 
-    public List<Room> getListAvailableRoomsByDate(FilterRoom filter, LocalDate date){
+    public List<Room> getListAvailableRoomsByDate(RoomFilter filter, LocalDate date) {
         List<Room> availableRooms = roomManager.listAvailableRoomsByDate(filter, date);
         availableRooms.stream().toList().forEach(room -> System.out.println(room.toString()));
         return availableRooms;
     }
 
     public void getInfoAboutRoom(int numberRoom) {
-        if(hotel.getRoomMap().get(numberRoom) == null){
-            throw new RuntimeException("Нет такого номера!");
+        if (hotel.getRoom(numberRoom).isEmpty()) {
+            System.out.println("Нет такого номера!");
+            return;
         }
-        System.out.println(hotel.getRoomMap().get(numberRoom).toString());
+        System.out.println(hotel.getRoom(numberRoom).toString());
     }
 
-    public void requestListRoom(FilterRoom filter){
+    public void requestListRoom(RoomFilter filter) {
         roomManager.requestListRoom(filter);
     }
 
-    public void requestListRoomAndPrice(FilterRoom filter){
+    public void requestListRoomAndPrice(RoomFilter filter) {
         roomManager.requestListRoomAndPrice(filter);
     }
 
-    public void addPersonal(Collection<Employee> persons){
+    public void addPersonal(Collection<Employee> persons) {
         employeeManager.addPersonal(persons);
     }
 
-    public void getInfoAboutClientDatabase(FilterClient filterClient){
-        clientManager.getInfoAboutClientDatabase(filterClient);
-        System.out.println("Общее число постояльцев: " + hotel.getClientMap().size());
+    public void getInfoAboutClientDatabase(ClientFilter clientFilter) {
+        clientManager.getInfoAboutClientDatabase(clientFilter);
+        System.out.println("Общее число постояльцев: " + hotel.getClientMap().get().size());
     }
 
     public void addClientServices(int id, List<Services> list) {
         clientManager.addService(list, id);
+        System.out.println(employee.getPosition() + " обновил клиенту с ID: " + id + " услуги:\n" + clientManager.getServices(id));
     }
 
     public void getInfoAboutClient(int id) {
         System.out.println(clientManager.getInfoAboutClient(id));
     }
 
-    public void requestLastThreeClient(){
+    public void requestLastThreeClient() {
         clientManager.requestLastThreeClient();
     }
 
-    public void requestListServicesClient(FilterServices filter, int idClient){
-        clientManager.requestListServicesClient(filter,idClient);
+    public void requestListServicesClient(ServicesFilter filter, int idClient) {
+        clientManager.requestListServicesClient(filter, idClient);
+    }
+
+    public Collection<Services> requestListServices(){
+        System.out.println(employee + "запросил список услуг:");
+        return servicesManager.requestListServices();
+    }
+
+    public void addService(String name, String description, int price){
+        servicesManager.addService(name,description,price);
+    }
+
+    public void changePriceService(String name, int price){
+        servicesManager.setPrice(name,price);
     }
 
     public void cleaningRequest(int roomId) {
-        Room room = hotel.getRoomMap().get(roomId);
+        Room room = hotel.getRoomMap().get().get(roomId);
         room.setStatus(RoomStatus.CLEANING);
-        for (Observer observer: observersMaid){
-            if (room != null && room.getStatus()==RoomStatus.CLEANING) {
+        for (Observer observer : observersMaid) {
+            if (room != null && room.getStatus() == RoomStatus.CLEANING) {
                 observer.update(roomId);
                 System.out.printf("%s изменил статус комнаты %d на %s\n",
                         employee.getPosition(), roomId, room.getStatus().getDescription());
@@ -140,8 +153,8 @@ public class AdminController  {
     }
 
     public void repairRequest(int roomId) {
-        for (Observer observer: observersMender) {
-            Room room = hotel.getRoomMap().get(roomId);
+        for (Observer observer : observersMender) {
+            Room room = hotel.getRoomMap().get().get(roomId);
             if (room != null) {
                 room.setStatus(RoomStatus.MAINTENANCE);
                 System.out.printf("%s изменил статус комнаты %d на %s\n",
@@ -151,81 +164,77 @@ public class AdminController  {
         }
     }
 
-    public void settle(Client client, int idRoom, FilterRoom filterRoom) {
-        Room room = hotel.getRoomMap().get(idRoom);
-        if (room == null || room.getNumber() == 0) {
+    public void settle(Client client, int idRoom, RoomFilter roomFilter) {
+        Room room = hotel.getRoomMap().get().get(idRoom);
+        if (room != null && room.getNumber() != 0 && room.getStatus() == RoomStatus.AVAILABLE) {
+            hotel.getClientMap().get().put(client.getId(), client);
+            System.out.printf("%s поселил клиента %s\n", employee.getPosition(), hotel.getClientMap().get().get(client.getId()).toString() +
+                    " в номер:" + hotel.getClientMap().get().get(client.getId()).getNumberRoom() + "\n");
+            hotel.getRoomMap().get().get(idRoom).setStatus(RoomStatus.OCCUPIED);
+            return;
+        }
+        if (room == null || room.getNumber() == 0 || room.getStatus() != RoomStatus.AVAILABLE) {
             System.out.println("Комната " + idRoom + " не существует, мы учтем ваши пожелание и подберем вам номер сами!");
-            if (roomManager.listAvailableRoomsByDate(FilterRoom.ID, client.getCheckOutDate()) == null) {
-                System.out.printf("Не удалось заселить клиента %s, нет свободных комнат к этой дате\n", client.toString());
+            if (roomManager.listAvailableRoomsByDate(RoomFilter.ID, client.getCheckOutDate()).isEmpty()) {
+                System.out.printf("Не удалось заселить клиента %s, \nнет свободных комнат к этой дате\n", client.toString());
                 return;
             }
-            idRoom = roomManager.listAvailableRoomsByDate(filterRoom, client.getCheckOutDate()).get(0).getNumber();
+            idRoom = roomManager.listAvailableRoomsByDate(roomFilter, client.getCheckOutDate()).get(0).getNumber();
             client.setIdRoom(idRoom);
-            hotel.getClientMap().put(client.getId(), client);
-            System.out.printf("%s поселил клиента %s\n", employee.getPosition(), hotel.getClientMap().get(client.getId()).toString() +
-                    " в номер:" + hotel.getClientMap().get(client.getId()).getNumberRoom() + "\n");
-            hotel.getRoomMap().get(idRoom).setStatus(RoomStatus.OCCUPIED);
-            return;
+            hotel.getClientMap().get().put(client.getId(), client);
+            System.out.printf("%s поселил клиента %s\n", employee.getPosition(), hotel.getClientMap().get().get(client.getId()).toString() +
+                    " в номер:" + hotel.getClientMap().get().get(client.getId()).getNumberRoom() + "\n");
+            hotel.getRoomMap().get().get(idRoom).setStatus(RoomStatus.OCCUPIED);
         }
-
-        if (room.getStatus() != RoomStatus.AVAILABLE) {
-            System.out.println("Данная комната не обслуживается, выберите другую");
-            return;
-        }
-
-        hotel.getClientMap().put(client.getId(), client);
-        System.out.printf("%s поселил клиента %s\n", employee.getPosition(), hotel.getClientMap().get(client.getId()).toString() +
-                " в номер:" + hotel.getClientMap().get(client.getId()).getNumberRoom() + "\n");
-        hotel.getRoomMap().get(idRoom).setStatus(RoomStatus.OCCUPIED);
     }
 
-    public void settle(Client client, FilterRoom filterRoom) {
-        if (roomManager.listAvailableRoomsByDate(FilterRoom.ID, client.getCheckOutDate()) == null) {
+    public void settle(Client client, RoomFilter roomFilter) {
+        if (roomManager.listAvailableRoomsByDate(RoomFilter.ID, client.getCheckOutDate()) == null) {
             System.out.printf("Не удалось заселить клиента %s, нет свободных комнат к этой дате\n", client.toString());
             return;
         }
-        int idRoom = roomManager.listAvailableRoomsByDate(filterRoom, client.getCheckOutDate()).get(0).getNumber();
+        int idRoom = roomManager.listAvailableRoomsByDate(roomFilter, client.getCheckOutDate()).get(0).getNumber();
         client.setIdRoom(idRoom);
-        hotel.getClientMap().put(client.getId(), client);
-        System.out.printf("%s поселил клиента %s\n", employee.getPosition(), hotel.getClientMap().get(client.getId()).toString() +
-                " в номер:" + hotel.getClientMap().get(client.getId()).getNumberRoom() + "\n");
-        hotel.getRoomMap().get(idRoom).setStatus(RoomStatus.OCCUPIED);
-        return;
+        hotel.getClientMap().get().put(client.getId(), client);
+        System.out.printf("%s поселил клиента %s\n", employee.getPosition(), hotel.getClientMap().get().get(client.getId()).toString() +
+                " в номер:" + hotel.getClientMap().get().get(client.getId()).getNumberRoom() + "\n");
+        hotel.getRoomMap().get().get(idRoom).setStatus(RoomStatus.OCCUPIED);
     }
 
     public void settle(Client client) {
-        if (roomManager.listAvailableRoomsByDate(FilterRoom.ID, client.getCheckOutDate()) == null) {
+        if (roomManager.listAvailableRoomsByDate(RoomFilter.ID, client.getCheckOutDate()) == null) {
             System.out.printf("Не удалось заселить клиента %s, нет свободных комнат к этой дате\n", client.toString());
             return;
         }
-        int idRoom = roomManager.listAvailableRoomsByDate(FilterRoom.ID, client.getCheckOutDate()).get(0).getNumber();
+        int idRoom = roomManager.listAvailableRoomsByDate(RoomFilter.ID, client.getCheckOutDate()).get(0).getNumber();
         client.setIdRoom(idRoom);
-        hotel.getClientMap().put(client.getId(), client);
-        System.out.printf("%s поселил клиента %s\n", employee.getPosition(), hotel.getClientMap().get(client.getId()).toString() +
-                " в номер:" + hotel.getClientMap().get(client.getId()).getNumberRoom() + "\n");
-        hotel.getRoomMap().get(idRoom).setStatus(RoomStatus.OCCUPIED);
+        hotel.getClientMap().get().put(client.getId(), client);
+        System.out.printf("%s поселил клиента %s\n", employee.getPosition(), hotel.getClientMap().get().get(client.getId()).toString() +
+                " в номер:" + hotel.getClientMap().get().get(client.getId()).getNumberRoom() + "\n");
+        hotel.getRoomMap().get().get(idRoom).setStatus(RoomStatus.OCCUPIED);
     }
 
-    public void givOutCheck(int idClient){
+    public void givOutCheck(int idClient) {
         int sum = 0;
-        Client client = hotel.getClientMap().get(idClient);
+        Client client = hotel.getClientMap().get().get(idClient);
         int idRoom = client.getNumberRoom();
 
-        sum += hotel.getRoomMap().get(idRoom).getPrice();
-        for(Services service : client.getServicesList()){
+        sum += hotel.getRoomMap().get().get(idRoom).getPrice();
+        for (Services service : client.getServicesList()) {
             sum += (int) service.getPrice();
         }
-        System.out.printf("%s предоставил счет клиенту в размере: %d\n",employee.getPosition(), sum);
+        System.out.printf("%s предоставил счет клиенту в размере: %d\n", employee.getPosition(), sum);
     }
 
-    public void evict(int idClient){
-        Client client = hotel.getClientMap().get(idClient);
-        int roomId = client.getNumberRoom();
-        Room room = hotel.getRoomMap().get(roomId);
-
+    public void evict(int idClient) {
+        Client client = hotel.getClientMap().get().get(idClient);
         if (client == null) {
+            System.out.println("Такого клиента не существует!\nID: " + idClient);
             return;
         }
+        int roomId = client.getNumberRoom();
+        Room room = hotel.getRoomMap().get().get(roomId);
+
         if (roomId == 0) {
             System.out.println("У клиента нет номера для выселения");
             return;

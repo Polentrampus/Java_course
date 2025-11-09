@@ -3,7 +3,7 @@ package hotel.model.room;
 public class Room {
     private int number;
     private RoomCategory category;
-    private RoomStatus status = RoomStatus.AVAILABLE;
+    private RoomStatus status;
     private RoomType type;
     private int capacity;
     private int price;

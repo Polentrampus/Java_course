@@ -4,7 +4,7 @@ import hotel.model.Hotel;
 import hotel.model.service.Services;
 import hotel.users.employee.Employee;
 
-import java.util.List;
+import java.util.*;
 
 public class ServicesManager {
     protected final Hotel hotel = Hotel.getInstance();
@@ -12,17 +12,33 @@ public class ServicesManager {
 
     public ServicesManager(Employee employee) {
         this.employee = employee;
-        for (Services service : Services.values()) {
-            hotel.getSERVICES().put(service.name(), service);
-        }
     }
 
-    public List<Services> requestListServices(){
+    public Collection<Services> requestListServices(){
+        Collection<Services> servicesList = new ArrayList<>();
         int count = 1;
-        for (Services services : Hotel.getInstance().getSERVICES().values()){
+        servicesList = hotel.getServices().get().values().stream().toList();
+        for (Services services : servicesList){
             System.out.printf("%d) %s\n", count, services.toString());
             count++;
         }
-        return (List<Services>) Hotel.getInstance().getSERVICES().values();
+        return servicesList;
+    }
+
+    public void addService(String name, String description, int price){
+        if(hotel.getServices().get().get(name) == null){
+            hotel.getServices().get().put(name, new Services(name, description, price));
+        }
+        else
+            System.out.println("Такая услуга уже есть!");
+    }
+
+    public void setPrice(String name, int price){
+        Services services = hotel.getServices().get().get(name);
+        if(services == null){
+            System.out.println("Такой услуги не существует!");
+            return;
+        }
+        services.setPrice(price);
     }
 }

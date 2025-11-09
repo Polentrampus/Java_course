@@ -4,7 +4,7 @@ import hotel.users.client.Client;
 
 import java.util.Comparator;
 
-public enum FilterClient {
+public enum ClientFilter {
     SURNAME(Comparator.comparing(Client::getSurname)),
     ID(Comparator.comparing(Client::getId)),
     NUMBERROOM(Comparator.comparing(Client::getNumberRoom)),
@@ -13,7 +13,7 @@ public enum FilterClient {
 
     private final Comparator<Client> comparator;
 
-    FilterClient(Comparator<Client> comparator) {
+    ClientFilter(Comparator<Client> comparator) {
         this.comparator = comparator;
     }
 

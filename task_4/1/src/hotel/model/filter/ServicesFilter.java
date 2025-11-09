@@ -4,12 +4,12 @@ import hotel.model.service.Services;
 
 import java.util.Comparator;
 
-public enum FilterServices {
+public enum ServicesFilter {
     PRICE(Comparator.comparing(Services::getPrice));
 
     private final Comparator<Services> comparator;
 
-    FilterServices(Comparator<Services> comparator) {
+    ServicesFilter(Comparator<Services> comparator) {
         this.comparator = comparator;
     }
 

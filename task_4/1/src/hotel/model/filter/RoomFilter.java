@@ -4,7 +4,7 @@ import hotel.model.room.Room;
 
 import java.util.Comparator;
 
-public enum FilterRoom {
+public enum RoomFilter {
     CAPACITY(Comparator.comparing(Room::getCapacity)),
     TYPE(Comparator.comparing(Room::getType)),
     CATEGORY(Comparator.comparing(Room::getCategory)),
@@ -13,7 +13,7 @@ public enum FilterRoom {
 
     private final Comparator<Room> comparator;
 
-    FilterRoom(Comparator<Room> comparator) {
+    RoomFilter(Comparator<Room> comparator) {
         this.comparator = comparator;
     }
 
