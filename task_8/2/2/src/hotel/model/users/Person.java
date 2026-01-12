@@ -2,15 +2,8 @@ package hotel.model.users;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.time.LocalDate;
 
-@Data
-@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Person {
     private int id;
@@ -25,6 +18,9 @@ public class Person {
         this.surname = surname;
         this.patronymic = patronymic;
         this.date_of_birth = date_of_birth;
+    }
+
+    public Person() {
     }
 
     public int getId() {

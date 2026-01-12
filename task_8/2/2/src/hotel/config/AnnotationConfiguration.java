@@ -5,7 +5,6 @@ import hotel.annotation.ConfigProperty;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.*;
 
@@ -120,8 +119,8 @@ public class AnnotationConfiguration {
     /**
      * Конвертирует строку в массив
      * @param value строка со значениями, разделенными ';'
-     * @param componentType тип элементов массива (например, String.class, Integer.class)
-     * @param fieldName имя поля (для информативных сообщений об ошибках)
+     * @param componentType тип элементов массива
+     * @param fieldName имя поля
      */
     private static Object convertToArray(String value, Class<?> componentType, Field fieldName ) {
         String field = (fieldName != null) ? fieldName.getName() : "unknown";

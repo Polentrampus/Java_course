@@ -1,6 +1,6 @@
 package hotel.service;
 
-import hotel.controller.export_import.CsvImporter;
+import hotel.service.export_import.CsvImporter;
 
 import java.io.BufferedReader;
 import java.io.File;

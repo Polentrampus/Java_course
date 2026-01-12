@@ -63,12 +63,7 @@ public class CreateBookingAction extends BaseAction {
                 System.out.println("Дата выезда должна быть после даты заезда!");
                 return;
             }
-            CreateBookingRequest request = CreateBookingRequest.builder()
-                    .clientId(clientId)
-                    .roomId(roomId)
-                    .checkInDate(checkInDate)
-                    .checkOutDate(checkOutDate)
-                    .build();
+            CreateBookingRequest request = new CreateBookingRequest(clientId, roomId, checkInDate, checkOutDate);
 
             var result = adminController.createBooking(request);
             if (result.isPresent()) {

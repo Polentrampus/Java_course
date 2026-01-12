@@ -1,16 +1,15 @@
 package hotel.service;
 
 import hotel.annotation.Component;
-import hotel.annotation.Inject;
 import hotel.model.Hotel;
 import hotel.model.users.employee.Employee;
-import lombok.NoArgsConstructor;
-
 import java.util.Collection;
 
 @Component
-@NoArgsConstructor
 public class EmployeeService {
+    public EmployeeService() {
+    }
+
     public void addPersonal(Collection<? extends Employee> persons)
     {
         if(persons.isEmpty()){

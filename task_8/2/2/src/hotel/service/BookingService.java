@@ -7,7 +7,6 @@ import hotel.model.booking.Bookings;
 import hotel.model.room.Room;
 import hotel.model.room.RoomStatus;
 import hotel.model.users.client.Client;
-import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -16,9 +15,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
-@RequiredArgsConstructor
 public class BookingService implements IBookingService {
     private final Hotel hotel = Hotel.getInstance();
+
+    public BookingService() {
+    }
 
     @Override
     public List<Bookings> getAllBookings() {

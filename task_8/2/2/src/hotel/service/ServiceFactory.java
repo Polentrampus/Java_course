@@ -3,13 +3,14 @@ package hotel.service;
 import hotel.annotation.Component;
 import hotel.annotation.Inject;
 import hotel.config.HotelConfiguration;
-import lombok.NoArgsConstructor;
 
 @Component
-@NoArgsConstructor
 public class ServiceFactory {
     @Inject
     private HotelConfiguration config;
+
+    public ServiceFactory() {
+    }
 
     public ServiceFactory(HotelConfiguration config) {
         this.config = config;

@@ -19,13 +19,10 @@ import hotel.model.service.Services;
 import hotel.model.users.client.Client;
 import hotel.model.users.employee.Employee;
 import hotel.model.users.employee.service.Observer;
-import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 import java.util.*;
 
 @Component
-@NoArgsConstructor
 public class AdminController {
     private Hotel hotel = Hotel.getInstance();
     @Inject
@@ -36,7 +33,9 @@ public class AdminController {
     private IRoomService roomService;
     @Inject
     private EmployeeService employeeService;
+    @Inject
     private HotelConfiguration config;
+    @Inject
     private ServiceFactory serviceFactory;
     @Inject
     private IBookingService bookingService;
@@ -44,6 +43,9 @@ public class AdminController {
     private Employee employee;
     private List<Observer> observersMaid = new ArrayList<>();
     private List<Observer> observersMender = new ArrayList<>();
+
+    public AdminController() {
+    }
 
     public void initialize(List<Employee> employees, HotelConfiguration hotelConfiguration, ServiceFactory serviceFactory) {
         this.serviceFactory = serviceFactory;

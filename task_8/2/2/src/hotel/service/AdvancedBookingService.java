@@ -3,18 +3,23 @@ package hotel.service;
 import hotel.config.HotelConfiguration;
 import hotel.dto.CreateBookingRequest;
 import hotel.model.booking.Bookings;
-import lombok.AllArgsConstructor;
-
 import java.util.*;
 
 /**
  * Реализация через структурный паттерн декоратор:
  * base класс = BookingService - полная реализация интерфейса IBookingService
  */
-@AllArgsConstructor
 public class AdvancedBookingService implements IBookingService {
     private HotelConfiguration config;
     private IBookingService baseService;
+
+    public AdvancedBookingService(HotelConfiguration config, IBookingService baseBookingService) {
+        this.config = config;
+        this.baseService = baseBookingService;
+    }
+
+    public AdvancedBookingService() {
+    }
 
     @Override
     public List<Bookings> getAllBookings() {

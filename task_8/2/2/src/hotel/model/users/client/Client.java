@@ -1,20 +1,14 @@
 package hotel.model.users.client;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import hotel.controller.export_import.Entity;
+import hotel.service.export_import.Entity;
 import hotel.model.service.Services;
 import hotel.model.users.Person;
-import lombok.*;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Client extends Person implements Entity  {
     @JsonIgnore
@@ -32,6 +26,42 @@ public class Client extends Person implements Entity  {
         this.numberRoom = idRoom;
         this.servicesList = servicesList != null ? new ArrayList<>(servicesList) : new ArrayList<>();
         this.checkOutDate = checkOutDate;
+        this.departureDate = departureDate;
+    }
+
+    public Client() {
+
+    }
+
+    public List<Services> getServicesList() {
+        return servicesList;
+    }
+
+    public void setServicesList(List<Services> servicesList) {
+        this.servicesList = servicesList;
+    }
+
+    public int getNumberRoom() {
+        return numberRoom;
+    }
+
+    public void setNumberRoom(int numberRoom) {
+        this.numberRoom = numberRoom;
+    }
+
+    public LocalDate getCheckOutDate() {
+        return checkOutDate;
+    }
+
+    public void setCheckOutDate(LocalDate checkOutDate) {
+        this.checkOutDate = checkOutDate;
+    }
+
+    public LocalDate getDepartureDate() {
+        return departureDate;
+    }
+
+    public void setDepartureDate(LocalDate departureDate) {
         this.departureDate = departureDate;
     }
 

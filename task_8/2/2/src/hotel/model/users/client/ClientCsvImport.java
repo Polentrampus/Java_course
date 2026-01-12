@@ -1,6 +1,6 @@
 package hotel.model.users.client;
 
-import hotel.controller.export_import.CsvImporter;
+import hotel.service.export_import.CsvImporter;
 import hotel.exception.csv.CsvImportLengthException;
 import hotel.exception.csv.CsvImportParsingException;
 import hotel.model.Hotel;

@@ -18,7 +18,6 @@ import hotel.view.ConsoleMenuFactory;
 import hotel.view.Menu;
 import hotel.view.MenuController;
 import hotel.view.Navigator;
-
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -157,15 +156,14 @@ public class Main {
             System.out.println("Вы не назначили админа, поэтому зашли в систему под именем супер пользователя: ");
         }
 
-        HotelConfiguration config = new PropertiesConfiguration("hotel.properties");
-        ServiceFactory serviceFactory = new ServiceFactory(config);
-
+        HotelConfiguration config = container.getBean(PropertiesConfiguration.class);
+        ServiceFactory serviceFactory = container.getBean(ServiceFactory.class);
         ClientService clientService = container.getBean(ClientService.class);
         ServicesService servicesService = container.getBean(ServicesService.class);
         EmployeeService employeeService = container.getBean(EmployeeService.class);
         BookingService bookingService = container.getBean(BookingService.class);
-
         AdminController adminController = container.getBean(AdminController.class);
+        
         adminController.initialize(employees, config, serviceFactory);
 
         for (Client client : clients) {

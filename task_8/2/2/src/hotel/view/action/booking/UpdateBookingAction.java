@@ -82,12 +82,7 @@ public class UpdateBookingAction extends BaseAction {
                 return;
             }
 
-            CreateBookingRequest request = CreateBookingRequest.builder()
-                    .clientId(clientId)
-                    .roomId(roomId)
-                    .checkInDate(checkInDate)
-                    .checkOutDate(checkOutDate)
-                    .build();
+            CreateBookingRequest request = new CreateBookingRequest(clientId, roomId, checkInDate, checkOutDate);
 
             var result = adminController.updateBooking(request, bookingId);
 

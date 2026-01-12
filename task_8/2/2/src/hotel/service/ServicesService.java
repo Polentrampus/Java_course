@@ -4,15 +4,12 @@ import hotel.annotation.Component;
 import hotel.exception.service.ServiceAlreadyExistsException;
 import hotel.model.Hotel;
 import hotel.model.service.Services;
-import hotel.model.users.employee.Employee;
-import lombok.NoArgsConstructor;
-
 import java.util.*;
 
 @Component
-@NoArgsConstructor
 public class ServicesService {
     protected final Hotel hotel = Hotel.getInstance();
+    public ServicesService() {}
 
     public Collection<Services> requestListServices(){
         if( hotel.getServices().isEmpty()){

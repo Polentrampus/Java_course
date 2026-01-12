@@ -1,21 +1,20 @@
 package hotel.service;
 
-import hotel.annotation.Component;
 import hotel.model.Hotel;
 import hotel.model.filter.RoomFilter;
 import hotel.model.room.Room;
 import hotel.model.room.RoomStatus;
-import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@NoArgsConstructor
 public abstract class RoomService implements IRoomService {
     protected final Hotel hotel = Hotel.getInstance();
+
+    public RoomService() {
+    }
 
     @Override
     public List<Room> listAvailableRooms(RoomFilter filter) {

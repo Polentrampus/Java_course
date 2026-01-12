@@ -7,11 +7,8 @@ import hotel.model.room.Room;
 import hotel.model.room.RoomCategory;
 import hotel.model.room.RoomStatus;
 import hotel.model.room.RoomType;
-import lombok.*;
 
 @Component
-@EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
 public class ModifiableRoomService extends RoomService implements ModifiableIRoomService{
 
     @Override

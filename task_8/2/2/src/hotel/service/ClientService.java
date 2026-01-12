@@ -9,7 +9,6 @@ import hotel.model.room.Room;
 import hotel.model.service.Services;
 import hotel.model.users.client.Client;
 import hotel.model.users.employee.Employee;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -17,13 +16,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-@NoArgsConstructor
 public class ClientService {
     protected final Hotel hotel = Hotel.getInstance();
-    private Employee employee;
 
-    public ClientService(Employee employee) {
-        this.employee = employee;
+    public ClientService() {
     }
 
     public List<Services> getServices(int id){
@@ -78,7 +74,7 @@ public class ClientService {
     }
 
     public void requestLastThreeClient(){
-        System.out.printf("%s сделал запрос на список последних трех человек:\n", employee.getPosition());
+        System.out.println("Сделан запрос на список последних трех человек:");
         List<Client> clientList = sortClient(ClientFilter.ID);
 
         for (int i = clientList.size() - 1; (clientList.size() - 3 <= 0 ? i <= 0 : i >= clientList.size() - 3); i--){
@@ -94,7 +90,7 @@ public class ClientService {
         if(hotel.getClientMap().get().get(idClient) == null){
             throw new ClientNotFoundException(idClient);
         }
-        System.out.printf("%s сделал запрос на список услуг %s :\n", employee.getPosition(), hotel.getClientMap().get().get(idClient).toString());
+        System.out.println("Сделан запрос на список услуг клиента с ID " + hotel.getClientMap().get().get(idClient).toString());
         for (Services service : hotel.getClientMap().get().get(idClient).getServicesList()){
             System.out.println(service.toString());
         }

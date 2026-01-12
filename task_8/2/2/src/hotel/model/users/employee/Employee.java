@@ -4,17 +4,13 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import hotel.controller.export_import.Entity;
+import hotel.service.export_import.Entity;
 import hotel.model.Hotel;
 import hotel.model.users.Person;
 import hotel.model.users.employee.service.Maid;
 import hotel.model.users.employee.service.Mender;
-import lombok.Getter;
-import lombok.Setter;
 import java.time.LocalDate;
 
-@Getter
-@Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
 @JsonSubTypes({

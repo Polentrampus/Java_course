@@ -20,7 +20,9 @@ public class DIContainer {
         List<Class<?>> classes = scanner.scan(basePackage);
         // создадим экземпляры всех компонентов
         for (Class<?> clazz : classes) {
-            createBean(clazz);
+            if(!beans.containsValue(clazz)){
+                createBean(clazz);
+            }
         }
         // внедрим зависимости во все бины
         for (Object bean : beans.values()) {
@@ -75,14 +77,46 @@ public class DIContainer {
             Constructor<?> constructor = clazz.getDeclaredConstructor();
             constructor.setAccessible(true);
 
-            Object instance = constructor.newInstance();
+            Class<?>[] paramTypes = constructor.getParameterTypes();
+            Object[] params = new Object[paramTypes.length];
+
+            for (int i = 0; i < paramTypes.length; i++) {
+                params[i] = resolveDependency(paramTypes[i]);
+            }
+
+            Object instance = constructor.newInstance(params);
             String beanName = generateBeanName(clazz);
             beans.put(beanName, instance);
             beanNames.put(clazz, beanName);
-            System.out.println("Создан бин: "+ beanName);
+            System.out.println("Создан бин: " + beanName);
         }catch (Exception e){
             throw new RuntimeException("Не получилось создать бин: "+clazz.getName());
         }
+    }
+
+    private Object resolveDependency(Class<?> type) {
+        for (Object bean : beans.values()) {
+            if (type.isInstance(bean)) {
+                return bean;
+            }
+        }
+
+        if (type == String.class) {
+            return "";
+        }
+        if (type == int.class || type == Integer.class) {
+            return 0;
+        }
+        if (type == boolean.class || type == Boolean.class) {
+            return false;
+        }
+
+        if (type.isAnnotationPresent(Component.class)) {
+            createBean(type);
+            return getBean(type);
+        }
+
+        throw new RuntimeException("Не могу разрешить зависимость типа: " + type.getName());
     }
 
     private String generateBeanName(Class<?> clazz) {

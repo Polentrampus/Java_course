@@ -8,15 +8,17 @@ import hotel.model.room.RoomType;
 import hotel.model.service.Services;
 import hotel.model.users.client.Client;
 import hotel.model.users.employee.Employee;
-import lombok.Getter;
 
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Hotel {
-    @Getter
     private static final Hotel instance = new Hotel();
+
+    public static Hotel getInstance() {
+        return instance;
+    }
 
     private Hotel() {
         System.out.println("Здравствуйте, это отель ***!");

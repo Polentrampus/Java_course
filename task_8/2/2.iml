@@ -8,17 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="" scope="PROVIDED">
-      <library>
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" exported="" name="fasterxml.jackson.core.databind" level="application" />
-    <orderEntry type="library" exported="" name="fasterxml.jackson.datatype.jdk8" level="application" />
-    <orderEntry type="library" exported="" name="fasterxml.jackson.datatype.jsr310" level="application" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

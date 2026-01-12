@@ -193,40 +193,33 @@
     }
   },
   "bookings" : {
-    "1" : {
-      "id" : 1,
-      "checkInDate" : "2026-01-07",
-      "checkOutDate" : "2024-01-15",
-      "totalPrice" : -1446.0,
-      "createdAt" : "2026-01-07T14:41:43.4381146"
-    },
     "2" : {
       "id" : 2,
-      "checkInDate" : "2026-01-07",
+      "checkInDate" : "2026-01-12",
       "checkOutDate" : "2024-01-16",
-      "totalPrice" : -2166.0,
-      "createdAt" : "2026-01-07T14:41:43.4391604"
+      "totalPrice" : 2181.0,
+      "createdAt" : "2026-01-12T21:19:17.0848765"
     },
     "3" : {
       "id" : 3,
-      "checkInDate" : "2026-01-07",
+      "checkInDate" : "2026-01-12",
       "checkOutDate" : "2024-01-18",
-      "totalPrice" : -1440.0,
-      "createdAt" : "2026-01-07T14:41:43.4391604"
+      "totalPrice" : 1450.0,
+      "createdAt" : "2026-01-12T21:19:17.0848765"
     },
     "4" : {
       "id" : 4,
-      "checkInDate" : "2026-01-07",
+      "checkInDate" : "2026-01-12",
       "checkOutDate" : "2024-01-20",
-      "totalPrice" : -1436.0,
-      "createdAt" : "2026-01-07T14:41:43.4391604"
+      "totalPrice" : 1446.0,
+      "createdAt" : "2026-01-12T21:19:17.0848765"
     },
     "5" : {
       "id" : 5,
-      "checkInDate" : "2026-01-07",
+      "checkInDate" : "2026-01-12",
       "checkOutDate" : "2024-01-22",
-      "totalPrice" : -716.0,
-      "createdAt" : "2026-01-07T14:41:43.4391604"
+      "totalPrice" : 721.0,
+      "createdAt" : "2026-01-12T21:19:17.0882579"
     }
   }
 }

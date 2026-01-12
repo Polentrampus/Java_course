@@ -1,23 +1,45 @@
 package hotel.model.service;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import hotel.controller.export_import.Entity;
-import lombok.*;
+import hotel.service.export_import.Entity;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Services implements Entity {
     private int id;
-    @Setter
-    @Getter
     private String name;
-    @Setter
-    @Getter
     private String description;
-    @Setter
-    @Getter
     private double price;
+
+    public Services(int id, String name, String description, double price) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public boolean isFree() {
         return price == 0.0;
