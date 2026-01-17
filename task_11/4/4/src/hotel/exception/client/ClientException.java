@@ -1,7 +1,7 @@
-package hotel.exception.room;
+package hotel.exception.client;
 
-public class RoomException extends RuntimeException {
-    public RoomException(String message) {
+public class ClientException extends RuntimeException {
+    public ClientException(String message) {
         super(message);
     }
 }

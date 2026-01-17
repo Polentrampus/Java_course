@@ -1,0 +1,51 @@
+package hotel.view.action.client;
+
+import hotel.controller.AdminController;
+import hotel.model.Hotel;
+import hotel.model.filter.ClientFilter;
+import hotel.model.service.Services;
+import hotel.model.users.client.Client;
+import hotel.view.action.BaseAction;
+
+import java.time.LocalDate;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class CheckClientOfHotel extends BaseAction {
+    AdminController adminController;
+
+    public CheckClientOfHotel(AdminController admin, Scanner scanner) {
+        super(scanner);
+        this.adminController = admin;
+    }
+
+    @Override
+    public void execute() {
+        try {
+            System.out.println("\n=== ЗАСЕЛЕНИЕ КЛИЕНТА ===");
+            Collection<Client> clientCollection = adminController.getInfoAboutClientDatabase(ClientFilter.ID);
+
+            List<Integer> availableClientIds = clientCollection.stream()
+                    .map(Client::getId)
+                    .collect(Collectors.toList());
+
+            int clientId = readInt("Введите ID клиента: ");
+            if (availableClientIds.contains(clientId)) {
+                System.out.println("Клиент с таким ID уже существует!");
+                return;
+            }
+            String clientName = readString("Введите имя клиента: ");
+            String clientSurname = readString("Введите фамилию клиента: ");
+            String clientPatronymic = readString("Введите отчество клиента: ");
+            LocalDate clientBirthDay = readDate("Введите день рождения клиента: ");
+
+            Client client = new Client(clientId, clientName, clientSurname,
+                    clientPatronymic, clientBirthDay);
+            Hotel.getInstance().getClientMap().get().put(clientId, client);
+            System.out.println("Клиент создан!");
+
+        } catch (Exception e) {
+            System.out.println("Ошибка при добавлении клиента: " + e.getMessage());
+        }
+    }
+}

@@ -1,8 +1,8 @@
-package hotel.exception.room;
+package hotel.exception.booking;
 
-public class RoomException extends RuntimeException {
-    public RoomException(String message) {
-        super(message);
+public class BookingException extends RuntimeException {
+    public BookingException(String message) {
+        super("Ошибка бронирований"+message);
     }
 }
 

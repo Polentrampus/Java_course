@@ -1,8 +1,8 @@
-package hotel.exception.room;
+package hotel.exception.employee;
 
-public class RoomException extends RuntimeException {
-    public RoomException(String message) {
-        super(message);
+public class EmployeeException extends RuntimeException {
+    public EmployeeException(String message) {
+        super("Ошибка работников"+message);
     }
 }
 
