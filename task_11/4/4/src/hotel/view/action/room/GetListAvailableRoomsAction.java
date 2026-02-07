@@ -1,17 +1,18 @@
 package hotel.view.action.room;
 
-import hotel.controller.AdminController;
+
 import hotel.model.filter.RoomFilter;
+import hotel.service.RoomService;
 import hotel.view.action.BaseAction;
 
 import java.util.Scanner;
 
 public class GetListAvailableRoomsAction extends BaseAction {
-    private final AdminController adminController;
+    private final RoomService roomService;
 
-    public GetListAvailableRoomsAction(AdminController adminController, Scanner scanner) {
+    public GetListAvailableRoomsAction(RoomService roomService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.roomService = roomService;
     }
 
     @Override
@@ -19,7 +20,7 @@ public class GetListAvailableRoomsAction extends BaseAction {
         try {
             System.out.println("\n=== СПИСОК ДОСТУПНЫХ КОМНАТ ===");
             RoomFilter filter = readEnum(RoomFilter.class, "Выберите фильтр для поиска:");
-            adminController.getListAvailableRooms(filter);
+            roomService.listAvailableRooms(filter);
         } catch (Exception e) {
             System.out.println("Ошибка при получении списка комнат: " + e.getMessage());
         }

@@ -1,18 +1,19 @@
 package hotel.view.action.room;
 
-import hotel.controller.AdminController;
+
 import hotel.model.filter.RoomFilter;
+import hotel.service.RoomService;
 import hotel.view.action.BaseAction;
 
 import java.time.LocalDate;
 import java.util.Scanner;
 
 public class GetListAvailableRoomsByDateAction extends BaseAction {
-    private final AdminController adminController;
+    private final RoomService roomService;
 
-    public GetListAvailableRoomsByDateAction(AdminController adminController, Scanner scanner) {
+    public GetListAvailableRoomsByDateAction(RoomService roomService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.roomService = roomService;
     }
 
     @Override
@@ -21,7 +22,7 @@ public class GetListAvailableRoomsByDateAction extends BaseAction {
             System.out.println("\n=== СПИСОК КОМНАТ ПО ДАТЕ ===");
             RoomFilter filter = readEnum(RoomFilter.class, "Выберите фильтр:");
             LocalDate date = readDate("Введите дату для проверки доступности");
-            adminController.getListAvailableRoomsByDate(filter, date);
+            roomService.listAvailableRoomsByDate(filter, date);
         } catch (Exception e) {
             System.out.println("Ошибка при получении списка комнат: " + e.getMessage());
         }

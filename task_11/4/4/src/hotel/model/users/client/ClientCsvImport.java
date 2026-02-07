@@ -3,7 +3,6 @@ package hotel.model.users.client;
 import hotel.service.export_import.CsvImporter;
 import hotel.exception.csv.CsvImportLengthException;
 import hotel.exception.csv.CsvImportParsingException;
-import hotel.model.Hotel;
 import hotel.model.service.Services;
 
 import java.time.LocalDate;
@@ -35,33 +34,17 @@ public class ClientCsvImport implements CsvImporter<Client> {
                 data[1],
                 data[2],
                 data[3],
-                LocalDate.parse(data[4])
+                LocalDate.parse(data[4]),
+                data[5]
         );
         return client;
     }
 
     @Override
     public String[] getHeader() {
-        return new String[]{"id", "name", "surname", "patronymic", "dateOfBirth", "services", "idRoom", "checkOutDate", "departureDate"};
+        return new String[]{"id", "name", "surname", "patronymic", "dateOfBirth", "notes"};
     }
 
-    public List<Services> parserServices(String data) {
-        if (data == null || data.trim().isEmpty() || data.equals("[]") || data.equals("0")) {
-            return new ArrayList<>();
-        }
-
-        String cleanedData = data.replace("[", "").replace("]", "").replace("\"", "").trim();
-        if (cleanedData.isEmpty()) {
-            return new ArrayList<>();
-        }
-        List<Services> services = new ArrayList<>();
-        return Arrays.stream(cleanedData.split(","))
-                .map(String::trim)
-                .filter(serviceName -> !serviceName.isEmpty())
-                .map(serviceName -> Hotel.getInstance().getService(serviceName))
-                .map(Optional::get)
-                .collect(Collectors.toList());
-    }
 }
 
 

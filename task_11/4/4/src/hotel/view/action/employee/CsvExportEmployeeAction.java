@@ -1,21 +1,23 @@
 package hotel.view.action.employee;
 
-import hotel.controller.AdminController;
+
+import hotel.service.ClientService;
 import hotel.service.CsvExportService;
 import hotel.model.users.employee.Employee;
 import hotel.model.users.employee.EmployeeCsvExport;
+import hotel.service.EmployeeService;
 import hotel.view.action.BaseAction;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class CsvExportEmployeeAction extends BaseAction {
-    AdminController adminController;
-    CsvExportService csvExportService;
+    private final EmployeeService employeeService;
+    private final CsvExportService csvExportService;
 
-    public CsvExportEmployeeAction(AdminController adminController, Scanner scanner) {
+    public CsvExportEmployeeAction(EmployeeService employeeService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.employeeService = employeeService;
         this.csvExportService = new CsvExportService();
     }
 
@@ -24,7 +26,7 @@ public class CsvExportEmployeeAction extends BaseAction {
         try {
             System.out.println("\n=== ЭКСПОРТ РАБОТНИКОВ ===");
 
-            List<Employee> employees = adminController.getEmployees();
+            List<Employee> employees = employeeService.findAll();
 
             if (employees.isEmpty()) {
                 System.out.println("Нет Работников для экспорта!");

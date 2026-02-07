@@ -1,9 +1,7 @@
 package hotel.view.action.client;
 
-import hotel.controller.AdminController;
-import hotel.model.Hotel;
+import hotel.service.ClientService;
 import hotel.service.CsvImportService;
-import hotel.model.filter.RoomFilter;
 import hotel.model.users.client.Client;
 import hotel.model.users.client.ClientCsvImport;
 import hotel.view.action.BaseAction;
@@ -13,12 +11,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CsvImportClientsAction extends BaseAction {
-    private final AdminController adminController;
+    private final ClientService clientService;
     private final CsvImportService importManager;
 
-    public CsvImportClientsAction(AdminController adminController, Scanner scanner) {
+    public CsvImportClientsAction(ClientService clientService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.clientService = clientService;
         this.importManager = new CsvImportService();
     }
 
@@ -27,8 +25,7 @@ public class CsvImportClientsAction extends BaseAction {
         try {
             System.out.println("\n=== ИМПОРТ КЛИЕНТОВ ===");
 
-            String filePath = readString("Введите путь к CSV файлу: " +
-                    "( C:\\my_program\\Java_course\\task_6\\1\\exports\\clientExport.csv )");
+            String filePath = readString("Введите путь к CSV файлу (например: exports/clientExport.csv): ");
             File file = new File(filePath);
 
             if (!file.exists()) {
@@ -46,15 +43,18 @@ public class CsvImportClientsAction extends BaseAction {
             }
 
             System.out.println("Успешно импортировано клиентов: " + importedClients.size());
-            saveClientToSystem(importedClients);
+
+            int savedCount = 0;
+            for (Client client : importedClients) {
+                if (clientService.save(client)) {
+                    savedCount++;
+                }
+            }
+
+            System.out.println("Сохранено в базу данных: " + savedCount + " клиентов");
+
         } catch (Exception e) {
             System.out.println("Ошибка при импорте клиентов: " + e.getMessage());
-        }
-    }
-
-    public  void saveClientToSystem(List<Client> importedClients) {
-        for (Client client : importedClients) {
-            Hotel.getInstance().getClientMap().get().put(client.getId(), client);
         }
     }
 }

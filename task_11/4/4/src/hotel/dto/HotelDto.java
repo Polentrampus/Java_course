@@ -3,8 +3,11 @@ package hotel.dto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import hotel.model.booking.Bookings;
 import hotel.model.room.Room;
+import hotel.model.service.Services;
 import hotel.model.users.client.Client;
 import hotel.model.users.employee.Employee;
+
+import java.security.Provider;
 import java.util.Map;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -13,16 +16,26 @@ public class HotelDto {
     private Map<Integer, Employee> employees;
     private Map<Integer, Client> clients;
     private Map<Integer, Bookings> bookings;
+    private Map<Integer, Services> services;
 
     public HotelDto(Map<Integer, Room> rooms, Map<Integer, Employee> employees,
-                    Map<Integer, Client> clients, Map<Integer, Bookings> bookings) {
+                    Map<Integer, Client> clients, Map<Integer, Bookings> bookings,  Map<Integer, Services> services) {
         this.rooms = rooms;
         this.employees = employees;
         this.clients = clients;
         this.bookings = bookings;
+        this.services = services;
     }
 
     public HotelDto() {
+    }
+
+    public Map<Integer, Services> getServices() {
+        return services;
+    }
+
+    public void setServices(Map<Integer, Services> services) {
+        this.services = services;
     }
 
     public Map<Integer, Room> getRooms() {

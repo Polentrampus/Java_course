@@ -13,6 +13,7 @@ import java.util.Properties;
 @Component
 public class PropertiesConfiguration implements HotelConfiguration {
     private static final String CONFIG_FILE = "hotel.properties";
+    private static final Properties properties = new Properties();
 
     @ConfigProperty(configFileName = CONFIG_FILE, propertyName = "room.status.modifiable")
     private boolean roomStatusModifiable = false;
@@ -24,7 +25,7 @@ public class PropertiesConfiguration implements HotelConfiguration {
     private boolean bookingDeletionAllowed = false;
 
     @ConfigProperty(propertyName = "bookings.history.enabled")
-    private boolean bookingHistoryEnabled = true;
+    private boolean bookingHistoryEnabled = false;
 
     public void initialize(String configFile) throws Exception {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(CONFIG_FILE);
@@ -34,9 +35,11 @@ public class PropertiesConfiguration implements HotelConfiguration {
             if (!Files.exists(configPath)) {
                 saveConfig();
             }
+            try (InputStream fileStream = Files.newInputStream(configPath)) {
+                properties.load(fileStream);
+            }
         } else {
             try {
-                Properties properties = new Properties();
                 properties.load(inputStream);
                 AnnotationConfiguration.config(this);
             } catch (Exception e) {
@@ -47,6 +50,10 @@ public class PropertiesConfiguration implements HotelConfiguration {
 
     public PropertiesConfiguration() throws Exception {
         initialize(CONFIG_FILE);
+    }
+
+    public static String getProperty(String key) {
+        return properties.getProperty(key);
     }
 
     private void saveConfig(){

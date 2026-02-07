@@ -16,7 +16,7 @@ public class EmployeeCsvExport implements CsvExporter<Employee> {
                     employee.getSurname(),
                     employee.getPatronymic(),
                     String.valueOf(employee.getDate_of_birth()),
-                    employee.getPosition()
+                    String.valueOf(employee.getPosition())
             };
             employeesList.add(csvData);
         }

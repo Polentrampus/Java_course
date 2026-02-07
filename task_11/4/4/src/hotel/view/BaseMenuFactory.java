@@ -1,7 +1,12 @@
 package hotel.view;
 
+import hotel.RepositoryFactory;
+
+import java.io.IOException;
+
 public abstract class BaseMenuFactory {
-    public abstract Menu createMainMenu();
+    public abstract Menu downloadMenu() throws IOException;
+    public abstract Menu createMainMenu() throws IOException;
     public abstract Menu createClientMenu();
     public abstract Menu createEmployeeMenu();
     public abstract Menu createRoomMenu();

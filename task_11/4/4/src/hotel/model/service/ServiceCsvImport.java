@@ -4,6 +4,7 @@ import hotel.service.export_import.CsvImporter;
 import hotel.exception.csv.CsvImportLengthException;
 import hotel.exception.csv.CsvImportParsingException;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class ServiceCsvImport implements CsvImporter<Services> {
                 Integer.parseInt(data[0]),
                 data[1],
                 data[2],
-                Double.parseDouble(data[3])
+                BigDecimal.valueOf(Long.parseLong(data[3]))
         );
         return service;
     }

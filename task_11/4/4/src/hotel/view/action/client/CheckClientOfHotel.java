@@ -1,48 +1,50 @@
 package hotel.view.action.client;
 
-import hotel.controller.AdminController;
-import hotel.model.Hotel;
-import hotel.model.filter.ClientFilter;
-import hotel.model.service.Services;
 import hotel.model.users.client.Client;
+import hotel.service.ClientService;
 import hotel.view.action.BaseAction;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class CheckClientOfHotel extends BaseAction {
-    AdminController adminController;
+    private final ClientService clientService;
 
-    public CheckClientOfHotel(AdminController admin, Scanner scanner) {
+    public CheckClientOfHotel(ClientService clientService, Scanner scanner) {
         super(scanner);
-        this.adminController = admin;
+        this.clientService = clientService;
     }
 
     @Override
     public void execute() {
         try {
-            System.out.println("\n=== ЗАСЕЛЕНИЕ КЛИЕНТА ===");
-            Collection<Client> clientCollection = adminController.getInfoAboutClientDatabase(ClientFilter.ID);
+            System.out.println("\n=== ДОБАВЛЕНИЕ КЛИЕНТА ===");
 
-            List<Integer> availableClientIds = clientCollection.stream()
+            Collection<Client> existingClients = clientService.findAll();
+            List<Integer> existingClientIds = existingClients.stream()
                     .map(Client::getId)
-                    .collect(Collectors.toList());
+                    .toList();
 
-            int clientId = readInt("Введите ID клиента: ");
-            if (availableClientIds.contains(clientId)) {
-                System.out.println("Клиент с таким ID уже существует!");
-                return;
+            System.out.println("\nВведите данные нового клиента:");
+            Client client = new Client();
+            client.setName(readString("Имя: "));
+            client.setSurname(readString("Фамилия: "));
+            client.setPatronymic(readString("Отчество: "));
+            client.setDate_of_birth(readDate("Дата рождения"));
+            client.setNotes(readString("Дополнительно: "));
+
+            boolean isAdded = clientService.save(client);
+
+            if (isAdded) {
+                System.out.println("\nКлиент успешно добавлен!");
+                System.out.println(client.toString());
+            } else {
+                System.out.println("\n✗ Не удалось заселить клиента.");
             }
-            String clientName = readString("Введите имя клиента: ");
-            String clientSurname = readString("Введите фамилию клиента: ");
-            String clientPatronymic = readString("Введите отчество клиента: ");
-            LocalDate clientBirthDay = readDate("Введите день рождения клиента: ");
-
-            Client client = new Client(clientId, clientName, clientSurname,
-                    clientPatronymic, clientBirthDay);
-            Hotel.getInstance().getClientMap().get().put(clientId, client);
-            System.out.println("Клиент создан!");
 
         } catch (Exception e) {
             System.out.println("Ошибка при добавлении клиента: " + e.getMessage());

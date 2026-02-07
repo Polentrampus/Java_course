@@ -1,23 +1,24 @@
 package hotel.view.action.client;
 
-import hotel.controller.AdminController;
+
+import hotel.service.ClientService;
 import hotel.view.action.BaseAction;
 
 import java.util.Scanner;
 
 public class RequestLastThreeClientAction extends BaseAction {
-    private final AdminController adminController;
+    private final ClientService clientService;
 
-    public RequestLastThreeClientAction(AdminController adminController, Scanner scanner) {
+    public RequestLastThreeClientAction(ClientService clientService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.clientService = clientService;
     }
 
     @Override
     public void execute() {
         try {
             System.out.println("\n=== ПОСЛЕДНИЕ 3 КЛИЕНТА ===");
-            adminController.requestLastThreeClient();
+            clientService.requestLastThreeClient();
         } catch (Exception e) {
             System.out.println("Ошибка при получении списка клиентов: " + e.getMessage());
         }

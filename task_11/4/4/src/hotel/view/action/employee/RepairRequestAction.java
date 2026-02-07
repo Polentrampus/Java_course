@@ -1,16 +1,17 @@
 package hotel.view.action.employee;
 
-import hotel.controller.AdminController;
+
+import hotel.service.EmployeeService;
 import hotel.view.action.BaseAction;
 
 import java.util.Scanner;
 
 public class RepairRequestAction extends BaseAction {
-    private final AdminController adminController;
+    private final EmployeeService employeeService;
 
-    public RepairRequestAction(AdminController adminController, Scanner scanner) {
+    public RepairRequestAction(EmployeeService employeeService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.employeeService = employeeService;
     }
 
     @Override
@@ -18,8 +19,8 @@ public class RepairRequestAction extends BaseAction {
         try {
             System.out.println("\n=== ЗАПРОС НА РЕМОНТ ===");
             int roomId = readInt("Введите ID комнаты для ремонта: ");
-            adminController.repairRequest(roomId);
             System.out.println("Запрос на ремонт отправлен!");
+            employeeService.requestRepair(roomId);
         } catch (Exception e) {
             System.out.println("Ошибка при отправке запроса на ремонт: " + e.getMessage());
         }

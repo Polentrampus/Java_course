@@ -1,16 +1,18 @@
 package hotel.view.action.room;
 
-import hotel.controller.AdminController;
+
+import hotel.service.RoomService;
 import hotel.view.action.BaseAction;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class ChangeRoomPriceAction extends BaseAction {
-    private final AdminController adminController;
+    private final RoomService roomService;
 
-    public ChangeRoomPriceAction(AdminController adminController, Scanner scanner) {
+    public ChangeRoomPriceAction(RoomService roomService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.roomService = roomService;
     }
 
     @Override
@@ -18,8 +20,8 @@ public class ChangeRoomPriceAction extends BaseAction {
         try {
             System.out.println("\n=== ИЗМЕНЕНИЕ ЦЕНЫ КОМНАТЫ ===");
             int roomId = readInt("Введите ID комнаты: ");
-            int newPrice = readInt("Введите новую цену: ");
-            adminController.changeRoomPrice(roomId, newPrice);
+            BigDecimal newPrice = BigDecimal.valueOf(readInt("Введите новую цену: "));
+            roomService.setTotalPrice(roomId, newPrice);
             System.out.println("Цена комнаты успешно изменена!");
         } catch (Exception e) {
             System.out.println("Ошибка при изменении цены комнаты: " + e.getMessage());

@@ -1,16 +1,18 @@
 package hotel.view.action.employee;
 
-import hotel.controller.AdminController;
+
+import hotel.service.ClientService;
+import hotel.service.EmployeeService;
 import hotel.view.action.BaseAction;
 
 import java.util.Scanner;
 
 public class CleaningRequestAction extends BaseAction {
-    private final AdminController adminController;
+    private final EmployeeService employeeService;
 
-    public CleaningRequestAction(AdminController adminController, Scanner scanner) {
+    public CleaningRequestAction(EmployeeService employeeService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.employeeService = employeeService;
     }
 
     @Override
@@ -18,8 +20,8 @@ public class CleaningRequestAction extends BaseAction {
         try {
             System.out.println("\n=== ЗАПРОС НА УБОРКУ ===");
             int roomId = readInt("Введите ID комнаты для уборки: ");
-            adminController.cleaningRequest(roomId);
             System.out.println("Запрос на уборку отправлен!");
+            employeeService.requestCleaning(roomId);
         } catch (Exception e) {
             System.out.println("Ошибка при отправке запроса на уборку: " + e.getMessage());
         }

@@ -1,33 +1,51 @@
 package hotel.view.action.room;
-import hotel.controller.AdminController;
+
+import hotel.model.room.Room;
 import hotel.model.room.RoomCategory;
 import hotel.model.room.RoomStatus;
 import hotel.model.room.RoomType;
+import hotel.service.RoomService;
 import hotel.view.action.BaseAction;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class AddRoomAction extends BaseAction {
-    private final AdminController adminController;
+    private final RoomService roomService;
 
-    public AddRoomAction(AdminController adminController, Scanner scanner) {
+    public AddRoomAction(RoomService roomService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.roomService = roomService;
     }
 
     @Override
     public void execute() {
         try {
-            System.out.println("\n=== Добавление комнаты ===");
+            System.out.println("\n=== ДОБАВЛЕНИЕ НОВОЙ КОМНАТЫ ===");
+            Room room = new Room();
 
-            int roomNumber = readInt("Введите номер комнаты: ");
-            RoomType roomType = readEnum(RoomType.class, "Введите тип комнаты");
-            int price = readInt("Введите цену: ");
-            RoomCategory roomCategory = readEnum(RoomCategory.class, "Введите категорию комнаты");
-            int capacity = readInt("Введите вместительность комнаты: ");
+            room.setNumber(readInt("Введите номер комнаты: "));
+            room.setType(readEnum(RoomType.class, "Выберите тип комнаты (STANDARD, SUITE, DELUXE, PRESIDENTIAL):"));
+            room.setCategory(readEnum(RoomCategory.class, "Выберите категорию комнаты (ECONOMY, COMFORT, BUSINESS, LUXURY):"));
+            room.setCapacity(readInt("Введите вместимость комнаты (количество человек): "));
+            room.setPrice(BigDecimal.valueOf(readInt("Введите цену за ночь ($): ")));
+            room.setStatus(RoomStatus.AVAILABLE);
 
-            adminController.addRoom(roomCategory, RoomStatus.AVAILABLE, roomType, roomNumber, price, capacity);
-            System.out.println("Комната успешно добавлена!");
+            System.out.println("========================================");
+            System.out.println("Номер комнаты: " + room.getNumber());
+            System.out.println("Тип: " + room.getType());
+            System.out.println("Категория: " + room.getCategory());
+            System.out.println("Вместимость: " + room.getCapacity() + " чел.");
+            System.out.println("Цена за ночь: $" + room.getPrice());
+            System.out.println("========================================");
+
+            boolean isAdded = roomService.save(room);
+
+            if (isAdded) {
+                System.out.println("\nКомната успешно добавлена!");
+            } else {
+                System.out.println("\nНе удалось добавить комнату.");
+            }
 
         } catch (Exception e) {
             System.out.println("Ошибка при добавлении комнаты: " + e.getMessage());

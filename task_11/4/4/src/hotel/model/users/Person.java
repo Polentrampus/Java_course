@@ -2,10 +2,12 @@ package hotel.model.users;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import hotel.service.export_import.Entity;
+
 import java.time.LocalDate;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Person {
+public class Person implements Entity {
     private int id;
     private String name;
     private String surname;
@@ -23,7 +25,7 @@ public class Person {
     public Person() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -61,6 +63,17 @@ public class Person {
 
     public void setDate_of_birth(LocalDate date_of_birth) {
         this.date_of_birth = date_of_birth;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", patronymic='" + patronymic + '\'' +
+                ", date_of_birth=" + date_of_birth +
+                '}';
     }
 }
 

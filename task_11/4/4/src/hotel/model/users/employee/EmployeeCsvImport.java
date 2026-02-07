@@ -25,24 +25,25 @@ public class EmployeeCsvImport implements CsvImporter<Employee> {
 
     @Override
     public Employee createEntity(String[] data) {
-        if (data.length < 6) {
-            throw new CsvImportLengthException(6, data.length);
-        }
-        return new Employee(
-                Integer.parseInt(data[0]),
-                data[1],
-                data[2],
-                data[3],
-                LocalDate.parse(data[4])
-        ) {
-            @Override
-            public String getPosition() {
-                return data[5];
-            }
-        };
+//        if (data.length < 6) {
+//            throw new CsvImportLengthException(6, data.length);
+//        }
+//        return new Employee(
+//                Integer.parseInt(data[0]),
+//                data[1],
+//                data[2],
+//                data[3],
+//                LocalDate.parse(data[4])
+//        ) {
+//            @Override
+//            public String getPosition() {
+//                return data[5];
+//            }
+//        };
+        return null;
     }
     @Override
     public String[] getHeader() {
-        return new String[]{"id", "name", "surname", "patronymic", "dateOfBirth", "position"};
+        return new String[]{"id", "name", "surname", "patronymic", "dateOfBirth", "position", "hire_date", "salary"};
     }
 }

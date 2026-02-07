@@ -1,8 +1,8 @@
 package hotel.view.action.client;
 
-import hotel.controller.AdminController;
 import hotel.model.filter.ClientFilter;
 import hotel.model.users.client.Client;
+import hotel.service.ClientService;
 import hotel.view.action.BaseAction;
 
 import java.util.Collection;
@@ -12,39 +12,53 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class GetInfoAboutClientAction extends BaseAction {
-    private final AdminController adminController;
+    private final ClientService clientService;
 
-    public GetInfoAboutClientAction(AdminController adminController, Scanner scanner) {
+    public GetInfoAboutClientAction(ClientService clientService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.clientService = clientService;
     }
 
     @Override
     public void execute() {
         try {
             System.out.println("\n=== ИНФОРМАЦИЯ О КЛИЕНТЕ ===");
-            Collection<Client> clientCollection = adminController.getInfoAboutClientDatabase(ClientFilter.ID);
+
+            List<Client> clientCollection = clientService.findAll();
             if (clientCollection.isEmpty()) {
-                System.out.println("В базе данных нет клиентов");
+                System.out.println("В базе данных нет клиентов.");
                 return;
             }
 
-            List<Integer> availableClientIds = clientCollection.stream()
-                    .map(Client::getId)
-                    .collect(Collectors.toList());
+            System.out.println("\nСписок клиентов:");
+            clientCollection.forEach(client ->
+                    System.out.println("ID: " + client.getId() +
+                            " | " + client.getSurname() + " " +
+                            client.getName() + " " + client.getPatronymic()));
 
-            int clientId = readInt("Введите ID клиента: ",
-                    Collections.min(availableClientIds),
-                    Collections.max(availableClientIds));
+            int clientId = readInt("\nВведите ID клиента: ");
 
-            if (!availableClientIds.contains(clientId)) {
-                System.out.println("Клиента с таким ID не существует!");
+            if(clientService.findById(clientId).isEmpty()){
+                System.out.println("Клиент с ID " + clientId + " не найден.");
                 return;
             }
+            Client client = clientService.findById(clientId).get();
 
-            adminController.getInfoAboutClient(clientId);
+            System.out.println("ПОДРОБНАЯ ИНФОРМАЦИЯ О КЛИЕНТЕ");
+            System.out.println("ID: " + client.getId());
+            System.out.println("Фамилия: " + client.getSurname());
+            System.out.println("Имя: " + client.getName());
+            System.out.println("Отчество: " + client.getPatronymic());
+            System.out.println("Дата рождения: " + client.getDate_of_birth());
+            System.out.println("Возраст: " + calculateAge(client.getDate_of_birth()) + " лет");
+            System.out.println("Дополнительно: " + (client.getNotes()));
+
         } catch (Exception e) {
             System.out.println("Ошибка при получении информации о клиенте: " + e.getMessage());
         }
+    }
+
+    private int calculateAge(java.time.LocalDate birthDate) {
+        return java.time.Period.between(birthDate, java.time.LocalDate.now()).getYears();
     }
 }

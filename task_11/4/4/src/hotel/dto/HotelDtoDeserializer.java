@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import hotel.model.booking.Bookings;
 import hotel.model.room.Room;
+import hotel.model.service.Services;
 import hotel.model.users.client.Client;
 import hotel.model.users.employee.Employee;
 
@@ -27,6 +28,7 @@ public class HotelDtoDeserializer extends JsonDeserializer<HotelDto> {
         dto.setEmployees(parseMap(node.get("employees"), Employee.class, p));
         dto.setClients(parseMap(node.get("clients"), Client.class, p));
         dto.setBookings(parseMap(node.get("bookings"), Bookings.class, p));
+        dto.setServices(parseMap(node.get("services"), Services.class, p));
 
         return dto;
     }

@@ -1,27 +1,29 @@
 package hotel.view.action.services;
 
-import hotel.controller.AdminController;
+import hotel.model.service.Services;
+import hotel.service.ServicesService;
 import hotel.view.action.BaseAction;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class AddServiceAction extends BaseAction {
-    private final AdminController adminController;
+    private final ServicesService servicesService;
 
-    public AddServiceAction(AdminController adminController, Scanner scanner) {
+    public AddServiceAction(ServicesService servicesService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.servicesService = servicesService;
     }
 
     @Override
     public void execute() {
         try {
             System.out.println("\n=== ДОБАВЛЕНИЕ УСЛУГИ ===");
-            String name = readString("Введите название услуги: ");
-            String description = readString("Введите описание услуги: ");
-            int id = readInt("Введите id услуги");
-            int price = readInt("Введите цену услуги: ", 0, 9999);
-            adminController.addService(id, name, description, price);
+            Services service = new Services();
+            service.setName(readString("Введите название услуги: "));
+            service.setDescription(readString("Введите описание услуги: "));
+            service.setPrice(BigDecimal.valueOf(readInt("Введите цену услуги: ", 0, 9999)));
+            servicesService.addService(service);
             System.out.println("Услуга успешно добавлена!");
 
         } catch (Exception e) {

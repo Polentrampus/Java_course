@@ -1,33 +1,47 @@
 package hotel.model.booking;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import hotel.model.room.Room;
 import hotel.model.users.client.Client;
 import hotel.model.service.Services;
+import hotel.service.export_import.Entity;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Bookings {
+public class Bookings implements Entity {
     private Integer id;
-    @JsonIgnore
-    private Client client;
-    @JsonIgnore
+    private Integer client;
+    private Integer room;
     private List<Services> services;
-    @JsonIgnore
-    private Room room;
     ///Дата заезда
     private LocalDate checkInDate;
     ///Дата выезда
     private LocalDate checkOutDate;
-    private double totalPrice;
+    private BigDecimal totalPrice;
+    private BookingStatus status;
     private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime updatedAt = LocalDateTime.now();
 
-    public Bookings(Integer id, Client client, List<Services> services,
-                    Room room, LocalDate checkInDate, LocalDate checkOutDate,
-                    double totalPrice, LocalDateTime createdAt) {
+    public Bookings() {
+    }
+
+    @JsonCreator
+    public Bookings(
+            @JsonProperty("id") Integer id,
+            @JsonProperty("client") Integer client,
+            @JsonProperty("services") List<Services> services,
+            @JsonProperty("room") Integer room,
+            @JsonProperty("checkInDate") LocalDate checkInDate,
+            @JsonProperty("checkOutDate") LocalDate checkOutDate,
+            @JsonProperty("totalPrice") BigDecimal totalPrice,
+            @JsonProperty("createdAt") LocalDateTime createdAt) {
         this.id = id;
         this.client = client;
         this.services = services;
@@ -38,22 +52,21 @@ public class Bookings {
         this.createdAt = createdAt;
     }
 
-    public Bookings() {
-    }
-
+    @Override
     public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    @Override
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Client getClient() {
+    public Integer getClient() {
         return client;
     }
 
-    public void setClient(Client client) {
+    public void setClient(Integer client) {
         this.client = client;
     }
 
@@ -65,11 +78,11 @@ public class Bookings {
         this.services = services;
     }
 
-    public Room getRoom() {
+    public Integer getRoom() {
         return room;
     }
 
-    public void setRoom(Room room) {
+    public void setRoom(Integer room) {
         this.room = room;
     }
 
@@ -89,11 +102,11 @@ public class Bookings {
         this.checkOutDate = checkOutDate;
     }
 
-    public double getTotalPrice() {
+    public BigDecimal getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(double totalPrice) {
+    public void setTotalPrice(BigDecimal totalPrice) {
         this.totalPrice = totalPrice;
     }
 
@@ -103,6 +116,22 @@ public class Bookings {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public BookingStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(BookingStatus status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
@@ -115,5 +144,11 @@ public class Bookings {
                 ", checkOutDate=" + checkOutDate +
                 ", totalPrice=" + totalPrice +
                 '}';
+    }
+
+    public boolean isActiveOn(LocalDate date) {
+        return status == BookingStatus.CONFIRMED
+                && !date.isBefore(checkInDate)
+                && !date.isAfter(checkOutDate);
     }
 }

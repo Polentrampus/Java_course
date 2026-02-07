@@ -1,17 +1,25 @@
 package hotel.view.action.booking;
 
-import hotel.controller.AdminController;
 import hotel.model.booking.Bookings;
+import hotel.service.BookingService;
+import hotel.service.ClientService;
+import hotel.service.RoomService;
 import hotel.view.action.BaseAction;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
 public class GetAllBookingsAction extends BaseAction {
-    private final AdminController adminController;
-    public GetAllBookingsAction(Scanner scanner, AdminController adminController) {
+    private final BookingService bookingService;
+    private final ClientService clientService;
+
+    public GetAllBookingsAction(BookingService bookingService,
+                                Scanner scanner,
+                                ClientService clientService) {
         super(scanner);
-        this.adminController = adminController;
+        this.bookingService = bookingService;
+        this.clientService = clientService;
     }
 
     @Override
@@ -19,7 +27,7 @@ public class GetAllBookingsAction extends BaseAction {
         try {
             System.out.println("\n=== ВСЕ БРОНИРОВАНИЯ ===");
 
-            List<Bookings> bookings = adminController.findAllBookings();
+            List<Bookings> bookings = bookingService.getAllBookings();
 
             if (bookings.isEmpty()) {
                 System.out.println("Бронирования не найдены.");
@@ -27,11 +35,10 @@ public class GetAllBookingsAction extends BaseAction {
             }
 
             System.out.println("Всего бронирований: " + bookings.size());
-            System.out.println("----------------------------------------");
 
             for (Bookings booking : bookings) {
-                printBookingDetails(booking);
-                System.out.println("----------------------------------------");
+                printBookingSummary(booking);
+                System.out.println("================================");
             }
 
         } catch (Exception e) {
@@ -39,12 +46,13 @@ public class GetAllBookingsAction extends BaseAction {
         }
     }
 
-    private void printBookingDetails(Bookings booking) {
-        System.out.println("ID бронирования: " + booking.getId());
-        System.out.println("Клиент: " + booking.getClient().getName() + " (ID: " + booking.getClient().getId() + ")");
-        System.out.println("Комната: №" + booking.getRoom().getNumber() + " (ID: " + booking.getRoom().getId() + ")");
-        System.out.println("Дата заезда: " + booking.getCheckInDate());
-        System.out.println("Дата выезда: " + booking.getCheckOutDate());
-        System.out.println("Общая стоимость: $" + booking.getTotalPrice());
+    private void printBookingSummary(Bookings booking) throws SQLException {
+        System.out.println("ID: " + booking.getId() +
+                " | Клиент: " + clientService.findById(booking.getClient()).get() + "." +
+                " | Комната: №" + booking.getRoom() +
+                " | Заезд: " + booking.getCheckInDate() +
+                " | Выезд: " + booking.getCheckOutDate() +
+                " | Статус: " + booking.getStatus() +
+                " | Стоимость: $" + booking.getTotalPrice());
     }
 }

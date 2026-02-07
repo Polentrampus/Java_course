@@ -1,6 +1,6 @@
 package hotel.view.action.client;
 
-import hotel.controller.AdminController;
+import hotel.service.ClientService;
 import hotel.service.CsvExportService;
 import hotel.model.filter.ClientFilter;
 import hotel.model.users.client.Client;
@@ -11,21 +11,20 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CsvExportClientsAction extends BaseAction {
-    private final AdminController adminController;
+    private final ClientService clientService;
     private final CsvExportService csvExportService;
 
-    public CsvExportClientsAction(AdminController adminController, Scanner scanner) {
+    public CsvExportClientsAction(ClientService clientService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
-        csvExportService = new CsvExportService();
+        this.clientService = clientService;
+        this.csvExportService = new CsvExportService();
     }
-
     @Override
     public void execute() {
         try {
             System.out.println("===ЭКСПОРТ КЛИЕНТОВ===");
 
-            List<Client> clients = adminController.getInfoAboutClientDatabase(ClientFilter.ID).stream().toList();
+            List<Client> clients = clientService.getInfoAboutClientDatabase(ClientFilter.ID).stream().toList();
             if (clients.isEmpty()) {
                 System.out.println("Нет клиентов для экспорта!");
                 return;

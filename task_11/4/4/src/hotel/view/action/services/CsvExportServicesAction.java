@@ -1,9 +1,10 @@
 package hotel.view.action.services;
 
-import hotel.controller.AdminController;
+
 import hotel.service.CsvExportService;
 import hotel.model.service.ServiceCsvExport;
 import hotel.model.service.Services;
+import hotel.service.ServicesService;
 import hotel.view.action.BaseAction;
 
 import java.util.Collection;
@@ -11,13 +12,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CsvExportServicesAction extends BaseAction {
-    private AdminController adminController;
+    private ServicesService serviceService;
     private CsvExportService csvExportService;
 
-    public CsvExportServicesAction(AdminController adminController, Scanner scanner) {
+    public CsvExportServicesAction(ServicesService serviceService, Scanner scanner) {
         super(scanner);
         this.csvExportService = new CsvExportService();
-        this.adminController = adminController;
+        this.serviceService = serviceService;
     }
 
     @Override
@@ -25,7 +26,7 @@ public class CsvExportServicesAction extends BaseAction {
         try {
             System.out.println("\n=== ЭКСПОРТ УСЛУГ ===");
 
-            Collection<Services> services = adminController.requestListServices();
+            List<Services> services = serviceService.findAll();
 
             if (services.isEmpty()) {
                 System.out.println("Нет услуг для экспорта!");
@@ -34,7 +35,7 @@ public class CsvExportServicesAction extends BaseAction {
 
             System.out.println("Найдено услуг для экспорта: " + services.size());
             ServiceCsvExport exporter = new ServiceCsvExport();
-            csvExportService.exportToFile("exports", (List<Services>) services, exporter);
+            csvExportService.exportToFile("exports", services, exporter);
 
         } catch (Exception e) {
             System.out.println("Ошибка при экспорте услуг: " + e.getMessage());

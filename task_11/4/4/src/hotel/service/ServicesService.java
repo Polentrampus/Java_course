@@ -1,45 +1,66 @@
 package hotel.service;
 
 import hotel.annotation.Component;
+import hotel.dto.CreateServiceRequest;
 import hotel.exception.service.ServiceAlreadyExistsException;
-import hotel.model.Hotel;
 import hotel.model.service.Services;
+import hotel.repository.HotelRepository;
+import hotel.repository.service.ServicesRepository;
+
+import java.math.BigDecimal;
+import java.sql.SQLException;
 import java.util.*;
 
 @Component
-public class ServicesService {
-    protected final Hotel hotel = Hotel.getInstance();
-    public ServicesService() {}
+public class ServicesService implements ServicesRepository{
+    private ServicesRepository servicesRepository;
 
-    public Collection<Services> requestListServices(){
-        if( hotel.getServices().isEmpty()){
-            System.out.println("Услуг нет.");
-            return Collections.emptyList();
-        }
-        Collection<Services> servicesList = new ArrayList<>();
-        int count = 1;
-        servicesList = hotel.getServices().get().values().stream().toList();
-        for (Services services : servicesList){
-            System.out.printf("%d) %s\n", count, services.toString());
-            count++;
-        }
-        return servicesList;
+    public ServicesService() {
     }
 
-    public void addService(int id, String name, String description, int price){
-        if(hotel.getServices().get().get(name) == null){
-            hotel.getServices().get().put(name, new Services(id, name, description, price));
-        }
-        else
-            throw new ServiceAlreadyExistsException(name);
+    public void setHotelRepository(ServicesRepository servicesRepository) {
+        this.servicesRepository = servicesRepository;
     }
 
-    public void setPrice(String name, int price){
-        Services services = hotel.getServices().get().get(name);
-        if(services == null){
+    @Override
+    public Optional<Services> findById(int id) throws SQLException {
+        return servicesRepository.findById(id);
+    }
+
+    public List<Services> findAll() {
+        return servicesRepository.findAll();
+    }
+
+    @Override
+    public boolean save(Services services) {
+        return servicesRepository.save(services);
+    }
+
+    @Override
+    public boolean update(Services services) {
+        return servicesRepository.update(services);
+    }
+
+    @Override
+    public boolean delete(int id) {
+        return servicesRepository.delete(id);
+    }
+
+    public void addService(Services service) {
+        servicesRepository.save(service);
+    }
+
+    public void setPrice(String name, BigDecimal price) {
+        if(servicesRepository.findByName(name).isEmpty()){
             System.out.println("Такой услуги не существует!");
             return;
         }
+        Services services = servicesRepository.findByName(name).get();
         services.setPrice(price);
+    }
+
+    @Override
+    public Optional<Services> findByName(String name) {
+        return servicesRepository.findByName(name);
     }
 }

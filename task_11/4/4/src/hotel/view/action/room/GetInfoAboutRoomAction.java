@@ -1,17 +1,17 @@
 package hotel.view.action.room;
 
-import hotel.controller.AdminController;
-import hotel.model.Hotel;
+
+import hotel.service.RoomService;
 import hotel.view.action.BaseAction;
 
 import java.util.Scanner;
 
 public class GetInfoAboutRoomAction extends BaseAction {
-    private final AdminController adminController;
+    private final RoomService roomService;
 
-    public GetInfoAboutRoomAction(AdminController adminController, Scanner scanner) {
+    public GetInfoAboutRoomAction(RoomService roomService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.roomService = roomService;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class GetInfoAboutRoomAction extends BaseAction {
         try {
             System.out.println("\n=== ИНФОРМАЦИЯ О КОМНАТЕ ===");
             int roomNumber = readInt("Введите номер комнаты: ", 0, 9999);
-            adminController.getInfoAboutRoom(roomNumber);
+            System.out.println(roomService.findById(roomNumber).get());
         } catch (Exception e) {
             System.out.println("Ошибка при получении информации о комнате: " + e.getMessage());
         }

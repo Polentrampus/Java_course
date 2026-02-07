@@ -1,9 +1,11 @@
 package hotel.view.action.employee;
 
-import hotel.controller.AdminController;
+
+import hotel.service.ClientService;
 import hotel.service.CsvImportService;
 import hotel.model.users.employee.Employee;
 import hotel.model.users.employee.EmployeeCsvImport;
+import hotel.service.EmployeeService;
 import hotel.view.action.BaseAction;
 
 import java.io.File;
@@ -11,12 +13,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CsvImportEmployeeActon extends BaseAction {
-    private final AdminController adminController;
+    private final EmployeeService employeeService;
     private final CsvImportService importManager;
 
-    public CsvImportEmployeeActon(Scanner scanner, AdminController adminController) {
+    public CsvImportEmployeeActon(EmployeeService employeeService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.employeeService = employeeService;
         this.importManager = new CsvImportService();
     }
 
@@ -44,7 +46,7 @@ public class CsvImportEmployeeActon extends BaseAction {
             }
 
             System.out.println("Успешно импортированы работники: " + importedRooms.size());
-            adminController.addPersonal(importedRooms);
+            employeeService.addPersonal(importedRooms);
         } catch (Exception e) {
             System.out.println("Ошибка при импорте работников: " + e.getMessage());
         }

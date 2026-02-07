@@ -1,22 +1,24 @@
 package hotel.view.action.services;
 
-import hotel.controller.AdminController;
+
 import hotel.service.CsvImportService;
 import hotel.model.service.ServiceCsvImport;
 import hotel.model.service.Services;
+import hotel.service.ServicesService;
 import hotel.view.action.BaseAction;
 
 import java.io.File;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
 public class CsvImportServicesActon extends BaseAction {
-    private final AdminController adminController;
+    private final ServicesService servicesService;
     private final CsvImportService importManager;
 
-    public CsvImportServicesActon(AdminController adminController, Scanner scanner) {
+    public CsvImportServicesActon(ServicesService servicesService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.servicesService = servicesService;
         this.importManager = new CsvImportService();
     }
 
@@ -50,14 +52,9 @@ public class CsvImportServicesActon extends BaseAction {
         }
     }
 
-    public  void saveServiceToSystem(List<Services> importedServices) {
+    public  void saveServiceToSystem(List<Services> importedServices) throws SQLException {
         for (Services service : importedServices) {
-            adminController.addService(
-                    service.getId(),
-                    service.getName(),
-                    service.getDescription(),
-                    (int) service.getPrice()
-            );
+            servicesService.addService(service);
         }
     }
 }

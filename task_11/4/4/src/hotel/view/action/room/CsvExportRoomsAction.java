@@ -1,22 +1,23 @@
 package hotel.view.action.room;
 
-import hotel.controller.AdminController;
+
 import hotel.service.CsvExportService;
 import hotel.model.filter.RoomFilter;
 import hotel.model.room.Room;
 import hotel.model.room.RoomCsvExport;
+import hotel.service.RoomService;
 import hotel.view.action.BaseAction;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class CsvExportRoomsAction extends BaseAction {
-    private final AdminController adminController;
+    private final RoomService roomService;
     private final CsvExportService csvExportService;
 
-    public CsvExportRoomsAction(AdminController adminController, Scanner scanner) {
+    public CsvExportRoomsAction(RoomService roomService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.roomService = roomService;
         this.csvExportService = new CsvExportService();
     }
 
@@ -25,7 +26,7 @@ public class CsvExportRoomsAction extends BaseAction {
         try {
             System.out.println("\n=== ЭКСПОРТ КОМНАТ ===");
 
-            List<Room> rooms = adminController.requestListRoom(RoomFilter.ID);
+            List<Room> rooms = roomService.findAll();
 
             if (rooms.isEmpty()) {
                 System.out.println("Нет комнат для экспорта!");

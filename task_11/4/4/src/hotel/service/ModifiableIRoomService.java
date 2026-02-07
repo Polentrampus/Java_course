@@ -1,12 +1,13 @@
 package hotel.service;
 
-import hotel.model.room.RoomCategory;
+import hotel.model.room.Room;
 import hotel.model.room.RoomStatus;
-import hotel.model.room.RoomType;
+
+import java.math.BigDecimal;
+import java.sql.SQLException;
 
 public interface ModifiableIRoomService extends IRoomService {
-    void setStatusRoom(int roomId, RoomStatus status);
-    void changeRoomPrice(int idRoom, int newPrice);
-    void addRoom(RoomCategory category, RoomStatus status, RoomType type, int capacity, int roomNumber, int price);
-
+    void setStatusRoom(int roomId, RoomStatus status) throws SQLException;
+    void changeRoomPrice(int idRoom, BigDecimal newPrice) throws SQLException;
+    void addRoom(Room room) throws SQLException;
 }

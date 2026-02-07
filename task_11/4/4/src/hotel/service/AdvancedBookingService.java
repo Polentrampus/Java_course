@@ -3,8 +3,10 @@ package hotel.service;
 import hotel.config.HotelConfiguration;
 import hotel.dto.CreateBookingRequest;
 import hotel.model.booking.Bookings;
-import hotel.model.service.Services;
 
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.*;
 
 /**
@@ -29,40 +31,39 @@ public class AdvancedBookingService implements IBookingService {
     }
 
     @Override
-    public Optional<Bookings> getBookingById(Integer id) {
+    public Optional<Bookings> getBookingById(Integer id) throws SQLException {
         return baseService.getBookingById(id);
     }
 
     @Override
-    public Optional<Bookings> getBookingByIdClient(Integer idClient) {
-        return Optional.empty();
-    }
-
-    @Override
-    public Optional<Bookings> createBooking(CreateBookingRequest request) {
+    public Optional<Bookings> createBooking(CreateBookingRequest request) throws SQLException {
         return baseService.createBooking(request);
     }
 
     @Override
-    public void deleteBookingById(Integer id) {
+    public boolean deleteBookingById(Integer id) {
         baseService.deleteBookingById(id);
+        return false;
     }
 
     @Override
-    public Optional<Bookings> updateBooking(CreateBookingRequest request, Integer idBooking) {
+    public Optional<Bookings> updateBooking(CreateBookingRequest request, Integer idBooking) throws SQLException {
         return baseService.updateBooking(request, idBooking);
     }
 
     @Override
-    public double givOutCheck(int idClient) {
-        Bookings bookings = getBookingByIdClient(idClient).get();
-        double sum = 0;
-        sum += bookings.getServices().stream().mapToDouble(Services::getPrice).sum();
-        sum += bookings.getRoom().getPrice();
-        long daysBetween = bookings.getCheckOutDate().toEpochDay()
-                - bookings.getCheckInDate().toEpochDay();
-        sum *= daysBetween;
-        return sum;
+    public BigDecimal givOutCheck(int idBooking) throws SQLException {
+        return baseService.givOutCheck(idBooking);
+    }
+
+    @Override
+    public Optional<Bookings> findActiveByRoomId(int idRoom, LocalDate date) {
+        return baseService.findActiveByRoomId(idRoom, date);
+    }
+
+    @Override
+    public Optional<Bookings> findActiveByClientId(int idClient){
+        return baseService.findActiveByClientId(idClient);
     }
 
     public List<Bookings> getRoomBookingHistory(int roomId) {
@@ -74,7 +75,7 @@ public class AdvancedBookingService implements IBookingService {
         List<Bookings> roomHistory = new ArrayList<>();
 
         for (Bookings booking : allBookings) {
-            if (booking.getRoom().getNumber() == roomId) {
+            if (booking.getRoom() == roomId) {
                 roomHistory.add(booking);
             }
         }

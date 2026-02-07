@@ -13,20 +13,40 @@ import java.util.Map;
 public class DIContainer {
     private Map<String, Object> beans = new HashMap<>();
     private Map<Class<?>, String> beanNames = new HashMap<>();
+    public static final DIContainer INSTANCE = new DIContainer();
+
+    private DIContainer() {}
+
+    public static DIContainer getInstance() {
+        return INSTANCE;
+    }
 
     /// Автоматическая инициализация контейнера
     public void init(String basePackage) {
         BeanScanner scanner = new BeanScanner();
         List<Class<?>> classes = scanner.scan(basePackage);
-        // создадим экземпляры всех компонентов
+
         for (Class<?> clazz : classes) {
-            if(!beans.containsValue(clazz)){
+            String beanName = generateBeanName(clazz);
+            if (!beans.containsKey(beanName)) {
+                beanNames.put(clazz, beanName);
+                beans.put(beanName, null); // Зарезервируем место
+            }
+        }
+
+        // создаем бины
+        for (Class<?> clazz : classes) {
+            String beanName = beanNames.get(clazz);
+            if (beans.get(beanName) == null) { // Если еще не создан
                 createBean(clazz);
             }
         }
-        // внедрим зависимости во все бины
+
+        // Внедряем зависимости
         for (Object bean : beans.values()) {
-            injectDependencies(bean);
+            if (bean != null) {
+                injectDependencies(bean);
+            }
         }
     }
 

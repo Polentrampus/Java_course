@@ -1,22 +1,25 @@
 package hotel.view.action.room;
 
-import hotel.controller.AdminController;
+
+import hotel.service.ClientService;
 import hotel.service.CsvImportService;
 import hotel.model.room.Room;
 import hotel.model.room.RoomCsvImport;
+import hotel.service.RoomService;
 import hotel.view.action.BaseAction;
 
 import java.io.File;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
 public class CsvImportRoomsActon extends BaseAction {
-    private final AdminController adminController;
+    private final RoomService roomService;
     private final CsvImportService importManager;
 
-    public CsvImportRoomsActon(AdminController adminController, Scanner scanner) {
+    public CsvImportRoomsActon(RoomService roomService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.roomService = roomService;
         this.importManager = new CsvImportService();
     }
 
@@ -49,16 +52,9 @@ public class CsvImportRoomsActon extends BaseAction {
             System.out.println("Ошибка при импорте комнат: " + e.getMessage());
         }
     }
-    public  void saveRoomToSystem(List<Room> importedServices) {
+    public  void saveRoomToSystem(List<Room> importedServices) throws SQLException {
         for (Room room : importedServices) {
-            adminController.addRoom(
-                    room.getCategory(),
-                    room.getStatus(),
-                    room.getType(),
-                    room.getNumber(),
-                    room.getPrice(),
-                    room.getCapacity()
-            );
+            roomService.save(room);
         }
     }
 }

@@ -1,9 +1,9 @@
 package hotel.exception.service;
 
-import hotel.exception.room.RoomException;
+import hotel.exception.ErrorCode;
 
-public class ServiceAlreadyExistsException extends RoomException {
-    public ServiceAlreadyExistsException(String name) {
-        super("Услуга " + name + " уже существует");
+public class ServiceAlreadyExistsException extends ServiceException {
+    public ServiceAlreadyExistsException(ErrorCode code, String name) {
+        super(code, "Услуга " + name + " уже существует");
     }
 }

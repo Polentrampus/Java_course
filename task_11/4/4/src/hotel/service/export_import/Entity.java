@@ -1,6 +1,6 @@
 package hotel.service.export_import;
 
 public interface Entity {
-    int getId();
+    Integer getId();
     void setId(int id);
 }

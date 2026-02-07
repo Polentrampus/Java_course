@@ -1,5 +1,7 @@
 package hotel.view.action;
 
+import hotel.exception.HotelException;
+
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -9,6 +11,7 @@ public abstract class BaseAction implements IAction {
     public BaseAction(Scanner scanner) {
         this.scanner = scanner;
     }
+
 
     protected int readInt(String prompt, int min, int max) {
         while (true) {

@@ -4,17 +4,19 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import hotel.annotation.Component;
 import hotel.service.export_import.Entity;
 
+import java.math.BigDecimal;
+
 @Component
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Room implements Entity {
-    private int number;
+    private Integer number;
     private RoomCategory category;
     private RoomStatus status;
     private RoomType type;
     private int capacity;
-    private int price;
+    private BigDecimal price;
 
-    public Room(int number, RoomCategory category, RoomStatus status, RoomType type, int capacity, int price) {
+    public Room(Integer number, RoomCategory category, RoomStatus status, RoomType type, int capacity, BigDecimal price) {
         this.number = number;
         this.category = category;
         this.status = status;
@@ -66,11 +68,11 @@ public class Room implements Entity {
         this.capacity = capacity;
     }
 
-    public int getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -87,7 +89,7 @@ public class Room implements Entity {
     }
 
     @Override
-    public int getId() {
+    public Integer getId() {
         return number;
     }
 

@@ -1,9 +1,11 @@
 package hotel.view;
 
+import hotel.annotation.Component;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Optional;
-
+@Component
 public class Navigator {
     private final Deque<Menu> menuStack = new ArrayDeque<>();
     private boolean running = true;

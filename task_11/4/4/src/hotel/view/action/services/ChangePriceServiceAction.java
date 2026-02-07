@@ -1,16 +1,19 @@
 package hotel.view.action.services;
 
-import hotel.controller.AdminController;
+
+import hotel.service.ServicesService;
 import hotel.view.action.BaseAction;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
+import java.util.function.BiFunction;
 
 public class ChangePriceServiceAction extends BaseAction {
-    private final AdminController adminController;
+    private final ServicesService servicesService;
 
-    public ChangePriceServiceAction(AdminController adminController, Scanner scanner) {
+    public ChangePriceServiceAction(ServicesService servicesService, Scanner scanner) {
         super(scanner);
-        this.adminController = adminController;
+        this.servicesService = servicesService;
     }
 
     @Override
@@ -18,9 +21,9 @@ public class ChangePriceServiceAction extends BaseAction {
         try {
             System.out.println("\n=== ИЗМЕНЕНИЕ ЦЕНЫ УСЛУГИ ===");
             String name = readString("Введите название услуги: ");
-            int price = readInt("Введите новую цену: ", 0, 9999);
+            BigDecimal price = BigDecimal.valueOf(readInt("Введите новую цену: ", 0, 9999));
 
-            adminController.changePriceService(name, price);
+            servicesService.setPrice(name, price);
             System.out.println("Цена услуги успешно изменена!");
 
         } catch (Exception e) {

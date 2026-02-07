@@ -1,8 +1,7 @@
 package hotel.view.action.client;
 
-import hotel.controller.AdminController;
-import hotel.model.filter.ClientFilter;
 import hotel.model.users.client.Client;
+import hotel.service.ClientService;
 import hotel.view.action.BaseAction;
 
 import java.util.Collection;
@@ -11,36 +10,60 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class EvictClientOfHotel extends BaseAction {
-    AdminController adminController;
+    private final ClientService clientService;
 
-    public EvictClientOfHotel(AdminController admin, Scanner scanner) {
+    public EvictClientOfHotel(ClientService clientService, Scanner scanner) {
         super(scanner);
-        this.adminController = admin;
+        this.clientService = clientService;
     }
 
     @Override
     public void execute() {
         try {
-            System.out.println("\n=== ВЫСЕЛЕНИЕ КЛИЕНТА ===");
-            Collection<Client> clientCollection = adminController.getInfoAboutClientDatabase(ClientFilter.ID);
+            System.out.println("\n=== УДАЛЕНИЕ КЛИЕНТА ИЗ СИСТЕМЫ ===");
 
-            List<Integer> availableClientIds = clientCollection.stream()
-                    .map(Client::getId)
-                    .collect(Collectors.toList());
+            List<Client> clients = clientService.findAll();
 
-            int clientId = readInt("Введите ID клиента: ");
-
-            if (!availableClientIds.contains(clientId)) {
-                System.out.println("Клиент с таким ID не существует!");
+            if (clients.isEmpty()) {
+                System.out.println("В базе данных нет клиентов.");
                 return;
             }
 
-            adminController.evict(clientId);
-            System.out.println("Клиент выселен!");
+            System.out.println("\nСписок клиентов:");
+            clients.forEach(client ->
+                    System.out.println("ID: " + client.getId() +
+                            " | " + client.getSurname() + " " +
+                            client.getName() + " " + client.getPatronymic()));
+
+            int clientId = readInt("\nВведите ID клиента для выселения: ");
+
+            if (clientService.findById(clientId).isEmpty()) {
+                System.out.println("Клиент с ID " + clientId + " не найден.");
+                return;
+            }
+            Client clientToEvict = clientService.findById(clientId).get();
+
+            System.out.println("\nИнформация о клиенте:");
+            System.out.println("ФИО: " + clientToEvict.getSurname() + " " +
+                    clientToEvict.getName() + " " + clientToEvict.getPatronymic());
+            System.out.println("Дата рождения: " + clientToEvict.getDate_of_birth());
+            System.out.println("Дополнительно:: " + clientToEvict.getNotes());
+
+            String confirm = readString("\nВы уверены, что хотите выселить этого клиента? (yes/no): ");
+            if (!confirm.equalsIgnoreCase("yes")) {
+                System.out.println("Выселение отменено.");
+                return;
+            }
+            boolean isEvicted = clientService.delete(clientId);
+
+            if (isEvicted) {
+                System.out.println("\nКлиент успешно удален!");
+            } else {
+                System.out.println("\nНе удалось удалить клиента.");
+            }
 
         } catch (Exception e) {
-            System.out.println("Ошибка при выселении клиента: " + e.getMessage());
+            System.out.println("Ошибка при удалении клиента: " + e.getMessage());
         }
-
     }
 }

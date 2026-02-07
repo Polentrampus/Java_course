@@ -3,19 +3,23 @@ package hotel.model.service;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import hotel.service.export_import.Entity;
 
+import java.math.BigDecimal;
+import java.util.Objects;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Services implements Entity {
-    private int id;
+    private Integer id;
     private String name;
     private String description;
-    private double price;
+    private BigDecimal price;
 
-    public Services(int id, String name, String description, double price) {
+    public Services(Integer id, String name, String description, BigDecimal price) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
     }
+    public Services() {}
 
     public String getName() {
         return name;
@@ -33,16 +37,16 @@ public class Services implements Entity {
         this.description = description;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
     public boolean isFree() {
-        return price == 0.0;
+        return Objects.equals(price, BigDecimal.ZERO);
     }
 
     @Override
@@ -51,7 +55,7 @@ public class Services implements Entity {
     }
 
     @Override
-    public int getId() {
+    public Integer getId() {
         return this.id;
     }
 
