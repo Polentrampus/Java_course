@@ -33,7 +33,10 @@ public enum ErrorCode {
     DATABASE_TRANSACTION_ERROR("DB_003", "Ошибка транзакции"),
 
     CONFIG_ERROR("CFG_001", "Ошибка конфигурации"),
-    CONFIG_PROPERTY_MISSING("CFG_002", "Отсутствует свойство конфигурации");
+    CONFIG_PROPERTY_MISSING("CFG_002", "Отсутствует свойство конфигурации"),
+    
+    VALIDATION_ERROR("VALID_001", "Ошибка валидации"),
+    UNEXPECTED_ERROR("UNXP_001","Непредвиденная ошибка" );
 
     private final String code;
     private final String description;
