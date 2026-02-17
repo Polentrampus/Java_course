@@ -1,0 +1,116 @@
+2026-02-12 16:19:16.686 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase()
+2026-02-12 16:19:16.692 [main] INFO  hotel.service.ClientService - sortClient()
+2026-02-12 16:19:16.777 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-12 16:19:17.004 [main] ERROR hotel.util.HibernateUtil - Could not locate cfg.xml resource [hibernate.cfg.xml]
+org.hibernate.internal.util.config.ConfigurationException: Could not locate cfg.xml resource [hibernate.cfg.xml]
+	at org.hibernate.boot.cfgxml.internal.ConfigLoader.loadConfigXmlResource(ConfigLoader.java:53)
+	at org.hibernate.boot.registry.StandardServiceRegistryBuilder.configure(StandardServiceRegistryBuilder.java:254)
+	at org.hibernate.cfg.Configuration.configure(Configuration.java:260)
+	at org.hibernate.cfg.Configuration.configure(Configuration.java:246)
+	at hotel.util.HibernateUtil.<clinit>(HibernateUtil.java:29)
+	at hotel.dao.BaseDAO.getSession(BaseDAO.java:22)
+	at hotel.dao.HibernateAbstractDao.findAll(HibernateAbstractDao.java:53)
+	at hotel.repository.client.HibernateClientRepository.findAll(HibernateClientRepository.java:20)
+	at hotel.service.ClientService.sortClient(ClientService.java:71)
+	at hotel.service.ClientService.getInfoAboutClientDatabase(ClientService.java:59)
+	at hotel.view.action.client.GetInfoAboutClientDatabaseAction.execute(GetInfoAboutClientDatabaseAction.java:25)
+	at hotel.view.Navigator.executeMenuItemAction(Navigator.java:85)
+	at hotel.view.Navigator.lambda$handleMenuSelection$4(Navigator.java:71)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at hotel.view.Navigator.handleMenuSelection(Navigator.java:69)
+	at hotel.view.Navigator.navigate(Navigator.java:52)
+	at hotel.view.MenuController.run(MenuController.java:20)
+	at hotel.Main.runHotelApplication(Main.java:61)
+	at hotel.Main.main(Main.java:49)
+2026-02-12 16:39:56.555 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase()
+2026-02-12 16:39:56.556 [main] INFO  hotel.service.ClientService - sortClient()
+2026-02-12 16:39:56.608 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-12 16:39:56.771 [main] ERROR hotel.util.HibernateUtil - Could not locate cfg.xml resource [hibernate.cfg.xml]
+org.hibernate.internal.util.config.ConfigurationException: Could not locate cfg.xml resource [hibernate.cfg.xml]
+	at org.hibernate.boot.cfgxml.internal.ConfigLoader.loadConfigXmlResource(ConfigLoader.java:53)
+	at org.hibernate.boot.registry.StandardServiceRegistryBuilder.configure(StandardServiceRegistryBuilder.java:254)
+	at org.hibernate.cfg.Configuration.configure(Configuration.java:260)
+	at org.hibernate.cfg.Configuration.configure(Configuration.java:246)
+	at hotel.util.HibernateUtil.<clinit>(HibernateUtil.java:29)
+	at hotel.dao.BaseDAO.getSession(BaseDAO.java:22)
+	at hotel.dao.HibernateAbstractDao.findAll(HibernateAbstractDao.java:53)
+	at hotel.repository.client.HibernateClientRepository.findAll(HibernateClientRepository.java:20)
+	at hotel.service.ClientService.sortClient(ClientService.java:71)
+	at hotel.service.ClientService.getInfoAboutClientDatabase(ClientService.java:59)
+	at hotel.view.action.client.GetInfoAboutClientDatabaseAction.execute(GetInfoAboutClientDatabaseAction.java:25)
+	at hotel.view.Navigator.executeMenuItemAction(Navigator.java:85)
+	at hotel.view.Navigator.lambda$handleMenuSelection$4(Navigator.java:71)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at hotel.view.Navigator.handleMenuSelection(Navigator.java:69)
+	at hotel.view.Navigator.navigate(Navigator.java:52)
+	at hotel.view.MenuController.run(MenuController.java:20)
+	at hotel.Main.runHotelApplication(Main.java:61)
+	at hotel.Main.main(Main.java:49)
+2026-02-12 16:44:33.122 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase()
+2026-02-12 16:44:33.123 [main] INFO  hotel.service.ClientService - sortClient()
+2026-02-12 16:44:33.190 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-12 16:44:33.669 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-12 16:44:33.822 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-12 16:44:33.827 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-12 16:44:33.827 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-12 16:44:33.829 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-12 16:44:33.832 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-12 16:44:34.081 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-12 16:44:34.583 [main] INFO  o.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: hotel.model.users.employee.Employee (class must be instantiated by Interceptor)
+2026-02-12 16:44:34.730 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-12 16:44:34.786 [main] ERROR hotel.service.ClientService - java.lang.NullPointerException: Cannot invoke "java.lang.Class.getSimpleName()" because "this.entityClass" is null
+2026-02-12 16:44:34.803 [main] ERROR hotel.service.ClientService - java.lang.NullPointerException: Cannot invoke "java.lang.Class.getSimpleName()" because "this.entityClass" is null
+2026-02-12 16:48:44.960 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase()
+2026-02-12 16:48:44.961 [main] INFO  hotel.service.ClientService - sortClient()
+2026-02-12 16:48:45.008 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-12 16:48:45.394 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-12 16:48:45.524 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-12 16:48:45.527 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-12 16:48:45.527 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-12 16:48:45.527 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-12 16:48:45.530 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-12 16:48:45.707 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-12 16:48:46.112 [main] INFO  o.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: hotel.model.users.employee.Employee (class must be instantiated by Interceptor)
+2026-02-12 16:48:46.233 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-12 16:48:46.314 [main] ERROR o.h.hql.internal.ast.ErrorTracker - line 1:1: unexpected token: fromClient
+2026-02-12 16:48:46.314 [main] ERROR o.h.hql.internal.ast.ErrorTracker - line 1:1: unexpected token: fromClient
+line 1:1: unexpected token: fromClient
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:212)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:294)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:112)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:73)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:162)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:636)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:748)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:848)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:114)
+	at hotel.dao.HibernateAbstractDao.findAll(HibernateAbstractDao.java:57)
+	at hotel.repository.client.HibernateClientRepository.findAll(HibernateClientRepository.java:20)
+	at hotel.service.ClientService.sortClient(ClientService.java:71)
+	at hotel.service.ClientService.getInfoAboutClientDatabase(ClientService.java:59)
+	at hotel.view.action.client.GetInfoAboutClientDatabaseAction.execute(GetInfoAboutClientDatabaseAction.java:25)
+	at hotel.view.Navigator.executeMenuItemAction(Navigator.java:85)
+	at hotel.view.Navigator.lambda$handleMenuSelection$4(Navigator.java:71)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at hotel.view.Navigator.handleMenuSelection(Navigator.java:69)
+	at hotel.view.Navigator.navigate(Navigator.java:52)
+	at hotel.view.MenuController.run(MenuController.java:20)
+	at hotel.Main.runHotelApplication(Main.java:61)
+	at hotel.Main.main(Main.java:49)
+2026-02-12 16:48:46.319 [main] ERROR hotel.service.ClientService - java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token: fromClient near line 1, column 1 [fromClient]
+2026-02-12 16:48:46.319 [main] ERROR hotel.service.ClientService - java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token: fromClient near line 1, column 1 [fromClient]
+2026-02-12 16:52:42.254 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase()
+2026-02-12 16:52:42.256 [main] INFO  hotel.service.ClientService - sortClient()
+2026-02-12 16:52:42.331 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-12 16:52:42.816 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-12 16:52:42.977 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-12 16:52:42.982 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-12 16:52:42.984 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-12 16:52:42.984 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-12 16:52:42.986 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-12 16:52:43.325 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-12 16:52:43.955 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-12 16:52:44.110 [main] INFO  hotel.service.ClientService - sortClient(): sorted clients size: 5
+2026-02-12 16:52:44.110 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): clients size: 5

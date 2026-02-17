@@ -1,0 +1,1227 @@
+2026-02-17 10:53:21.997 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 10:53:22.549 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 10:53:22.698 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 10:53:22.703 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 10:53:22.703 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 10:53:22.704 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 10:53:22.708 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 10:53:23.018 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 10:53:23.125 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 10:53:33.029 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-17 10:53:33.399 [main] INFO  hotel.service.BookingService - getAllBookings(): bookings size: 4
+2026-02-17 10:53:38.430 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 10:53:38.445 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Anna, surname=Smirnova}, room=Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}, checkInDate=2026-02-25, checkOutDate=2026-03-01, totalPrice=30000.00}]
+2026-02-17 10:53:38.445 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 10:53:38.447 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 10:53:38.449 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 10:53:38.451 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 10:53:38.451 [main] INFO  hotel.service.RoomService - findById()
+2026-02-17 10:53:38.451 [main] INFO  hotel.service.RoomService - findById()
+2026-02-17 10:53:38.453 [main] INFO  hotel.service.RoomService - findById(): room: Optional[Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}]
+2026-02-17 10:53:38.453 [main] INFO  hotel.service.RoomService - findById()
+2026-02-17 10:53:38.453 [main] INFO  hotel.service.RoomService - findById()
+2026-02-17 10:53:38.455 [main] INFO  hotel.service.RoomService - findById(): room: Optional[Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}]
+2026-02-17 10:53:49.964 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 10:53:49.970 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Anna, surname=Smirnova}, room=Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}, checkInDate=2026-02-25, checkOutDate=2026-03-01, totalPrice=30000.00}]
+2026-02-17 10:53:49.970 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 10:53:49.972 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 10:53:49.972 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 10:53:49.975 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 10:53:49.975 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 10:53:49.980 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 10:53:57.781 [main] INFO  hotel.service.RoomService - findAll()
+2026-02-17 10:53:57.785 [main] INFO  hotel.service.RoomService - findAll(): rooms size: 9
+2026-02-17 10:54:25.694 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 10:54:26.190 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 10:54:26.323 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 10:54:26.326 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 10:54:26.328 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 10:54:26.328 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 10:54:26.329 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 10:54:26.511 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 10:54:26.599 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 10:54:34.069 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 10:54:34.121 [main] ERROR hotel.service.BookingService - Cannot invoke "hotel.repository.booking.HibernateBookingsRepository.setSession(org.hibernate.Session)" because "this.bookingsRepository" is null
+2026-02-17 10:54:49.924 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-17 10:54:49.925 [main] ERROR hotel.service.BookingService - Cannot invoke "hotel.repository.booking.HibernateBookingsRepository.setSession(org.hibernate.Session)" because "this.bookingsRepository" is null
+2026-02-17 10:55:17.799 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 10:55:18.242 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 10:55:18.371 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 10:55:18.374 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 10:55:18.374 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 10:55:18.374 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 10:55:18.377 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 10:55:18.573 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 10:55:18.673 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 10:55:23.124 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 10:55:23.238 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Anna, surname=Smirnova}, room=Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}, checkInDate=2026-02-25, checkOutDate=2026-03-01, totalPrice=30000.00}]
+2026-02-17 10:55:23.240 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 10:55:23.242 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 10:55:23.243 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 10:55:23.244 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 10:55:23.244 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 10:55:23.311 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 11:21:15.838 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 11:21:16.282 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 11:21:16.434 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 11:21:16.436 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 11:21:16.436 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 11:21:16.438 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 11:21:16.441 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 11:21:16.684 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 11:21:16.781 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 11:22:39.249 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 11:22:39.711 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 11:22:39.855 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 11:22:39.861 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 11:22:39.861 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 11:22:39.861 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 11:22:39.865 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 11:22:40.074 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 11:22:40.178 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 11:25:30.574 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 11:25:31.077 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 11:25:31.208 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 11:25:31.212 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 11:25:31.213 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 11:25:31.213 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 11:25:31.216 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 11:25:31.402 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 11:25:31.507 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 11:25:40.579 [main] INFO  hotel.service.RoomService - findAll()
+2026-02-17 11:25:40.712 [main] INFO  hotel.service.RoomService - findAll(): rooms size: 9
+2026-02-17 11:39:59.267 [main] INFO  hotel.service.BookingService - findByRoomId()
+2026-02-17 11:39:59.268 [main] ERROR hotel.service.BookingService - org.hibernate.HibernateException: Calling method 'createQuery' is not valid without an active transaction (Current status: NOT_ACTIVE)
+2026-02-17 11:40:42.607 [main] INFO  hotel.service.RoomService - setTotalPrice()
+2026-02-17 11:52:09.703 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 11:52:10.210 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 11:52:10.346 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 11:52:10.351 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 11:52:10.351 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 11:52:10.351 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 11:52:10.355 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 11:52:10.571 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 11:52:10.692 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 11:52:18.863 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 11:52:19.023 [main] INFO  hotel.service.ReadRoomService - findAll(): rooms size: 9
+2026-02-17 11:52:30.054 [main] INFO  hotel.service.ReadRoomService - setTotalPrice()
+2026-02-17 11:52:30.062 [main] INFO  hotel.service.ReadRoomService - setTotalPrice(): set price for room 102 to 1245
+2026-02-17 11:52:42.239 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 11:54:30.534 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 11:54:30.987 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 11:54:31.131 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 11:54:31.136 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 11:54:31.136 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 11:54:31.137 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 11:54:31.141 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 11:54:31.353 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 11:54:31.459 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 11:54:40.893 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 11:54:41.046 [main] INFO  hotel.service.ReadRoomService - findAll(): rooms size: 9
+2026-02-17 11:54:46.036 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 11:54:46.045 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=1245342, category=BUSINESS, status=AVAILABLE, type=STANDARD, capacity=15, price=6795.00}]
+2026-02-17 11:56:17.477 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 11:56:17.952 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 11:56:18.085 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 11:56:18.088 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 11:56:18.090 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 11:56:18.090 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 11:56:18.093 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 11:56:18.289 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 11:56:18.392 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 11:56:22.589 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 11:56:22.721 [main] INFO  hotel.service.ReadRoomService - findAll(): rooms size: 9
+2026-02-17 11:56:27.174 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 11:56:27.184 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=1245342, category=BUSINESS, status=AVAILABLE, type=STANDARD, capacity=15, price=6795.00}]
+2026-02-17 12:04:53.869 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:04:54.314 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:04:54.451 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:04:54.455 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:04:54.455 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:04:54.455 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:04:54.460 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:04:54.644 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:04:54.738 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:05:00.043 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 12:05:00.097 [main] ERROR hotel.service.ReadRoomService - Cannot invoke "hotel.repository.room.RoomRepository.setSession(org.hibernate.Session)" because "this.roomRepository" is null
+2026-02-17 12:10:27.239 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:10:27.695 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:10:27.837 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:10:27.843 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:10:27.843 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:10:27.843 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:10:27.849 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:10:28.032 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:10:28.119 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:10:33.002 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 12:10:33.053 [main] ERROR hotel.service.ReadRoomService - Cannot invoke "hotel.repository.room.RoomRepository.setSession(org.hibernate.Session)" because "this.roomRepository" is null
+2026-02-17 12:11:43.532 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:11:43.991 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:11:44.130 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:11:44.135 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:11:44.135 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:11:44.135 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:11:44.138 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:11:44.329 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:11:44.433 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:11:49.257 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 12:11:49.393 [main] INFO  hotel.service.ReadRoomService - findAll(): rooms size: 9
+2026-02-17 12:18:43.213 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:18:43.721 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:18:43.862 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:18:43.865 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:18:43.865 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:18:43.865 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:18:43.868 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:18:44.056 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:18:44.143 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:18:50.831 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 12:18:50.879 [main] ERROR hotel.service.ReadRoomService - Cannot invoke "hotel.repository.room.RoomRepository.setSession(org.hibernate.Session)" because "this.roomRepository" is null
+2026-02-17 12:35:35.699 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:35:36.141 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:35:36.272 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:35:36.276 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:35:36.276 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:35:36.276 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:35:36.278 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:35:36.478 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:35:36.566 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:35:41.267 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 12:35:41.443 [main] INFO  hotel.service.ReadRoomService - findAll(): rooms size: 9
+2026-02-17 12:35:53.004 [main] INFO  hotel.service.ReadRoomService - setTotalPrice()
+2026-02-17 12:35:53.017 [main] INFO  hotel.service.ReadRoomService - setTotalPrice(): set price for room 102 to 1245
+2026-02-17 12:36:01.212 [main] INFO  hotel.service.BookingService - findByRoomId()
+2026-02-17 12:36:01.212 [main] ERROR hotel.service.BookingService - Cannot invoke "hotel.repository.booking.HibernateBookingsRepository.findByRoomId(java.lang.Integer)" because "this.bookingsRepository" is null
+2026-02-17 12:37:26.199 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:37:26.714 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:37:26.857 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:37:26.862 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:37:26.862 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:37:26.862 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:37:26.865 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:37:27.061 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:37:27.152 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:37:32.884 [main] INFO  hotel.service.BookingService - findByRoomId()
+2026-02-17 12:37:32.929 [main] ERROR hotel.service.BookingService - org.hibernate.HibernateException: Calling method 'createQuery' is not valid without an active transaction (Current status: NOT_ACTIVE)
+2026-02-17 12:43:02.383 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:43:02.819 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:43:02.967 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:43:02.972 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:43:02.972 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:43:02.973 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:43:02.976 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:43:03.178 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:43:03.278 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:43:08.986 [main] INFO  hotel.service.BookingService - findByRoomId()
+2026-02-17 12:43:09.164 [main] INFO  hotel.service.BookingService - findByRoomId(): bookings size: 1
+2026-02-17 12:43:36.835 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 12:43:36.838 [main] INFO  hotel.service.ReadRoomService - findAll(): rooms size: 9
+2026-02-17 12:43:42.851 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 12:43:42.857 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=1245342, category=BUSINESS, status=AVAILABLE, type=STANDARD, capacity=15, price=6795.00}]
+2026-02-17 12:43:45.978 [main] INFO  hotel.service.ModifiableRoomService - delete()
+2026-02-17 12:43:46.010 [main] INFO  hotel.service.ModifiableRoomService - delete(): result: true
+2026-02-17 12:43:58.042 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 12:43:58.043 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=400, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=1000.00}]
+2026-02-17 12:44:10.274 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-17 12:44:10.292 [main] INFO  hotel.service.BookingService - getAllBookings(): bookings size: 4
+2026-02-17 12:44:15.962 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 12:44:15.966 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Anna, surname=Smirnova}, room=Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}, checkInDate=2026-02-25, checkOutDate=2026-03-01, totalPrice=30000.00}]
+2026-02-17 12:44:15.967 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:44:15.969 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 12:44:15.969 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:44:15.972 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 12:44:15.972 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 12:44:15.974 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}]
+2026-02-17 12:44:15.974 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 12:44:15.977 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}]
+2026-02-17 12:44:22.306 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 12:44:22.310 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Anna, surname=Smirnova}, room=Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}, checkInDate=2026-02-25, checkOutDate=2026-03-01, totalPrice=30000.00}]
+2026-02-17 12:44:22.311 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:44:22.312 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 12:44:22.312 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:44:22.314 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 12:44:22.315 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 12:44:22.319 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 12:44:28.129 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 12:44:28.132 [main] INFO  hotel.service.ReadRoomService - findAll(): rooms size: 8
+2026-02-17 12:44:35.146 [main] INFO  h.service.AdvancedBookingService - updateBooking()
+2026-02-17 12:44:35.152 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-17 12:44:35.153 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 40000.00
+2026-02-17 12:44:35.160 [main] ERROR h.service.AdvancedBookingService - org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [hotel.model.booking.Bookings#7]
+2026-02-17 12:48:35.959 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:48:36.408 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:48:36.542 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:48:36.546 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:48:36.546 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:48:36.546 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:48:36.550 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:48:36.742 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:48:36.848 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:48:50.128 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 12:48:50.242 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Anna, surname=Smirnova}, room=Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}, checkInDate=2026-02-25, checkOutDate=2026-03-01, totalPrice=30000.00}]
+2026-02-17 12:48:50.242 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:48:50.244 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 12:48:50.245 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:48:50.247 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-17 12:48:50.247 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 12:48:50.326 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 12:48:54.449 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 12:48:54.452 [main] INFO  hotel.service.ReadRoomService - findAll(): rooms size: 8
+2026-02-17 12:49:12.576 [main] INFO  h.service.AdvancedBookingService - updateBooking()
+2026-02-17 12:49:12.581 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-17 12:49:12.583 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 75000.00
+2026-02-17 12:49:12.602 [main] INFO  h.service.AdvancedBookingService - updateBooking(): booking: Bookings{id=7, client=Client{name=Полина, surname=Пшеницына}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-02-24, checkOutDate=2026-03-01, totalPrice=75000.00}
+2026-02-17 12:49:12.603 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:49:12.605 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Полина, surname=Пшеницына}]
+2026-02-17 12:49:25.129 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 12:49:25.133 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Полина, surname=Пшеницына}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-02-24, checkOutDate=2026-03-01, totalPrice=75000.00}]
+2026-02-17 12:49:25.134 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:49:25.135 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Полина, surname=Пшеницына}]
+2026-02-17 12:49:25.136 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:49:25.139 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Полина, surname=Пшеницына}]
+2026-02-17 12:49:25.140 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 12:49:25.141 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}]
+2026-02-17 12:49:25.141 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 12:49:25.143 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}]
+2026-02-17 12:49:46.704 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 12:49:46.709 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Полина, surname=Пшеницына}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-02-24, checkOutDate=2026-03-01, totalPrice=75000.00}]
+2026-02-17 12:49:46.709 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:49:46.710 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Полина, surname=Пшеницына}]
+2026-02-17 12:49:46.711 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 12:49:46.712 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}]
+2026-02-17 12:49:49.705 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-17 12:49:49.709 [main] ERROR h.service.AdvancedBookingService - java.lang.IllegalStateException: Session/EntityManager is closed
+2026-02-17 12:50:49.209 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:50:49.686 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:50:49.819 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:50:49.823 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:50:49.823 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:50:49.823 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:50:49.825 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:50:50.026 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:50:50.132 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:50:55.929 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 12:50:56.065 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Полина, surname=Пшеницына}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-02-24, checkOutDate=2026-03-01, totalPrice=75000.00}]
+2026-02-17 12:50:56.065 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:50:56.067 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Полина, surname=Пшеницына}]
+2026-02-17 12:50:56.068 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 12:50:56.070 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}]
+2026-02-17 12:50:58.305 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-17 12:50:58.309 [main] ERROR h.service.AdvancedBookingService - java.lang.IllegalStateException: Session/EntityManager is closed
+2026-02-17 12:52:06.247 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:52:06.707 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:52:06.838 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:52:06.844 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:52:06.844 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:52:06.844 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:52:06.847 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:52:07.048 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:52:07.137 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:52:14.975 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 12:52:15.079 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=7, client=Client{name=Полина, surname=Пшеницына}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-02-24, checkOutDate=2026-03-01, totalPrice=75000.00}]
+2026-02-17 12:52:15.080 [main] INFO  hotel.service.ClientService - findById()
+2026-02-17 12:52:15.082 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Полина, surname=Пшеницына}]
+2026-02-17 12:52:15.083 [main] INFO  hotel.service.ReadRoomService - findById()
+2026-02-17 12:52:15.085 [main] INFO  hotel.service.ReadRoomService - findById(): room: Optional[Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}]
+2026-02-17 12:52:16.993 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-17 12:52:16.997 [main] INFO  h.service.AdvancedBookingService - deleteBookingById(): booking: Bookings{id=7, client=Client{name=Полина, surname=Пшеницына}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-02-24, checkOutDate=2026-03-01, totalPrice=75000.00}
+2026-02-17 12:52:21.351 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 12:52:21.412 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 12:52:37.161 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate()
+2026-02-17 12:57:53.855 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 12:57:54.329 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 12:57:54.464 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 12:57:54.469 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 12:57:54.471 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 12:57:54.471 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 12:57:54.475 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 12:57:54.671 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 12:57:54.766 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 12:57:57.462 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 12:57:57.616 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 12:58:08.639 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate()
+2026-02-17 12:58:08.671 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): available rooms size: 5
+2026-02-17 12:58:14.431 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-17 12:58:14.435 [main] INFO  hotel.service.ServicesService - findAll(): services size: 6
+2026-02-17 12:58:16.535 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-17 12:58:16.535 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-17 12:58:16.561 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-17 12:58:16.561 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 50000.00
+2026-02-17 12:58:16.568 [main] INFO  hotel.service.BookingService - createBooking(): booking: Optional[Bookings{id=18, client=Client{name=Anna, surname=Smirnova}, room=Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}, checkInDate=2026-02-20, checkOutDate=2026-02-25, totalPrice=50000.00}]
+2026-02-17 12:58:22.486 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-17 12:58:22.486 [main] ERROR hotel.service.BookingService - Transaction already active
+2026-02-17 13:01:34.034 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 13:01:34.497 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 13:01:34.631 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 13:01:34.636 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 13:01:34.636 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 13:01:34.636 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 13:01:34.641 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 13:01:34.936 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 13:01:35.041 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 13:01:39.222 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-17 13:01:39.396 [main] INFO  hotel.service.BookingService - getAllBookings(): bookings size: 3
+2026-02-17 13:01:41.639 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 13:01:41.644 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 13:01:57.543 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate()
+2026-02-17 13:05:04.767 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 13:05:05.252 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 13:05:05.388 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 13:05:05.393 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 13:05:05.394 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 13:05:05.394 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 13:05:05.400 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 13:05:05.604 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 13:05:05.692 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 13:05:09.269 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 13:05:09.410 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 13:05:23.231 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate()
+2026-02-17 13:05:23.263 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): available rooms size: 8
+2026-02-17 13:05:30.110 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-17 13:05:30.113 [main] INFO  hotel.service.ServicesService - findAll(): services size: 6
+2026-02-17 13:05:32.501 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-17 13:05:32.501 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-17 13:05:32.521 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-17 13:05:32.522 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 110000.00
+2026-02-17 13:05:32.528 [main] INFO  hotel.service.BookingService - createBooking(): booking: Optional[Bookings{id=19, client=Client{name=Dmitry, surname=Kuznetsov}, room=Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}, checkInDate=2026-03-01, checkOutDate=2026-03-12, totalPrice=110000.00}]
+2026-02-17 13:05:43.965 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 13:05:43.965 [main] ERROR hotel.service.BookingService - Transaction already active
+2026-02-17 13:08:04.573 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 13:08:05.024 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 13:08:05.167 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 13:08:05.170 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 13:08:05.171 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-17 13:08:05.171 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 13:08:05.174 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 13:08:05.354 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 13:08:05.440 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 13:08:11.299 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-17 13:08:11.377 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional.empty
+2026-02-17 13:08:16.492 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-17 13:08:16.583 [main] INFO  hotel.service.BookingService - getAllBookings(): bookings size: 3
+2026-02-17 13:08:20.900 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 13:08:20.904 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 13:08:33.031 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate()
+2026-02-17 13:20:48.010 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 13:20:48.802 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 13:20:48.956 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 13:20:48.961 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 13:20:48.961 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 13:20:48.962 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 13:20:48.964 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 13:20:49.216 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 13:20:49.323 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 13:20:58.324 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 13:20:58.479 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 13:21:12.268 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate()
+2026-02-17 13:21:12.306 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): available rooms size: 8
+2026-02-17 13:21:16.083 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-17 13:21:16.086 [main] INFO  hotel.service.ServicesService - findAll(): services size: 6
+2026-02-17 13:21:17.907 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-17 13:21:17.907 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-17 13:21:17.922 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-17 13:21:17.922 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 200000.00
+2026-02-17 13:21:17.931 [main] INFO  hotel.service.BookingService - createBooking(): booking: Optional[Bookings{id=20, client=Client{name=Dmitry, surname=Kuznetsov}, room=Room{number=301, category=PREMIUM, status=AVAILABLE, type=SUITE, capacity=4, price=10000.00}, checkInDate=2026-03-01, checkOutDate=2026-03-21, totalPrice=200000.00}]
+2026-02-17 13:22:33.031 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 13:22:33.511 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 13:22:33.656 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 13:22:33.659 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 13:22:33.661 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 13:22:33.661 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 13:22:33.663 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 13:22:33.863 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 13:22:33.955 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 13:22:38.954 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-17 13:22:39.144 [main] INFO  hotel.service.BookingService - getAllBookings(): bookings size: 3
+2026-02-17 13:24:21.674 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 13:24:22.195 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 13:24:22.331 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 13:24:22.334 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 13:24:22.334 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 13:24:22.334 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 13:24:22.337 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 13:24:22.503 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 13:24:22.602 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 13:24:33.058 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 13:24:33.212 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-17 13:24:54.028 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate()
+2026-02-17 13:24:54.060 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): available rooms size: 8
+2026-02-17 13:24:57.937 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-17 13:24:57.941 [main] INFO  hotel.service.ServicesService - findAll(): services size: 6
+2026-02-17 13:25:08.058 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-17 13:25:08.059 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-17 13:25:08.075 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-17 13:25:08.076 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 6234.00
+2026-02-17 13:25:08.083 [main] INFO  hotel.service.BookingService - createBooking(): booking: Optional[Bookings{id=21, client=Client{name=Полина, surname=Пшеницына}, room=Room{number=400, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=1000.00}, checkInDate=2026-02-17, checkOutDate=2026-02-19, totalPrice=6234.00}]
+2026-02-17 13:25:17.307 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-17 13:25:17.330 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23502
+2026-02-17 13:25:17.330 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: значение NULL в столбце "service_price" отношения "booking_services" нарушает ограничение NOT NULL
+  Подробности: Ошибочная строка содержит (21, 3, null).
+2026-02-17 13:25:17.333 [main] INFO  o.h.e.j.b.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+2026-02-17 13:25:17.336 [main] ERROR hotel.service.BookingService - javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
+2026-02-17 13:32:16.167 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-17 13:32:16.169 [main] ERROR hotel.service.BookingService - org.hibernate.HibernateException: Calling method 'createQuery' is not valid without an active transaction (Current status: MARKED_ROLLBACK)
+2026-02-17 13:33:59.911 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase()
+2026-02-17 13:33:59.911 [main] ERROR hotel.service.ClientService - Transaction already active
+2026-02-17 21:21:46.221 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-17 21:21:54.735 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-17 21:24:39.569 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:24:40.164 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:24:40.319 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:24:40.324 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:24:40.324 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:24:40.324 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:24:40.328 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:24:40.556 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:24:40.683 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 21:24:55.702 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-17 21:24:55.745 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-17 21:24:55.917 [main] INFO  hotel.service.ClientService - sortClient(): sorted 5 clients
+2026-02-17 21:24:55.926 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 5 clients
+2026-02-17 21:25:02.917 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 21:25:02.920 [main] INFO  hotel.service.ClientService - findAll(): found 5 clients
+2026-02-17 21:25:35.039 [main] INFO  hotel.service.ClientService - save() for client: Client{name=Elena, surname=Suslova}
+2026-02-17 21:25:35.071 [main] INFO  hotel.service.ClientService - save(): client saved with id: 12
+2026-02-17 21:25:45.344 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 21:30:20.217 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:30:20.651 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:30:20.776 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:30:20.779 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:30:20.779 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:30:20.779 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:30:20.782 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:30:20.989 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:30:21.098 [main] WARN  org.hibernate.cfg.AnnotationBinder - HHH000457: Joined inheritance hierarchy [hotel.model.users.Person] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2026-02-17 21:30:41.679 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 21:35:09.141 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:35:09.610 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:35:09.743 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:35:09.749 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:35:09.749 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:35:09.749 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:35:09.752 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:35:09.948 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:35:27.993 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 21:36:27.171 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:36:27.619 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:36:27.754 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:36:27.759 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:36:27.759 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:36:27.759 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:36:27.762 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:36:27.942 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:36:32.236 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 21:36:32.350 [main] INFO  hotel.service.ReadRoomService - findAll(): found 8 rooms
+2026-02-17 21:41:12.744 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:41:13.206 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:41:13.363 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:41:13.367 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:41:13.367 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:41:13.368 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:41:13.372 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:41:13.663 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:41:19.273 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 21:41:19.382 [main] INFO  hotel.service.ReadRoomService - findAll(): found 8 rooms
+2026-02-17 21:41:31.662 [main] INFO  hotel.service.ReadRoomService - setTotalPrice() for room: 201, new price: 1234
+2026-02-17 21:41:31.675 [main] INFO  hotel.service.ReadRoomService - setTotalPrice(): set price for room 201 to 1234
+2026-02-17 21:41:31.712 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42804
+2026-02-17 21:41:31.712 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: столбец "category" имеет тип room_category_type, а выражение - character varying
+  Подсказка: Перепишите выражение или преобразуйте его тип.
+  Позиция: 40
+2026-02-17 21:41:31.716 [main] INFO  o.h.e.j.b.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+2026-02-17 21:43:46.158 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:43:46.688 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:43:46.835 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:43:46.840 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:43:46.840 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:43:46.841 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:43:46.846 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:43:47.052 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:43:56.391 [main] INFO  hotel.service.ReadRoomService - setTotalPrice() for room: 201, new price: 1234
+2026-02-17 21:43:56.451 [main] INFO  hotel.service.ReadRoomService - setTotalPrice(): set price for room 201 to 1234
+2026-02-17 21:43:56.471 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42804
+2026-02-17 21:43:56.471 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: столбец "category" имеет тип room_category_type, а выражение - character varying
+  Подсказка: Перепишите выражение или преобразуйте его тип.
+  Позиция: 40
+2026-02-17 21:43:56.471 [main] INFO  o.h.e.j.b.internal.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+2026-02-17 21:44:37.153 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:44:37.631 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:44:37.777 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:44:37.780 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:44:37.781 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:44:37.781 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:44:37.784 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:44:38.106 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:44:51.041 [main] INFO  hotel.service.ReadRoomService - setTotalPrice() for room: 201, new price: 1234
+2026-02-17 21:44:51.100 [main] INFO  hotel.service.ReadRoomService - setTotalPrice(): set price for room 201 to 1234
+2026-02-17 21:45:42.833 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:45:43.296 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:45:43.447 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:45:43.452 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:45:43.452 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:45:43.452 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:45:43.455 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:45:43.651 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:47:32.842 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:47:33.300 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:47:33.442 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:47:33.447 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:47:33.447 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:47:33.447 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:47:33.450 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:47:33.643 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:47:37.887 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-17 21:53:45.889 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:53:46.699 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:53:46.951 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:53:46.957 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:53:46.957 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:53:46.958 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:53:46.963 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:53:47.323 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:53:52.742 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-17 21:53:52.742 [main] DEBUG hotel.service.BookingService - Checking initialization in BookingService:
+2026-02-17 21:53:52.743 [main] DEBUG hotel.service.BookingService -   transactionManager = null
+2026-02-17 21:53:52.743 [main] DEBUG hotel.service.BookingService -   bookingsRepository = null
+2026-02-17 21:53:52.743 [main] DEBUG hotel.service.BookingService -   clientRepository = null
+2026-02-17 21:53:52.743 [main] DEBUG hotel.service.BookingService -   roomRepository = null
+2026-02-17 21:57:32.443 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:57:33.237 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:57:33.500 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:57:33.508 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:57:33.508 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:57:33.508 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:57:33.513 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:57:33.858 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:58:22.490 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:58:23.281 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:58:23.539 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:58:23.545 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:58:23.546 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:58:23.546 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:58:23.552 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:58:23.933 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 21:59:19.975 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 21:59:20.732 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 21:59:20.985 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 21:59:20.991 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 21:59:20.992 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 21:59:20.992 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 21:59:20.998 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 21:59:21.360 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:02:44.025 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:02:44.889 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:02:45.155 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:02:45.162 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:02:45.163 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:02:45.163 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:02:45.167 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:02:45.526 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:05:14.711 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:05:15.515 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:05:15.761 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:05:15.767 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:05:15.768 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:05:15.768 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:05:15.772 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:05:16.142 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:06:57.469 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:06:58.286 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:06:58.561 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:06:58.568 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:06:58.568 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:06:58.568 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:06:58.573 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:06:58.952 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:07:16.631 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:07:38.780 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:07:39.548 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:07:39.819 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:07:39.827 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:07:39.827 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:07:39.828 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:07:39.834 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:07:40.240 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:07:47.298 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:16:02.533 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:16:03.387 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:16:03.672 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:16:03.681 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:16:03.681 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:16:03.682 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:16:03.687 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:16:04.045 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:16:05.225 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:16:05.226 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@4099209b
+2026-02-17 22:16:05.226 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@2ffe243f
+2026-02-17 22:16:05.226 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@58ae402b
+2026-02-17 22:16:33.402 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:16:33.402 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:16:33.403 [main] INFO  hotel.service.ReadRoomService -   transactionManager = null
+2026-02-17 22:16:33.403 [main] INFO  hotel.service.ReadRoomService -   roomRepository = null
+2026-02-17 22:16:33.403 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = null
+2026-02-17 22:18:21.676 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:18:22.517 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:18:22.793 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:18:22.800 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:18:22.800 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:18:22.800 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:18:22.808 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:18:23.169 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:18:24.348 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:18:24.349 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@3b7c80c6
+2026-02-17 22:18:24.349 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@54336976
+2026-02-17 22:18:24.349 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@f25f48a
+2026-02-17 22:18:49.281 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:18:49.281 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:18:49.281 [main] INFO  hotel.service.ReadRoomService -   transactionManager = null
+2026-02-17 22:18:49.281 [main] INFO  hotel.service.ReadRoomService -   roomRepository = null
+2026-02-17 22:18:49.281 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = null
+2026-02-17 22:19:42.136 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:19:42.921 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:19:43.197 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:19:43.204 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:19:43.205 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:19:43.205 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:19:43.210 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:19:43.559 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:19:44.711 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 1890097328
+2026-02-17 22:19:44.712 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at hotel.service.ModifiableRoomService.<init>(ModifiableRoomService.java:18)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:39)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:69)
+	at hotel.AppConfig.verifyRoomServiceInjection(AppConfig.java:63)
+	at hotel.AppConfig.configureContainer(AppConfig.java:52)
+	at hotel.Main.main(Main.java:13)
+2026-02-17 22:19:44.717 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 146605930
+2026-02-17 22:19:44.717 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:39)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:27)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:66)
+	at hotel.AppConfig.verifyRoomServiceInjection(AppConfig.java:73)
+	at hotel.AppConfig.configureContainer(AppConfig.java:52)
+	at hotel.Main.main(Main.java:13)
+2026-02-17 22:19:44.720 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:19:44.720 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@e91b4f4
+2026-02-17 22:19:44.720 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@66522ead
+2026-02-17 22:19:44.720 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@5a484ce1
+2026-02-17 22:20:38.458 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:20:38.459 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:20:38.459 [main] INFO  hotel.service.ReadRoomService -   transactionManager = null
+2026-02-17 22:20:38.460 [main] INFO  hotel.service.ReadRoomService -   roomRepository = null
+2026-02-17 22:20:38.460 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = null
+2026-02-17 22:28:07.615 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:28:08.430 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:28:08.700 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:28:08.705 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:28:08.706 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:28:08.706 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:28:08.711 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:28:09.113 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:28:10.252 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 1514687713
+2026-02-17 22:28:10.252 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at hotel.service.ModifiableRoomService.<init>(ModifiableRoomService.java:18)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:38)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:66)
+	at hotel.AppConfig.verifyRoomServiceInjection(AppConfig.java:102)
+	at hotel.AppConfig.configureContainer(AppConfig.java:51)
+	at hotel.Main.main(Main.java:13)
+2026-02-17 22:28:10.254 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 1108730163
+2026-02-17 22:28:10.255 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:38)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:66)
+	at hotel.AppConfig.verifyRoomServiceInjection(AppConfig.java:112)
+	at hotel.AppConfig.configureContainer(AppConfig.java:51)
+	at hotel.Main.main(Main.java:13)
+2026-02-17 22:28:10.257 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:28:10.257 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@2091833
+2026-02-17 22:28:10.257 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@7bc58891
+2026-02-17 22:28:10.257 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@6411504a
+2026-02-17 22:28:32.734 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:28:32.734 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:28:32.734 [main] INFO  hotel.service.ReadRoomService -   transactionManager = null
+2026-02-17 22:28:32.735 [main] INFO  hotel.service.ReadRoomService -   roomRepository = null
+2026-02-17 22:28:32.735 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = null
+2026-02-17 22:30:43.095 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:30:43.915 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:30:44.175 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:30:44.182 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:30:44.183 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:30:44.183 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:30:44.190 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:30:44.758 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:30:45.956 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 1108730163
+2026-02-17 22:30:45.957 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at hotel.service.ModifiableRoomService.<init>(ModifiableRoomService.java:18)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:38)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:79)
+	at hotel.AppConfig.verifyRoomServiceInjection(AppConfig.java:102)
+	at hotel.AppConfig.configureContainer(AppConfig.java:51)
+	at hotel.Main.main(Main.java:13)
+2026-02-17 22:30:45.961 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 644399750
+2026-02-17 22:30:45.961 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:38)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:79)
+	at hotel.AppConfig.verifyRoomServiceInjection(AppConfig.java:112)
+	at hotel.AppConfig.configureContainer(AppConfig.java:51)
+	at hotel.Main.main(Main.java:13)
+2026-02-17 22:30:45.965 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:30:45.965 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@420cd102
+2026-02-17 22:30:45.965 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@2abc8034
+2026-02-17 22:30:45.965 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@474179fa
+2026-02-17 22:30:54.552 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:30:54.553 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:30:54.553 [main] INFO  hotel.service.ReadRoomService -   transactionManager = null
+2026-02-17 22:30:54.553 [main] INFO  hotel.service.ReadRoomService -   roomRepository = null
+2026-02-17 22:30:54.553 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = null
+2026-02-17 22:32:11.220 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:32:11.942 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:32:12.212 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:32:12.219 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:32:12.220 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:32:12.220 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:32:12.228 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:32:12.587 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:32:13.787 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 497877502
+2026-02-17 22:32:13.787 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at hotel.service.ModifiableRoomService.<init>(ModifiableRoomService.java:18)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:31)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:55)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.Main.main(Main.java:14)
+2026-02-17 22:32:19.281 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:32:19.281 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:32:19.281 [main] INFO  hotel.service.ReadRoomService -   transactionManager = null
+2026-02-17 22:32:19.281 [main] INFO  hotel.service.ReadRoomService -   roomRepository = null
+2026-02-17 22:32:19.281 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = null
+2026-02-17 22:35:49.261 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:35:50.000 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:35:50.257 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:35:50.263 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:35:50.264 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:35:50.265 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:35:50.271 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:35:50.619 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:35:51.787 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 1217347025
+2026-02-17 22:35:51.787 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:31)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:55)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.Main.main(Main.java:14)
+2026-02-17 22:36:02.560 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:36:02.560 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:36:02.560 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@1a464fa3
+2026-02-17 22:36:02.560 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@2abc8034
+2026-02-17 22:36:02.560 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@467b0f6e
+2026-02-17 22:36:02.784 [main] INFO  hotel.service.ReadRoomService - findAll(): found 8 rooms
+2026-02-17 22:38:43.959 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:38:44.744 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:38:45.020 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:38:45.027 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:38:45.027 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:38:45.027 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:38:45.034 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:38:45.385 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:38:46.492 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 2045706119
+2026-02-17 22:38:46.492 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:31)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:55)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.Main.main(Main.java:14)
+2026-02-17 22:39:11.018 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-17 22:39:11.019 [main] DEBUG hotel.service.BookingService - Checking initialization in BookingService:
+2026-02-17 22:39:11.019 [main] DEBUG hotel.service.BookingService -   transactionManager = hotel.service.TransactionManager@3b7c80c6
+2026-02-17 22:39:11.019 [main] DEBUG hotel.service.BookingService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@5ccb85d6
+2026-02-17 22:39:11.019 [main] DEBUG hotel.service.BookingService -   clientRepository = hotel.repository.client.HibernateClientRepository@d88f893
+2026-02-17 22:39:11.019 [main] DEBUG hotel.service.BookingService -   roomRepository = hotel.repository.room.HibernateRoomRepository@259b85d6
+2026-02-17 22:39:11.303 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-17 22:39:17.035 [main] INFO  hotel.service.BookingService - getBookingById() for id: 5
+2026-02-17 22:39:17.050 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=5, client=Client{name=Anna, surname=Smirnova}, room=Room{number=201, category=BUSINESS, status=AVAILABLE, type=DELUXE, capacity=2, price=1234.00}, checkInDate=2026-01-26, checkOutDate=2026-02-02, totalPrice=30000.00}]
+2026-02-17 22:39:17.060 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-17 22:39:17.063 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 22:39:17.065 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-17 22:39:17.068 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 22:39:17.069 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 22:39:17.077 [main] INFO  hotel.service.ClientService - findAll(): found 6 clients
+2026-02-17 22:39:20.349 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 22:39:20.349 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 22:39:20.350 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@3b7c80c6
+2026-02-17 22:39:20.350 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@43ac0a68
+2026-02-17 22:39:20.350 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@1dad01fe
+2026-02-17 22:39:20.354 [main] INFO  hotel.service.ReadRoomService - findAll(): found 8 rooms
+2026-02-17 22:39:28.393 [main] INFO  h.service.AdvancedBookingService - updateBooking()
+2026-02-17 22:39:28.432 [main] INFO  hotel.service.ClientService - findById() for id: 12
+2026-02-17 22:39:28.436 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 22:39:42.197 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-17 22:39:42.198 [main] DEBUG hotel.service.BookingService - Checking initialization in BookingService:
+2026-02-17 22:39:42.198 [main] DEBUG hotel.service.BookingService -   transactionManager = hotel.service.TransactionManager@3b7c80c6
+2026-02-17 22:39:42.198 [main] DEBUG hotel.service.BookingService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@5ccb85d6
+2026-02-17 22:39:42.198 [main] DEBUG hotel.service.BookingService -   clientRepository = hotel.repository.client.HibernateClientRepository@d88f893
+2026-02-17 22:39:42.198 [main] DEBUG hotel.service.BookingService -   roomRepository = hotel.repository.room.HibernateRoomRepository@259b85d6
+2026-02-17 22:39:42.218 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-17 22:39:45.422 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 22:39:45.427 [main] INFO  hotel.service.ClientService - findAll(): found 6 clients
+2026-02-17 22:39:59.822 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate() for date: 2026-03-12
+2026-02-17 22:39:59.840 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): found 8 available rooms for date 2026-03-12
+2026-02-17 22:40:02.921 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-17 22:40:02.926 [main] INFO  hotel.service.ServicesService - findAll(): found 6 services
+2026-02-17 22:40:06.789 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-17 22:40:06.790 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-17 22:40:06.848 [main] INFO  hotel.service.BookingService - Booking created with ID: 22
+2026-02-17 22:40:06.849 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-17 22:40:06.850 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 11500.00
+2026-02-17 22:40:06.850 [main] INFO  hotel.service.BookingService - Check calculated for booking 22: 11500.00
+2026-02-17 22:40:06.850 [main] INFO  hotel.service.BookingService - createBooking(): booking created successfully
+2026-02-17 22:40:12.771 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-17 22:40:12.772 [main] DEBUG hotel.service.BookingService - Checking initialization in BookingService:
+2026-02-17 22:40:12.772 [main] DEBUG hotel.service.BookingService -   transactionManager = hotel.service.TransactionManager@3b7c80c6
+2026-02-17 22:40:12.772 [main] DEBUG hotel.service.BookingService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@5ccb85d6
+2026-02-17 22:40:12.772 [main] DEBUG hotel.service.BookingService -   clientRepository = hotel.repository.client.HibernateClientRepository@d88f893
+2026-02-17 22:40:12.772 [main] DEBUG hotel.service.BookingService -   roomRepository = hotel.repository.room.HibernateRoomRepository@259b85d6
+2026-02-17 22:40:12.791 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-17 22:40:22.183 [main] INFO  hotel.service.BookingService - getBookingById() for id: 22
+2026-02-17 22:40:22.188 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=22, client=Client{name=Dmitry, surname=Kuznetsov}, room=Room{number=101, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=2500.00}, checkInDate=2026-03-12, checkOutDate=2026-03-16, totalPrice=11500.00}]
+2026-02-17 22:40:22.191 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-17 22:40:22.192 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 22:40:22.193 [main] INFO  hotel.service.ReadRoomService - findById() for id: 101
+2026-02-17 22:40:22.196 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-17 22:40:25.141 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-17 22:42:11.481 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:42:12.251 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:42:12.512 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:42:12.519 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:42:12.520 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:42:12.520 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:42:12.526 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:42:12.890 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:42:14.109 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 1217347025
+2026-02-17 22:42:14.111 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:31)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:55)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.Main.main(Main.java:14)
+2026-02-17 22:42:18.161 [main] INFO  hotel.service.BookingService - getBookingById() for id: 22
+2026-02-17 22:42:18.321 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=22, client=Client{name=Dmitry, surname=Kuznetsov}, room=Room{number=101, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=2500.00}, checkInDate=2026-03-12, checkOutDate=2026-03-16, totalPrice=11500.00}]
+2026-02-17 22:42:18.369 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-17 22:42:18.374 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 22:42:18.376 [main] INFO  hotel.service.ReadRoomService - findById() for id: 101
+2026-02-17 22:42:18.378 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-17 22:42:21.557 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-17 22:44:38.717 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 22:44:39.500 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 22:44:39.754 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 22:44:39.761 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 22:44:39.761 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 22:44:39.761 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 22:44:39.767 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 22:44:40.126 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 22:44:41.321 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 1556841942
+2026-02-17 22:44:41.321 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:31)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:55)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.Main.main(Main.java:14)
+2026-02-17 22:44:44.885 [main] INFO  hotel.service.BookingService - getBookingById() for id: 22
+2026-02-17 22:44:45.035 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=22, client=Client{name=Dmitry, surname=Kuznetsov}, room=Room{number=101, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=2500.00}, checkInDate=2026-03-12, checkOutDate=2026-03-16, totalPrice=11500.00}]
+2026-02-17 22:44:45.087 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-17 22:44:45.090 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 22:44:45.091 [main] INFO  hotel.service.ReadRoomService - findById() for id: 101
+2026-02-17 22:44:45.095 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-17 22:44:48.371 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-17 23:21:03.355 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 23:21:03.863 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 23:21:04.002 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 23:21:04.006 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 23:21:04.007 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 23:21:04.007 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 23:21:04.010 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 23:21:04.253 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 23:21:05.093 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 1217347025
+2026-02-17 23:21:05.093 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:31)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:55)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.Main.main(Main.java:14)
+2026-02-17 23:21:13.739 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 23:21:13.852 [main] INFO  hotel.service.ClientService - findAll(): found 6 clients
+2026-02-17 23:21:32.068 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate() for date: 2026-04-12
+2026-02-17 23:21:32.110 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): found 8 available rooms for date 2026-04-12
+2026-02-17 23:21:35.225 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-17 23:21:35.230 [main] INFO  hotel.service.ServicesService - findAll(): found 6 services
+2026-02-17 23:21:40.911 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-17 23:21:40.911 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-17 23:21:40.949 [main] INFO  hotel.service.BookingService - Booking created with ID: 23
+2026-02-17 23:21:40.949 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-17 23:21:40.949 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 6502.00
+2026-02-17 23:21:40.949 [main] INFO  hotel.service.BookingService - Check calculated for booking 23: 6502.00
+2026-02-17 23:21:40.950 [main] INFO  hotel.service.BookingService - createBooking(): booking created successfully
+2026-02-17 23:21:47.706 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-17 23:21:47.706 [main] DEBUG hotel.service.BookingService - Checking initialization in BookingService:
+2026-02-17 23:21:47.706 [main] DEBUG hotel.service.BookingService -   transactionManager = hotel.service.TransactionManager@1a464fa3
+2026-02-17 23:21:47.706 [main] DEBUG hotel.service.BookingService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@ca8ef3a
+2026-02-17 23:21:47.706 [main] DEBUG hotel.service.BookingService -   clientRepository = hotel.repository.client.HibernateClientRepository@17043b04
+2026-02-17 23:21:47.706 [main] DEBUG hotel.service.BookingService -   roomRepository = hotel.repository.room.HibernateRoomRepository@511f5b1d
+2026-02-17 23:21:47.721 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-17 23:21:53.569 [main] INFO  hotel.service.BookingService - getBookingById() for id: 23
+2026-02-17 23:21:53.574 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=23, client=Client{name=Полина, surname=Пшеницына}, room=Room{number=201, category=BUSINESS, status=AVAILABLE, type=DELUXE, capacity=2, price=1234.00}, checkInDate=2026-04-12, checkOutDate=2026-04-15, totalPrice=6502.00}]
+2026-02-17 23:21:53.575 [main] INFO  hotel.service.ClientService - findById() for id: 6
+2026-02-17 23:21:53.576 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 23:21:53.577 [main] INFO  hotel.service.ReadRoomService - findById() for id: 201
+2026-02-17 23:21:53.578 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-17 23:21:56.487 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-17 23:22:08.765 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-17 23:22:08.767 [main] INFO  hotel.service.ServicesService - findAll(): found 6 services
+2026-02-17 23:22:20.516 [main] INFO  hotel.service.ServicesService - setPrice() for service: Мур, new price: 43
+2026-02-17 23:22:20.521 [main] INFO  hotel.service.ServicesService - setPrice(): set price for service Мур to 43
+2026-02-17 23:22:31.608 [main] INFO  hotel.service.ServicesService - addService() for service: кот
+2026-02-17 23:22:31.611 [main] INFO  hotel.service.ServicesService - addService(): added service: кот
+2026-02-17 23:22:34.646 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-17 23:22:34.648 [main] INFO  hotel.service.ServicesService - findAll(): found 7 services
+2026-02-17 23:22:44.959 [main] INFO  hotel.service.EmployeeService - findAll()
+2026-02-17 23:22:44.971 [main] INFO  hotel.service.EmployeeService - findAll(): found 3 employees
+2026-02-17 23:22:50.164 [main] INFO  hotel.service.EmployeeService - requestCleaning() for room: 101
+2026-02-17 23:22:51.187 [main] INFO  hotel.service.EmployeeService - requestCleaning(): requested cleaning for room: 101
+2026-02-17 23:22:56.252 [main] INFO  hotel.service.EmployeeService - requestRepair() for room: 101
+2026-02-17 23:22:57.757 [main] INFO  hotel.service.EmployeeService - requestRepair(): requested repair for room: 101
+2026-02-17 23:23:07.112 [main] INFO  hotel.service.BookingService - findByRoomId() for room: 101
+2026-02-17 23:23:07.127 [main] INFO  hotel.service.BookingService - findByRoomId(): found 2 bookings
+2026-02-17 23:23:21.174 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 23:23:21.174 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 23:23:21.174 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@1a464fa3
+2026-02-17 23:23:21.174 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@2abc8034
+2026-02-17 23:23:21.175 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@467b0f6e
+2026-02-17 23:23:21.176 [main] INFO  hotel.service.ReadRoomService - findAll(): found 8 rooms
+2026-02-17 23:23:36.068 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 23:23:36.068 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 23:23:36.068 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@1a464fa3
+2026-02-17 23:23:36.068 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@2abc8034
+2026-02-17 23:23:36.068 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@467b0f6e
+2026-02-17 23:23:36.069 [main] INFO  hotel.service.ReadRoomService - findAll(): found 8 rooms
+2026-02-17 23:23:46.043 [main] INFO  hotel.service.ReadRoomService - listAvailableRooms() with filter: ID
+2026-02-17 23:23:46.045 [main] INFO  hotel.service.ReadRoomService - listAvailableRooms(): found 8 available rooms
+2026-02-17 23:24:06.480 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate() for date: 2026-03-01
+2026-02-17 23:24:06.491 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): found 8 available rooms for date 2026-03-01
+2026-02-17 23:24:29.435 [main] INFO  hotel.service.ReadRoomService - setTotalPrice() for room: 400, new price: 32
+2026-02-17 23:24:29.438 [main] INFO  hotel.service.ReadRoomService - setTotalPrice(): set price for room 400 to 32
+2026-02-17 23:24:52.117 [main] INFO  hotel.service.ModifiableRoomService - save() for room: Room{number=543, category=BUSINESS, status=AVAILABLE, type=STANDARD, capacity=5, price=999}
+2026-02-17 23:24:52.118 [main] INFO  hotel.service.ModifiableRoomService - save(): saved room with id: 543
+2026-02-17 23:25:29.802 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 23:25:29.802 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 23:25:29.802 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@1a464fa3
+2026-02-17 23:25:29.802 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@2abc8034
+2026-02-17 23:25:29.802 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@467b0f6e
+2026-02-17 23:25:29.804 [main] INFO  hotel.service.ReadRoomService - findAll(): found 9 rooms
+2026-02-17 23:26:31.089 [main] INFO  hotel.service.ReadRoomService - findById() for id: 543
+2026-02-17 23:26:31.091 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-17 23:26:33.751 [main] INFO  hotel.service.ModifiableRoomService - delete() for room: Room{number=543, category=BUSINESS, status=AVAILABLE, type=STANDARD, capacity=5, price=999.00}
+2026-02-17 23:26:33.755 [main] INFO  hotel.service.ModifiableRoomService - delete()
+2026-02-17 23:26:38.341 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-17 23:26:38.343 [main] INFO  hotel.service.ReadRoomService - Checking injection in ReadRoomService:
+2026-02-17 23:26:38.343 [main] INFO  hotel.service.ReadRoomService -   transactionManager = hotel.service.TransactionManager@1a464fa3
+2026-02-17 23:26:38.343 [main] INFO  hotel.service.ReadRoomService -   roomRepository = hotel.repository.room.HibernateRoomRepository@2abc8034
+2026-02-17 23:26:38.343 [main] INFO  hotel.service.ReadRoomService -   bookingsRepository = hotel.repository.booking.HibernateBookingsRepository@467b0f6e
+2026-02-17 23:26:38.344 [main] INFO  hotel.service.ReadRoomService - findAll(): found 8 rooms
+2026-02-17 23:26:46.216 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-17 23:26:46.216 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-17 23:26:46.270 [main] INFO  hotel.service.ClientService - sortClient(): sorted 6 clients
+2026-02-17 23:26:46.271 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 6 clients
+2026-02-17 23:26:52.201 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 23:26:52.204 [main] INFO  hotel.service.ClientService - findAll(): found 6 clients
+2026-02-17 23:26:54.886 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-17 23:26:54.887 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 23:26:54.887 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-17 23:26:54.890 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 23:27:02.880 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-17 23:27:02.882 [main] INFO  hotel.service.ClientService - findAll(): found 6 clients
+2026-02-17 23:27:07.641 [main] INFO  hotel.service.ClientService - findById() for id: 9
+2026-02-17 23:27:07.644 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 23:27:07.645 [main] INFO  hotel.service.ClientService - findById() for id: 9
+2026-02-17 23:27:07.645 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-17 23:27:10.522 [main] INFO  hotel.service.ClientService - delete() for id: 9
+2026-02-17 23:27:10.523 [main] INFO  hotel.service.ClientService - delete(): result: true
+2026-02-17 23:29:01.204 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 23:29:01.706 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 23:29:01.843 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 23:29:01.847 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 23:29:01.847 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 23:29:01.847 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 23:29:01.852 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 23:29:02.052 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 23:29:02.652 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 2045706119
+2026-02-17 23:29:02.652 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:31)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:55)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.Main.main(Main.java:14)
+2026-02-17 23:29:07.466 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-17 23:29:07.501 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-17 23:29:07.637 [main] INFO  hotel.service.ClientService - sortClient(): sorted 5 clients
+2026-02-17 23:29:07.647 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 5 clients
+2026-02-17 23:29:57.552 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-17 23:29:58.042 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-17 23:29:58.187 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-17 23:29:58.190 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-17 23:29:58.191 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-17 23:29:58.191 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-17 23:29:58.195 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-17 23:29:58.391 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-17 23:29:59.201 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 2045706119
+2026-02-17 23:29:59.203 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:31)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:55)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.Main.main(Main.java:14)
+2026-02-17 23:30:02.527 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-17 23:30:02.567 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-17 23:30:02.689 [main] INFO  hotel.service.ClientService - sortClient(): sorted 5 clients
+2026-02-17 23:30:02.698 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 5 clients
