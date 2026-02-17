@@ -1,0 +1,48 @@
+2026-02-10 13:18:21.847 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-10 13:18:22.093 [main] INFO  hotel.service.BookingService - getAllBookings(): bookings size: 5
+2026-02-10 14:25:18.047 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-10 14:25:18.316 [main] INFO  hotel.service.ClientService - findAll(): clients size: 4
+2026-02-10 14:25:43.037 [main] INFO  hotel.service.ClientService - save()
+2026-02-10 14:25:43.210 [main] INFO  hotel.service.ClientService - save(): result: true
+2026-02-10 14:26:07.623 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-10 14:26:07.663 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-10 14:26:10.798 [main] INFO  hotel.service.ClientService - findById()
+2026-02-10 14:26:10.839 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Владимир, surname=Сусликов}]
+2026-02-10 14:26:10.839 [main] INFO  hotel.service.ClientService - findById()
+2026-02-10 14:26:10.877 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Владимир, surname=Сусликов}]
+2026-02-10 14:26:20.928 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase()
+2026-02-10 14:26:20.928 [main] INFO  hotel.service.ClientService - sortClient()
+2026-02-10 14:26:20.967 [main] INFO  hotel.service.ClientService - sortClient(): sorted clients size: 5
+2026-02-10 14:26:20.967 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): clients size: 5
+2026-02-10 14:27:43.417 [main] INFO  hotel.service.RoomService - save()
+2026-02-10 14:27:43.650 [main] INFO  hotel.service.RoomService - save(): result: true
+2026-02-10 14:28:12.806 [main] INFO  hotel.service.RoomService - findAll()
+2026-02-10 14:28:12.855 [main] INFO  hotel.service.RoomService - findAll(): rooms size: 9
+2026-02-10 18:38:22.826 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-10 18:38:23.189 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=6, client=5, room=202, checkInDate=2026-02-15, checkOutDate=2026-02-19, totalPrice=20000.00}]
+2026-02-10 18:38:23.190 [main] INFO  hotel.service.ClientService - findById()
+2026-02-10 18:38:23.256 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Dmitry, surname=Kuznetsov}]
+2026-02-10 18:38:23.256 [main] INFO  hotel.service.RoomService - findById()
+2026-02-10 18:38:23.310 [main] INFO  hotel.service.RoomService - findById(): room: Optional[Room{number=202, category=BUSINESS, status=AVAILABLE, type=DELUXE, capacity=2, price=5000.00}]
+2026-02-10 18:38:34.159 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-10 18:38:34.253 [main] INFO  h.service.AdvancedBookingService - deleteBookingById(): booking: Bookings{id=6, client=5, room=202, checkInDate=2026-02-15, checkOutDate=2026-02-19, totalPrice=20000.00}
+2026-02-10 18:41:13.783 [main] INFO  hotel.service.RoomService - setTotalPrice()
+2026-02-10 18:41:14.018 [main] INFO  hotel.service.RoomService - setTotalPrice(): set price for room 101 to 1234
+2026-02-10 18:45:13.940 [main] INFO  hotel.service.RoomService - setTotalPrice()
+2026-02-10 18:45:14.232 [main] INFO  hotel.service.RoomService - setTotalPrice(): set price for room 101 to 1234
+2026-02-10 18:54:42.448 [main] INFO  hotel.service.RoomService - setTotalPrice()
+2026-02-10 18:54:42.684 [main] INFO  hotel.service.RoomService - setTotalPrice(): set price for room 101 to 1234
+2026-02-10 18:55:03.927 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-10 18:55:03.982 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-10 18:55:36.980 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-10 18:55:37.349 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=4, client=5, room=102, checkInDate=2026-02-05, checkOutDate=2026-02-08, totalPrice=7500.00}]
+2026-02-10 18:55:37.350 [main] INFO  hotel.service.ClientService - findById()
+2026-02-10 18:55:37.401 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Dmitry, surname=Kuznetsov}]
+2026-02-10 18:55:37.401 [main] INFO  hotel.service.ClientService - findById()
+2026-02-10 18:55:37.457 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Dmitry, surname=Kuznetsov}]
+2026-02-10 18:55:37.458 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-10 18:55:37.500 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-10 18:55:45.573 [main] INFO  hotel.service.RoomService - findAll()
+2026-02-10 18:55:45.613 [main] INFO  hotel.service.RoomService - findAll(): rooms size: 9
+2026-02-10 19:04:32.370 [main] INFO  hotel.service.RoomService - setTotalPrice()
+2026-02-10 19:04:32.603 [main] INFO  hotel.service.RoomService - setTotalPrice(): set price for room 101 to 12343
