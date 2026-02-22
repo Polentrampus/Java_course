@@ -7,21 +7,39 @@
 3) выполнить скрипт: psql -h localhost -U postgres -d hotelManager -f "C:\my_program\Java_course\task_11\4\hotel.sql"
 
 Система имеет архитектуру:
-UI->service->repository->(DAO, если репозиторий jdbc)->database
+UI->service->repository->database
 
-hotel-project/
+hotel-app/
 ├── src/
 │   └── main/
 │       └── java/
 │           └── hotel/
-│               ├── annotation/   # Аннотации
-│               ├── config/       # Конфигурация
-│               ├── dao/          # Data Access Objects
-│               ├── dto/          # Data Transfer Objects
-│               ├── di/           # Dependency Injection
-│               ├── exception/    # Исключения
-│               ├── model/        # Доменные модели
-│               ├── repository/   # Репозитории
-│               ├── service/      # Сервисы
 │               ├── util/         # Утилиты
 │               └── view/         # Представление
+hotel-business/
+├── src/
+│   └── main/
+│       └── java/
+│           └── hotel/
+│               ├── config/       # Конфигурация
+│               ├── dto/          # Data Transfer Objects
+│               ├── repository/   # Репозитории
+│               ├── service/      # Сервисы
+│   └── test/
+│       └── java/
+│           └── repository/       # Интеграционные тесты для репозиториев
+hotel-hibernate/
+├── src/
+│   └── main/
+│       └── java/
+│           └── hotel/
+│               ├── HibernateUtil/            # Утилитный класс для подключеня к БД
+│               ├── SessionContext/           # Контекст сессий
+│               ├── TransactionManager/       # Обертка для проведения транзакций
+hotel-core/
+├── src/
+│   └── main/
+│       └── java/
+│           └── hotel/
+│               ├── exception/    # Исключения
+│               ├── model/        # Доменные модели
