@@ -1,0 +1,324 @@
+2026-02-24 12:11:45.307 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-24 12:11:45.741 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-24 12:11:45.847 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-24 12:11:45.852 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-24 12:11:45.853 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-24 12:11:45.853 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-24 12:11:45.855 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-24 12:11:46.084 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-24 12:11:54.148 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-24 12:11:54.343 [main] INFO  hotel.service.ReadRoomService - findAll(): found 8 rooms
+2026-02-24 13:51:01.277 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-24 13:51:01.501 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-24 13:51:01.641 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-24 13:51:01.645 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-24 13:51:01.646 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-24 13:51:01.646 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-24 13:51:01.649 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-24 13:51:01.850 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-24 13:51:02.481 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5f726750] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 13:51:02.606 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-24 13:51:02.607 [main] ERROR hotel.database.HibernateUtil - Ошибка при создании SessionFactory: Schema-validation: wrong column type encountered in column [salary] in table [employees]; found [numeric (Types#NUMERIC)], but expecting [float8 (Types#DOUBLE)]
+org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [salary] in table [employees]; found [numeric (Types#NUMERIC)], but expecting [float8 (Types#DOUBLE)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:167)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:151)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:97)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:76)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:204)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at hotel.database.HibernateUtil.<clinit>(HibernateUtil.java:46)
+	at hotel.database.TransactionManager.<init>(TransactionManager.java:17)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:194)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:92)
+	at hotel.Main.main(Main.java:13)
+2026-02-24 13:51:02.613 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in file [C:\my_program\Java_course\task_15\2\hotel-hibernate\target\classes\hotel\TransactionManager.class]: Failed to instantiate [hotel.database.TransactionManager]: Constructor threw exception
+2026-02-24 13:53:01.504 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-24 13:53:01.682 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-24 13:53:01.810 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-24 13:53:01.816 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-24 13:53:01.816 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-24 13:53:01.816 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-24 13:53:01.818 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-24 13:53:01.981 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-24 13:53:02.582 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7455dacb] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-24 13:53:02.626 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-24 13:53:09.355 [main] INFO  hotel.service.EmployeeService - findAll()
+2026-02-24 13:53:09.504 [main] INFO  hotel.service.EmployeeService - findAll(): found 3 employees
+2026-02-24 13:53:23.371 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-24 13:53:23.375 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-24 13:53:23.416 [main] INFO  hotel.service.ClientService - sortClient(): sorted 5 clients
+2026-02-24 13:53:23.418 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 5 clients
+2026-02-24 14:12:14.677 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-24 14:12:14.818 [main] ERROR hotel.database.HibernateUtil - Ошибка при создании SessionFactory: null
+java.lang.NullPointerException
+	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
+	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
+	at java.base/java.util.Properties.put(Properties.java:1301)
+	at hotel.database.HibernateUtil.<clinit>(HibernateUtil.java:48)
+	at hotel.database.TransactionManager.<init>(TransactionManager.java:17)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:194)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:92)
+	at hotel.Main.main(Main.java:13)
+2026-02-24 14:12:14.823 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in file [C:\my_program\Java_course\task_15\2\hotel-hibernate\target\classes\hotel\TransactionManager.class]: Failed to instantiate [hotel.database.TransactionManager]: Constructor threw exception
+2026-02-24 14:19:40.084 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in file [C:\my_program\Java_course\task_15\2\hotel-hibernate\target\classes\hotel\TransactionManager.class]: Failed to instantiate [hotel.database.TransactionManager]: Constructor threw exception
+2026-02-24 14:22:40.455 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:22:40.537 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:22:40.538 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:22:41.516 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: ERROR: The file 'classpath:db/changelog/db.changelog-master.xml' was not found.
+The file property cannot be configured with a fully qualified path, but must be a relative path on the property,
+and any local or remote base of the path set on the search path.
+2026-02-24 14:23:59.237 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:23:59.282 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:23:59.282 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:24:00.223 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: ERROR: The file 'classpath:db/changelog/db.changelog-master.xml' was not found.
+The file property cannot be configured with a fully qualified path, but must be a relative path on the property,
+and any local or remote base of the path set on the search path.
+2026-02-24 14:25:43.110 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:25:43.157 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:25:43.157 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:25:44.086 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: ERROR: The file 'classpath:db/changelog/db.changelog-master.xml' was not found.
+The file property cannot be configured with a fully qualified path, but must be a relative path on the property,
+and any local or remote base of the path set on the search path.
+2026-02-24 14:29:02.256 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:29:02.300 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:29:02.300 [main] ERROR hotel.config.LiquibaseConfig - ФАЙЛ НЕ НАЙДЕН! Путь: db/changelog/db.changelog-master.xml
+2026-02-24 14:29:02.300 [main] INFO  hotel.config.LiquibaseConfig - Корень classpath: /C:/my_program/Java_course/task_15/2/hotel-app/target/classes/
+2026-02-24 14:29:02.301 [main] ERROR hotel.config.LiquibaseConfig - Папка db НЕ НАЙДЕНА в classpath!
+2026-02-24 14:29:02.301 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:29:03.230 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file db/changelog/db.changelog-master.xml was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-02-24 14:31:29.739 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:31:29.782 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:31:29.783 [main] ERROR hotel.config.LiquibaseConfig - ФАЙЛ НЕ НАЙДЕН! Путь: db/changelog/db.changelog-master.xml
+2026-02-24 14:31:29.783 [main] INFO  hotel.config.LiquibaseConfig - Корень classpath: /C:/my_program/Java_course/task_15/2/hotel-app/target/classes/
+2026-02-24 14:31:29.784 [main] ERROR hotel.config.LiquibaseConfig - Папка db НЕ НАЙДЕНА в classpath!
+2026-02-24 14:31:29.784 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:31:30.758 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file db/changelog/db.changelog-master.xml was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-02-24 14:33:16.526 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:33:16.570 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:33:16.570 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:33:17.537 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file file:C:/my_program/Java_course/task_15/2/hotel-hibernate/src/main/resources/db/changelog/db.changelog-master.xml was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-02-24 14:35:36.506 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:35:36.553 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:35:36.553 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:35:37.615 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file file:C:/my_program/Java_course/task_15/2/hotel-hibernate/src/main/resources/db/changelog/db.changelog-master.xml was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-02-24 14:37:25.608 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:37:25.652 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:37:25.652 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: classpath:db/changelog/db.changelog-master.xml
+2026-02-24 14:37:26.567 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: ERROR: The file 'classpath:db/changelog/db.changelog-master.xml' was not found.
+The file property cannot be configured with a fully qualified path, but must be a relative path on the property,
+and any local or remote base of the path set on the search path.
+2026-02-24 14:38:59.404 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:38:59.460 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:38:59.461 [main] ERROR hotel.config.LiquibaseConfig - Файл НЕ НАЙДЕН в classpath!
+2026-02-24 14:38:59.461 [main] INFO  hotel.config.LiquibaseConfig - Корень classpath: /C:/my_program/Java_course/task_15/2/hotel-app/target/classes/
+2026-02-24 14:38:59.461 [main] INFO  hotel.config.LiquibaseConfig - Файлы в корне classpath:
+2026-02-24 14:38:59.462 [main] INFO  hotel.config.LiquibaseConfig -   - db.changelog
+2026-02-24 14:38:59.462 [main] INFO  hotel.config.LiquibaseConfig -   - hotel
+2026-02-24 14:38:59.462 [main] INFO  hotel.config.LiquibaseConfig -   - hotel.properties
+2026-02-24 14:38:59.462 [main] INFO  hotel.config.LiquibaseConfig -   - logback.xml
+2026-02-24 14:38:59.462 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: liquibase-test.xml
+2026-02-24 14:39:00.435 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file liquibase-test.xml was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-02-24 14:39:32.376 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:39:32.421 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:39:32.421 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: classpath:db/changelog/db.changelog.xml
+2026-02-24 14:39:33.323 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: ERROR: The file 'classpath:db/changelog/db.changelog.xml' was not found.
+The file property cannot be configured with a fully qualified path, but must be a relative path on the property,
+and any local or remote base of the path set on the search path.
+2026-02-24 14:40:43.350 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:40:43.395 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:40:43.395 [main] ERROR hotel.config.LiquibaseConfig - Файл НЕ НАЙДЕН в classpath!
+2026-02-24 14:40:43.396 [main] INFO  hotel.config.LiquibaseConfig - Корень classpath: /C:/my_program/Java_course/task_15/2/hotel-app/target/classes/
+2026-02-24 14:40:43.396 [main] INFO  hotel.config.LiquibaseConfig - Файлы в корне classpath:
+2026-02-24 14:40:43.396 [main] INFO  hotel.config.LiquibaseConfig -   - db.changelog
+2026-02-24 14:40:43.396 [main] INFO  hotel.config.LiquibaseConfig -   - hotel
+2026-02-24 14:40:43.396 [main] INFO  hotel.config.LiquibaseConfig -   - hotel.properties
+2026-02-24 14:40:43.396 [main] INFO  hotel.config.LiquibaseConfig -   - logback.xml
+2026-02-24 14:40:43.396 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: liquibase-test.xml
+2026-02-24 14:40:44.329 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file liquibase-test.xml was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-02-24 14:41:49.306 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:41:49.353 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:41:49.353 [main] ERROR hotel.config.LiquibaseConfig - Файл НЕ НАЙДЕН в classpath!
+2026-02-24 14:41:49.354 [main] INFO  hotel.config.LiquibaseConfig - Корень classpath: /C:/my_program/Java_course/task_15/2/hotel-app/target/classes/
+2026-02-24 14:41:49.354 [main] INFO  hotel.config.LiquibaseConfig - Файлы в корне classpath:
+2026-02-24 14:41:49.354 [main] INFO  hotel.config.LiquibaseConfig -   - db
+2026-02-24 14:41:49.354 [main] INFO  hotel.config.LiquibaseConfig -   - hotel
+2026-02-24 14:41:49.354 [main] INFO  hotel.config.LiquibaseConfig -   - hotel.properties
+2026-02-24 14:41:49.354 [main] INFO  hotel.config.LiquibaseConfig -   - logback.xml
+2026-02-24 14:41:49.355 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: liquibase-test.xml
+2026-02-24 14:41:50.439 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file liquibase-test.xml was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-02-24 14:46:01.571 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:46:01.631 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:46:01.631 [main] ERROR hotel.config.LiquibaseConfig - Файл НЕ НАЙДЕН в classpath!
+2026-02-24 14:46:01.632 [main] INFO  hotel.config.LiquibaseConfig - Корень classpath: /C:/my_program/Java_course/task_15/2/hotel-app/target/classes/
+2026-02-24 14:46:01.632 [main] INFO  hotel.config.LiquibaseConfig - Файлы в корне classpath:
+2026-02-24 14:46:01.632 [main] INFO  hotel.config.LiquibaseConfig -   - db
+2026-02-24 14:46:01.632 [main] INFO  hotel.config.LiquibaseConfig -   - hotel
+2026-02-24 14:46:01.632 [main] INFO  hotel.config.LiquibaseConfig -   - hotel.properties
+2026-02-24 14:46:01.632 [main] INFO  hotel.config.LiquibaseConfig -   - logback.xml
+2026-02-24 14:46:01.632 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: liquibase-test.xml
+2026-02-24 14:46:02.587 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: The file liquibase-test.xml was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-02-24 14:47:20.765 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:47:20.818 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:47:20.819 [main] INFO  hotel.config.LiquibaseConfig - Файл найден! URL: file:/C:/my_program/Java_course/task_15/2/hotel-app/target/classes/db/changelog/db.changelog-master.xml
+2026-02-24 14:47:20.819 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:47:34.324 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-24 14:49:45.345 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:49:45.388 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:49:45.388 [main] INFO  hotel.config.LiquibaseConfig - Файл найден! URL: file:/C:/my_program/Java_course/task_15/2/hotel-app/target/classes/db/changelog/db.changelog-master.xml
+2026-02-24 14:49:45.388 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:49:56.733 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-24 14:51:36.633 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:51:36.679 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:51:36.679 [main] INFO  hotel.config.LiquibaseConfig - Файл найден! URL: file:/C:/my_program/Java_course/task_15/2/hotel-app/target/classes/db/changelog/db.changelog-master.xml
+2026-02-24 14:51:36.679 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:51:37.857 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ValidationFailedException: Validation Failed:
+     1 changesets check sum
+          db/changelog/v1.0/v1.0.1-insert_all_tables.sql::raw::includeAll was: 9:d3f1989cc0b54a51721315ca6e5e2dcc but is now: 9:f84cf9e2ef14b289c4799ee4194144ee
+
+2026-02-24 14:54:03.000 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:54:03.054 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:54:03.055 [main] INFO  hotel.config.LiquibaseConfig - Файл найден! URL: file:/C:/my_program/Java_course/task_15/2/hotel-app/target/classes/db/changelog/db.changelog-master.xml
+2026-02-24 14:54:03.055 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:54:04.534 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Failed to initialize dependency 'liquibase' of TransactionManager bean 'transactionManager': Error creating bean with name 'liquibase' defined in class path resource [hotel/LiquibaseConfig.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/v1.0/v1.0.1-insert_all_tables.sql::raw::includeAll:
+     Reason: liquibase.exception.DatabaseException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "employees_pkey"
+  Подробности: Ключ "(id)=(1)" уже существует. [Failed SQL: (0) INSERT INTO persons (type, name, surname, patronymic, date_of_birth)
+VALUES ('employee', 'Ivan', 'Ivanov', 'Ivanovich', '1985-05-15'),
+       ('employee', 'Maria', 'Petrova', 'Sergeevna', '1990-08-22'),
+       ('employee', 'Alexey', 'Sidorov', 'Vladimirovich', '1988-03-10');
+
+INSERT INTO employees (id, position, hire_date, salary)
+VALUES (1, 'ADMIN', '2020-01-15', 50000.00),
+       (2, 'MAID', '2021-03-20', 35000.00),
+       (3, 'MENDER', '2019-11-10', 45000.00);
+
+INSERT INTO persons (type, name, surname, patronymic, date_of_birth)
+VALUES ('client', 'Anna', 'Smirnova', 'Alexandrovna', '1992-07-30'),
+       ('client', 'Dmitry', 'Kuznetsov', 'Petrovich', '1987-12-14');
+
+INSERT INTO clients (id)
+VALUES (4),
+       (5);
+
+INSERT INTO services (name, description, price)
+VALUES ('Breakfast', 'Continental breakfast', 500.00),
+       ('Dinner', 'Three-course meal', 1500.00),
+       ('SPA', 'Spa procedures', 3000.00),
+       ('Laundry', 'Washing and ironing', 800.00);
+
+INSERT INTO rooms (number, category, status, type, capacity, price)
+VALUES (101, 'ECONOMY', 'AVAILABLE', 'STANDARD', 2, 2500.00),
+       (102, 'ECONOMY', 'AVAILABLE', 'STANDARD', 2, 2500.00),
+       (201, 'BUSINESS', 'AVAILABLE', 'DELUXE', 2, 5000.00),
+       (202, 'BUSINESS', 'AVAILABLE', 'DELUXE', 2, 5000.00),
+       (301, 'PREMIUM', 'AVAILABLE', 'SUITE', 4, 10000.00),
+       (302, 'PREMIUM', 'AVAILABLE', 'PRESIDENTIAL', 2, 15000.00)]
+2026-02-24 14:54:34.731 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:54:34.782 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:54:34.783 [main] INFO  hotel.config.LiquibaseConfig - Файл найден! URL: file:/C:/my_program/Java_course/task_15/2/hotel-app/target/classes/db/changelog/db.changelog-master.xml
+2026-02-24 14:54:34.783 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:55:48.754 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:55:48.805 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:55:48.806 [main] INFO  hotel.config.LiquibaseConfig - Файл найден! URL: file:/C:/my_program/Java_course/task_15/2/hotel-app/target/classes/db/changelog/db.changelog-master.xml
+2026-02-24 14:55:48.806 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:55:58.011 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-24 14:56:39.415 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 14:56:39.478 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 14:56:39.478 [main] INFO  hotel.config.LiquibaseConfig - Файл найден! URL: file:/C:/my_program/Java_course/task_15/2/hotel-app/target/classes/db/changelog/db.changelog-master.xml
+2026-02-24 14:56:39.478 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 14:56:53.341 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-24 15:00:05.306 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 15:00:05.353 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 15:00:05.354 [main] INFO  hotel.config.LiquibaseConfig - Файл найден! URL: file:/C:/my_program/Java_course/task_15/2/hotel-app/target/classes/db/changelog/db.changelog-master.xml
+2026-02-24 15:00:05.354 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 15:02:35.285 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-24 15:02:35.332 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-24 15:02:35.333 [main] INFO  hotel.config.LiquibaseConfig - Файл найден! URL: file:/C:/my_program/Java_course/task_15/2/hotel-app/target/classes/db/changelog/db.changelog-master.xml
+2026-02-24 15:02:35.333 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-24 15:02:43.745 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
