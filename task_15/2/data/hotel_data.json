@@ -1,0 +1,89 @@
+{
+  "rooms" : {
+    "101" : {
+      "number" : 101,
+      "category" : "ECONOMY",
+      "status" : "AVAILABLE",
+      "type" : "STANDARD",
+      "capacity" : 2,
+      "price" : 1000.00,
+      "id" : 101
+    },
+    "102" : {
+      "number" : 102,
+      "category" : "BUSINESS",
+      "status" : "OCCUPIED",
+      "type" : "DELUXE",
+      "capacity" : 3,
+      "price" : 2000.00,
+      "id" : 102
+    }
+  },
+  "employees" : {
+    "1" : {
+      "id" : 1,
+      "name" : "Иван",
+      "surname" : "Петров",
+      "patronymic" : "Сергеевич",
+      "date_of_birth" : "1985-05-15",
+      "position" : "ADMIN",
+      "salary" : 100000.0,
+      "hireDate" : "2020-01-10",
+      "fullName" : "Петров Иван Сергеевич",
+      "cleaning" : false,
+      "fixing" : false
+    }
+  },
+  "clients" : {
+    "1" : {
+      "id" : 1,
+      "name" : "Анна",
+      "surname" : "Смирнова",
+      "patronymic" : "Игоревна",
+      "date_of_birth" : "1990-03-12",
+      "notes" : "VIP клиент"
+    }
+  },
+  "bookings" : {
+    "1" : {
+      "id" : 9,
+      "client" : 1,
+      "services" : [ ],
+      "room" : 101,
+      "checkInDate" : "2026-02-12",
+      "checkOutDate" : "2026-02-14",
+      "totalPrice" : 2000.00,
+      "createdAt" : "2026-02-06T18:07:55.6384863",
+      "status" : "CONFIRMED",
+      "updatedAt" : "2026-02-06T18:07:55.6384863"
+    },
+    "2" : {
+      "id" : 2,
+      "client" : 1,
+      "services" : [ ],
+      "room" : 102,
+      "checkInDate" : "2026-02-18",
+      "checkOutDate" : "2026-02-21",
+      "totalPrice" : 6000.00,
+      "createdAt" : "2026-02-06T18:16:47.9122448",
+      "status" : "CONFIRMED",
+      "updatedAt" : "2026-02-06T18:16:47.9122448"
+    }
+  },
+  "services" : {
+    "1" : {
+      "id" : 1,
+      "name" : "Wi-Fi",
+      "description" : "Бесплатный Wi-Fi",
+      "price" : 0.0,
+      "free" : false
+    },
+    "2" : {
+      "id" : 2,
+      "name" : "Завтрак",
+      "description" : "Шведский стол",
+      "price" : 1500.0,
+      "free" : false
+    }
+  }
+}
