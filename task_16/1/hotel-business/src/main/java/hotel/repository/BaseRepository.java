@@ -1,49 +1,68 @@
 package hotel.repository;
 
+import hotel.exception.dao.DAOException;
+import lombok.NonNull;
+import lombok.Setter;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.io.Serializable;
-import java.util.List;
-import java.util.Optional;
+import java.util.Arrays;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 @Repository
 public abstract class BaseRepository<T, ID> {
+    private static final Logger logger = LoggerFactory.getLogger(BaseRepository.class);
+    @Setter
     private Class<T> entityClass;
     @Autowired
     private SessionFactory sessionFactory;
 
     public BaseRepository() {
     }
-    public void setEntityClass(Class<T> entityClass) {
-        this.entityClass = entityClass;
-    }
 
     protected Session getCurrentSession() {
         return sessionFactory.getCurrentSession();
     }
 
-    public Optional<T> findById(ID id) {
-        return Optional.ofNullable(getCurrentSession().get(entityClass, (Serializable) id));
+    protected void execute(String operationName, Consumer<Session> action, Object... context) {
+        try {
+            Session session = getCurrentSession();
+            action.accept(session);
+            logging(operationName, context);
+        } catch (Exception e) {
+            String errorMsg = getErrorMsg(operationName, context);
+            logger.error(errorMsg, e);
+            throw new DAOException(e, errorMsg);
+        }
     }
 
-    public ID save(T entity) {
-        return (ID) getCurrentSession().save(entity);
+    protected <T> T executeWithResult(String operationName, Function<Session, T> action, Object... context) {
+        try {
+            Session session = getCurrentSession();
+            System.out.println("Session obtained in executeWithResult: " + session);
+            T t = action.apply(session);
+            logging(operationName, context);
+            return t;
+        } catch (Exception e) {
+            String errorMsg = getErrorMsg(operationName, context);
+            logger.error(errorMsg, e);
+            throw new DAOException(e, errorMsg);
+        }
     }
 
-    public void delete(T entity) {
-        getCurrentSession().delete(entity);
+    private static @NonNull String getErrorMsg(String operationName, Object[] context) {
+        return String.format("Ошибка операции %s. Контекст: %s", operationName,
+                Arrays.toString(context));
     }
 
-    public void update(T entity) {
-        getCurrentSession().update(entity);
+    private void logging(String operationName, Object[] context) {
+        logger.info("Операция {} выполнена. Контекст: {}", operationName,
+                Arrays.toString(context));
     }
 
-    public List<T> findAll() {
-        return getCurrentSession()
-                .createQuery("from " + entityClass.getName(), entityClass)
-                .list();
-    }
 }

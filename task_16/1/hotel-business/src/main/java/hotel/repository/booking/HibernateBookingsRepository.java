@@ -1,171 +1,265 @@
 package hotel.repository.booking;
 
-import hotel.exception.booking.BookingNotFoundException;
+import hotel.exception.HotelException;
+import hotel.exception.dao.DAOException;
 import hotel.model.booking.BookingStatus;
 import hotel.model.booking.Bookings;
 import hotel.model.service.Services;
 import hotel.repository.BaseRepository;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
 public class HibernateBookingsRepository extends BaseRepository<Bookings, Integer> implements BookingsRepository {
-    private final static String FIND_ACTIVE_BOOKINGS_HQL = """
-            SELECT DISTINCT b FROM Bookings b
-            LEFT JOIN FETCH b.client c
-            LEFT JOIN FETCH b.room r
-            LEFT JOIN FETCH b.services s
-            WHERE b.status = :status
-            AND :date BETWEEN b.checkInDate AND b.checkOutDate
-            ORDER BY b.checkInDate
-            """;
-
-    private final static String FIND_BY_ROOM_ID_HQL = """
-            SELECT DISTINCT b FROM Bookings b
-            LEFT JOIN FETCH b.client c
-            LEFT JOIN FETCH b.room r
-            LEFT JOIN FETCH b.services s
-            WHERE b.room.id = :roomId
-            ORDER BY b.checkInDate
-            """;
-    private final static String FIND_BY_CLIENT_ID_HQL = """
-            SELECT DISTINCT b FROM Bookings b
-            LEFT JOIN FETCH b.client c
-            LEFT JOIN FETCH b.room r
-            LEFT JOIN FETCH b.services s
-            WHERE b.client.id = :clientId
-            ORDER BY b.checkInDate DESC
-            """;
-
-    private final static String FIND_ACTIVE_BY_ROOM_ID_HQL = """
-            SELECT b FROM Bookings b
-            LEFT JOIN FETCH b.client c
-            LEFT JOIN FETCH b.room r
-            LEFT JOIN FETCH b.services s
-            WHERE b.room.id = :roomId
-            AND b.status = :status
-            AND :date BETWEEN b.checkInDate AND b.checkOutDate
-            """;
-
-    private final static String GET_BOOKING_SERVICES_HQL = """
-            SELECT s FROM Bookings b
-            JOIN b.services s
-            WHERE b.id = :bookingId
-            ORDER BY s.name
-            """;
 
     public HibernateBookingsRepository() {
         setEntityClass(Bookings.class);
     }
 
     @Override
-    /// Найти активные брони по дате
+    public Optional<Bookings> findById(Integer id) {
+        return executeWithResult("findById",
+                session -> {
+                    String hql = """
+                        SELECT DISTINCT b FROM Bookings b
+                        LEFT JOIN FETCH b.client
+                        LEFT JOIN FETCH b.room
+                        LEFT JOIN FETCH b.services
+                        WHERE b.id = :id
+                        """;
+
+                    return session.createQuery(hql, Bookings.class)
+                            .setParameter("id", id)
+                            .uniqueResultOptional();
+                },
+                "id", id
+        );
+    }
+
+    @Override
+    public List<Bookings> findAll() {
+        return executeWithResult("findAll",
+                session -> {
+                    String hql = """
+                        SELECT DISTINCT b FROM Bookings b
+                        LEFT JOIN FETCH b.client
+                        LEFT JOIN FETCH b.room
+                        LEFT JOIN FETCH b.services
+                        ORDER BY b.checkInDate DESC
+                        """;
+
+                    return session.createQuery(hql, Bookings.class).list();
+                }
+        );
+    }
+
+    @Override
+    public Integer save(Bookings entity) {
+        return executeWithResult("save",
+                session -> (Integer) session.save(entity),
+                "clientId", entity.getClient() != null ? entity.getClient().getId() : null,
+                "roomId", entity.getRoom() != null ? entity.getRoom().getId() : null,
+                "checkIn", entity.getCheckInDate()
+        );
+    }
+
+    @Override
+    public void update(Bookings entity) {
+        execute("update",
+                session -> {
+                    entity.setUpdatedAt(LocalDateTime.now());
+                    session.update(entity);
+                },
+                "bookingId", entity.getId()
+        );
+    }
+
+    @Override
+    public void delete(Bookings entity) {
+        execute("delete",
+                session -> session.delete(entity),
+                "bookingId", entity.getId()
+        );
+    }
+
+    @Override
     public List<Bookings> findActiveBookings(LocalDate date) {
-        return getCurrentSession().
-                createQuery(FIND_ACTIVE_BOOKINGS_HQL, Bookings.class).
-                setParameter("status", BookingStatus.CONFIRMED).
-                setParameter("date", date).
-                list();
-    }
+        return executeWithResult("findActiveBookings",
+                session -> {
+                    String hql = """
+                        SELECT DISTINCT b FROM Bookings b
+                        LEFT JOIN FETCH b.client
+                        LEFT JOIN FETCH b.room
+                        LEFT JOIN FETCH b.services
+                        WHERE b.status = :status
+                        AND :date BETWEEN b.checkInDate AND b.checkOutDate
+                        ORDER BY b.checkInDate
+                        """;
 
-    /// Найти бронирования по статусу
-    public List<Bookings> findByStatus(BookingStatus status) {
-        String hql = "FROM Bookings b WHERE b.status = :status ORDER BY b.checkInDate";
-        return getCurrentSession()
-                .createQuery(hql, Bookings.class)
-                .setParameter("status", status)
-                .list();
+                    return session.createQuery(hql, Bookings.class)
+                            .setParameter("status", BookingStatus.CONFIRMED)
+                            .setParameter("date", date)
+                            .list();
+                },
+                "date", date
+        );
     }
 
     @Override
-    /// Найти бронирования по id комнаты
     public List<Bookings> findByRoomId(Integer roomId) {
-        return getCurrentSession().
-                createQuery(FIND_BY_ROOM_ID_HQL, Bookings.class).
-                setParameter("roomId", roomId).
-                list();
+        return executeWithResult("findByRoomId",
+                session -> {
+                    String hql = """
+                        SELECT DISTINCT b FROM Bookings b
+                        LEFT JOIN FETCH b.client
+                        LEFT JOIN FETCH b.room
+                        LEFT JOIN FETCH b.services
+                        WHERE b.room.id = :roomId
+                        ORDER BY b.checkInDate
+                        """;
+
+                    return session.createQuery(hql, Bookings.class)
+                            .setParameter("roomId", roomId)
+                            .list();
+                },
+                "roomId", roomId
+        );
     }
 
     @Override
-    /// Найти активные бронирования по id клиента
     public List<Bookings> findByClientId(Integer clientId) {
-        return getCurrentSession().
-                createQuery(FIND_BY_CLIENT_ID_HQL, Bookings.class).
-                setParameter("clientId", clientId).
-                list();
+        return executeWithResult("findByClientId",
+                session -> {
+                    String hql = """
+                        SELECT DISTINCT b FROM Bookings b
+                        LEFT JOIN FETCH b.client
+                        LEFT JOIN FETCH b.room
+                        LEFT JOIN FETCH b.services
+                        WHERE b.client.id = :clientId
+                        ORDER BY b.checkInDate DESC
+                        """;
+
+                    return session.createQuery(hql, Bookings.class)
+                            .setParameter("clientId", clientId)
+                            .list();
+                },
+                "clientId", clientId
+        );
     }
 
     @Override
-    /// Найти активные бронирования по id комнаты
     public List<Bookings> findActiveByRoomId(Integer roomId, LocalDate date) {
-        return getCurrentSession().
-                createQuery(FIND_ACTIVE_BY_ROOM_ID_HQL, Bookings.class).
-                setParameter("roomId", roomId).
-                setParameter("status", BookingStatus.CONFIRMED).
-                setParameter("date", date).
-                list();
+        return executeWithResult("findActiveByRoomId",
+                session -> {
+                    String hql = """
+                        SELECT b FROM Bookings b
+                        LEFT JOIN FETCH b.client
+                        LEFT JOIN FETCH b.room
+                        LEFT JOIN FETCH b.services
+                        WHERE b.room.id = :roomId
+                        AND b.status = :status
+                        AND :date BETWEEN b.checkInDate AND b.checkOutDate
+                        """;
+
+                    return session.createQuery(hql, Bookings.class)
+                            .setParameter("roomId", roomId)
+                            .setParameter("status", BookingStatus.CONFIRMED)
+                            .setParameter("date", date)
+                            .list();
+                },
+                "roomId", roomId, "date", date
+        );
     }
 
     @Override
-    /// Добавляет услуги в бронь
     public Optional<Bookings> addBookingServices(Integer bookingId, List<Integer> serviceIds) {
-        Optional<Bookings> booking = findById(bookingId);
-        if (booking == null) {
-            throw new BookingNotFoundException(bookingId);
-        }
+        return executeWithResult("addBookingServices",
+                session -> {
+                    Bookings booking = session.get(Bookings.class, bookingId);
+                    if (booking == null) {
+                        throw HotelException.bookingNotFound(bookingId);
+                    }
 
-        List<Services> currentServices = booking.get().getServices();
-        if (currentServices == null) {
-            currentServices = new java.util.ArrayList<>();
-            booking.get().setServices(currentServices);
-        }
-        boolean changed = false;
+                    List<Services> currentServices =  new ArrayList<>(booking.getServices() == null?
+                            new ArrayList<>():booking.getServices());
+                    boolean changed = false;
 
-        for (Integer serviceId : serviceIds) {
-            Services service = getCurrentSession().get(Services.class, serviceId);
-            if (service == null) {
-                throw new RuntimeException("Service not found with id: " + serviceId);
-            }
+                    for (Integer serviceId : serviceIds) {
+                        Services service = session.get(Services.class, serviceId);
+                        if (service == null) {
+                            throw new DAOException(new IllegalArgumentException(),
+                                    "Service not found with id: " + serviceId);
+                        }
 
-            if (!currentServices.contains(service)) {
-                currentServices.add(service);
-                changed = true;
-            }
-        }
+                        if (!currentServices.contains(service)) {
+                            currentServices.add(service);
+                            changed = true;
+                        }
+                    }
 
-        if (changed) {
-            recalculateTotalPrice(booking.get());
-            booking.get().setUpdatedAt(LocalDateTime.now());
-            update(booking.get());
-        }
+                    if (changed) {
+                        booking.setServices(currentServices);
+                        recalculateTotalPrice(booking);
+                        booking.setUpdatedAt(LocalDateTime.now());
+                        session.update(booking);
+                    }
 
-        return booking;
+                    return Optional.of(booking);
+                },
+                "bookingId", bookingId, "serviceIds", serviceIds
+        );
     }
 
     @Override
-    /// Удаляем услуги(у) из брони
     public Optional<Bookings> removeBookingServices(Integer bookingId, List<Integer> serviceIds) {
-        Optional<Bookings> booking = findById(bookingId);
-        if (booking == null) {
-            throw new BookingNotFoundException(bookingId);
-        }
-        List<Services> services = booking.get().getServices();
+        return executeWithResult("removeBookingServices",
+                session -> {
+                    Bookings booking = session.get(Bookings.class, bookingId);
+                    if (booking == null) {
+                        throw HotelException.bookingNotFound(bookingId);
+                    }
 
-        boolean changed = services.removeIf(service -> serviceIds.contains(service.getId()));
-        if (changed) {
-            recalculateTotalPrice(booking.get());
-            booking.get().setUpdatedAt(LocalDateTime.now());
-            update(booking.get());
-        }
-        return booking;
+                    List<Services> services = new ArrayList<>(booking.getServices() == null?
+                            new ArrayList<>():booking.getServices());
+                    boolean changed = services.removeIf(service -> serviceIds.contains(service.getId()));
+
+                    if (changed) {
+                        booking.setServices(services);
+                        recalculateTotalPrice(booking);
+                        booking.setUpdatedAt(LocalDateTime.now());
+                        session.update(booking);
+                    }
+
+                    return Optional.of(booking);
+                },
+                "bookingId", bookingId, "serviceIds", serviceIds
+        );
     }
 
+    @Override
+    public List<Services> getBookingServices(Integer bookingId) {
+        return executeWithResult("getBookingServices",
+                session -> {
+                    String hql = """
+                        SELECT s FROM Bookings b
+                        JOIN b.services s
+                        WHERE b.id = :bookingId
+                        ORDER BY s.name
+                        """;
+
+                    return session.createQuery(hql, Services.class)
+                            .setParameter("bookingId", bookingId)
+                            .list();
+                },
+                "bookingId", bookingId
+        );
+    }
 
     private void recalculateTotalPrice(Bookings booking) {
         BigDecimal roomPrice = booking.getRoom().getPrice();
@@ -182,14 +276,4 @@ public class HibernateBookingsRepository extends BaseRepository<Bookings, Intege
         }
         booking.setTotalPrice(total);
     }
-
-    @Override
-    /// Получаем все услуги бронирования
-    public List<Services> getBookingServices(Integer bookingId) {
-        return getCurrentSession().
-                createQuery(GET_BOOKING_SERVICES_HQL, Services.class).
-                setParameter("bookingId", bookingId).
-                list();
-    }
-
 }

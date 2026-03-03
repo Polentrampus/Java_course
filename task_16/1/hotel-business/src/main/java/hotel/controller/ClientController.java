@@ -61,11 +61,18 @@ public class ClientController {
     @Operation(
             summary = "Создать нового клиента",
             description = """
-            Создание нового клиента отеля.
-            Требуются уникальные номер телефона и паспорта.
-            """
+                    Создание нового клиента отеля.
+                    ### Пример JSON:
+                    ```json
+                    {
+                      "name": "Polina",
+                      "surname": "Pshenicyna",
+                      "patronymic": "Sergeevna",
+                      "dateOfBirth": "2005-04-27"
+                    }
+                    ```
+                    """
     )
-
     public ResponseEntity<ClientDto> addClient(@Valid @RequestBody CreateClientRequest request) throws SQLException {
         log.info("Создание нового клиента: Имя={}",
                 request.getName());

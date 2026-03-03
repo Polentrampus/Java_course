@@ -1,5 +1,8 @@
 package hotel.exception;
 
+import lombok.Getter;
+
+@Getter
 public enum ErrorCode {
     CLIENT_NOT_FOUND("CLT_001", "Клиент не найден"),
     CLIENT_DUPLICATE("CLT_002", "Клиент уже существует"),
@@ -45,11 +48,4 @@ public enum ErrorCode {
         this.description = description;
     }
 
-    public String getCode() {
-        return code;
-    }
-
-    public String getDescription() {
-        return description;
-    }
 }

@@ -1,11 +1,19 @@
 package repository;
-import org.hibernate.SessionFactory;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import javax.sql.DataSource;
+import java.util.Properties;
 
 @Configuration
 @ComponentScan(basePackages = {
@@ -18,28 +26,57 @@ public class TestHibernateConfig {
 
     @Bean
     @Primary
-    public SessionFactory testSessionFactory() {
-        System.out.println("=== Creating TEST SessionFactory with H2 ===");
+    public DataSource dataSource() {
+        HikariConfig config = new HikariConfig();
+        config.setJdbcUrl("jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;DB_CLOSE_ON_EXIT=FALSE");
+        config.setUsername("sa");
+        config.setPassword("");
+        config.setDriverClassName("org.h2.Driver");
+        config.setMaximumPoolSize(10);
+        config.setMinimumIdle(2);
 
-        org.hibernate.cfg.Configuration configuration = new org.hibernate.cfg.Configuration()
-                .addAnnotatedClass(hotel.model.service.Services.class)
-                .addAnnotatedClass(hotel.model.users.Person.class)
-                .addAnnotatedClass(hotel.model.users.client.Client.class)
-                .addAnnotatedClass(hotel.model.users.employee.Employee.class)
-                .addAnnotatedClass(hotel.model.room.Room.class)
-                .addAnnotatedClass(hotel.model.booking.Bookings.class);
+        return new HikariDataSource(config);
+    }
 
-        configuration.setProperty("hibernate.connection.driver_class", "org.h2.Driver");
-        configuration.setProperty("hibernate.connection.url", "jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL");
-        configuration.setProperty("hibernate.connection.username", "sa");
-        configuration.setProperty("hibernate.connection.password", "");
+    @Bean
+    @Primary
+    public LocalSessionFactoryBean sessionFactory(DataSource dataSource) {
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource);
+        sessionFactory.setPackagesToScan(
+                "hotel.model",
+                "hotel.model.booking",
+                "hotel.model.room",
+                "hotel.model.service",
+                "hotel.model.users",
+                "hotel.model.users.client",
+                "hotel.model.users.employee"
+        );
 
-        configuration.setProperty("hibernate.hbm2ddl.auto", "create-drop");
-        configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-        configuration.setProperty("hibernate.show_sql", "true");
-        configuration.setProperty("hibernate.format_sql", "true");
-        configuration.setProperty("hibernate.current_session_context_class", "thread");
+        Properties hibernateProperties = new Properties();
+        hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+        hibernateProperties.setProperty("hibernate.show_sql", "true");
+        hibernateProperties.setProperty("hibernate.format_sql", "true");
 
-        return configuration.buildSessionFactory();
+        hibernateProperties.setProperty("hibernate.connection.autocommit", "false");
+        hibernateProperties.setProperty("hibernate.current_session_context_class",
+                "org.springframework.orm.hibernate5.SpringSessionContext");
+
+        sessionFactory.setHibernateProperties(hibernateProperties);
+
+        return sessionFactory;
+    }
+
+    /**
+     * Тестовый менеджер транзакций
+     * @param sessionFactory
+     * @return
+     */
+    @Bean
+    public PlatformTransactionManager transactionManager(LocalSessionFactoryBean sessionFactory) {
+        HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+        transactionManager.setSessionFactory(sessionFactory.getObject());
+        return transactionManager;
     }
 }

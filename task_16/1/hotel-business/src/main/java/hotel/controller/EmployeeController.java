@@ -108,7 +108,7 @@ public class EmployeeController {
             summary = "Удалить сотрудника",
             description = "Удаление сотрудника по ID."
     )
-    public ResponseEntity<Void> deleteEmployee(@PathVariable(name = "id") Integer id) throws SQLException {
+    public ResponseEntity<Void> deleteEmployee(@PathVariable(name = "id") Integer id) {
         log.info("Удаление сотрудника ID: {}", id);
         employeeService.deleteEmployee(id);
         return ResponseEntity.noContent().build();

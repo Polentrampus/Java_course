@@ -36,13 +36,11 @@ public class RoomController {
 
     private final IRoomService roomService;
 
-    @GetMapping("findAll")
+    @GetMapping("/findAll")
     @Operation(
             summary = "Получить список комнат",
             description = "Выводит список комнат сортируя их."
     )
-    // @ModelAttribute позволяет автоматически связывать параметры запроса с полями объекта RoomFilter.
-    // пример: rooms?category=BUSINESS&minPrice=1000
     public ResponseEntity<List<RoomDto>> getAllRooms(
             @RequestParam(name = "sortBy", required = false) String sortBy) {
         log.info("Получение списка всех комнат, сортировка: {}",
@@ -88,12 +86,6 @@ public class RoomController {
             summary = "Создать новую комнату",
             description = """
             Создание нового номера в отеле.
-            
-            ### Обязательные поля:
-            - roomCategory (категория комнаты)
-            - roomType (тип комнаты)
-            - price (цена за сутки)
-            - capacity (вместимость)
             
             ### Статус по умолчанию:
             При создании комната получает статус **AVAILABLE** (доступна).

@@ -79,12 +79,6 @@ public class BookingController {
             description = """
             Создание нового бронирования номера.
             
-            ### Проверки:
-            1. Комната должна быть доступна (статус AVAILABLE)
-            2. На выбранные даты комната не должна быть забронирована
-            3. Даты должны быть в будущем
-            4. Дата выезда должна быть после даты заезда
-            
             ### Пример JSON:
             ```json
             {
@@ -126,14 +120,12 @@ public class BookingController {
             summary = "Удалить бронирование",
             description = """
             Удаление бронирования по ID.
-            Если дата выезда еще не наступила, комната возвращается в статус AVAILABLE.
             """
     )
     public ResponseEntity<Void> deleteBooking(@PathVariable(name = "id") Integer id) throws SQLException {
         log.info("Удаление бронирования ID: {}", id);
         bookingService.deleteBookingById(id);
         return ResponseEntity.status(HttpStatus.OK).
-                header("Delete", "/bookings/" + id).
                 build();
     }
 }

@@ -9,6 +9,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -23,5 +25,5 @@ public class CreateServiceRequest {
 
     @NotNull(message = "Цена обязательна")
     @Min(value = 1, message = "Цена должна быть не менее 1")
-    private double price;
+    private BigDecimal price;
 }

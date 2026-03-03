@@ -1,8 +1,11 @@
 package hotel.exception;
 
+import lombok.Getter;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Getter
 public class HotelException extends RuntimeException {
     private final ErrorCode errorCode;
     private final Map<String, Object> details;
@@ -26,19 +29,6 @@ public class HotelException extends RuntimeException {
     public HotelException addDetail(String key, Object value) {
         this.details.put(key, value);
         return this;
-    }
-
-    // Getters
-    public ErrorCode getErrorCode() {
-        return errorCode;
-    }
-
-    public Map<String, Object> getDetails() {
-        return details;
-    }
-
-    public String getUserMessage() {
-        return userMessage;
     }
 
     public static HotelException clientNotFound(int clientId) {

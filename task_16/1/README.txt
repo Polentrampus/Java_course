@@ -4,24 +4,37 @@
 2) Настроить resource/hotel.properties файл
     2.1) настроить пользователя и заменить на валидный пароль
     2.2) вставить свой url
-3) выполнить скрипт: psql -h localhost -U postgres -d hotelManager -f "C:\my_program\Java_course\task_11\4\hotel.sql"
+3) Liquibase - заполнит таблицами бд, необходимо выполнить второй файл для заполнения бд данными
 
 Система имеет архитектуру:
-UI->service->repository->(DAO, если репозиторий jdbc)->database
+http request->controller->->repository->database->repository->service->controller->http response
 
-hotel-project/
+hotel-app/
 ├── src/
 │   └── main/
 │       └── java/
 │           └── hotel/
-│               ├── annotation/   # Аннотации
+│               ├── config/           # Конфигурационные классы @Configuration
+│               └── Main.java         # Класс с main метод
+│       └── resources/                # Используемые в приложение ресурсы (настройки для логера и конфигурации)
+│           └── db.changelog/         # Настройки и контроля версий БД (Liquibase) а так же сами миграции
+hotel-business/
+├── src/
+│   └── main/
+│       └── java/
+│           └── hotel/
 │               ├── config/       # Конфигурация
-│               ├── dao/          # Data Access Objects
+│               ├── controller/       # Слой контроллеров
 │               ├── dto/          # Data Transfer Objects
-│               ├── di/           # Dependency Injection
-│               ├── exception/    # Исключения
-│               ├── model/        # Доменные модели
 │               ├── repository/   # Репозитории
 │               ├── service/      # Сервисы
-│               ├── util/         # Утилиты
-│               └── view/         # Представление
+│   └── test/
+│       └── java/
+│           └── repository/       # Интеграционные тесты для репозиториев
+hotel-core/
+├── src/
+│   └── main/
+│       └── java/
+│           └── hotel/
+│               ├── exception/    # Исключения
+│               ├── model/        # Доменные модели

@@ -28,8 +28,9 @@ public class Client extends Person{
     }
 
     public Client() {
+        super();
+        this.setType("client");
     }
-
     @Override
     public String toString() {
         return "Client{" +

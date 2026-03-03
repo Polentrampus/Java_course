@@ -99,5 +99,11 @@
             <version>6.1.14</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.2.0-M1</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>

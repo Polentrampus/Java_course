@@ -4,6 +4,7 @@ import hotel.dto.CreateRoomRequest;
 import hotel.exception.ConfigException;
 import hotel.exception.ErrorCode;
 import hotel.exception.HotelException;
+import hotel.exception.room.RoomNotFoundException;
 import hotel.model.booking.Bookings;
 import hotel.model.filter.RoomFilter;
 import hotel.model.room.Room;
@@ -12,7 +13,6 @@ import hotel.repository.booking.BookingsRepository;
 import hotel.repository.room.RoomRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
@@ -25,8 +25,8 @@ import java.util.stream.Collectors;
 
 @Transactional
 public class ReadRoomService implements ReadIRoomService {
-    public RoomRepository roomRepository;
-    public BookingsRepository bookingsRepository;
+    protected final RoomRepository roomRepository;
+    protected final BookingsRepository bookingsRepository;
     private static final Logger log = LoggerFactory.getLogger(ReadRoomService.class);
 
     public ReadRoomService(RoomRepository roomRepository,
@@ -37,78 +37,152 @@ public class ReadRoomService implements ReadIRoomService {
 
     @Override
     public List<Room> listAvailableRooms(RoomFilter filter) {
-        log.info("listAvailableRooms() with filter: {}", filter);
+        log.info("Listing available rooms with filter: {}", filter);
 
-        List<Room> rooms = roomRepository.listAvailableRooms(filter);
-        log.info("listAvailableRooms(): found {} available rooms", rooms.size());
-        return rooms;
+        try {
+            List<Room> rooms = roomRepository.listAvailableRooms(filter);
+            log.info("Found {} available rooms", rooms.size());
+            return rooms;
+        } catch (Exception e) {
+            log.error("Error while listing available rooms", e);
+            throw new HotelException(ErrorCode.DATABASE_QUERY_ERROR,
+                    "Ошибка при получении списка доступных комнат", e);
+        }
     }
 
     @Override
     public List<Room> listAvailableRoomsByDate(RoomFilter filter, LocalDate date) {
-        log.info("listAvailableRoomsByDate() for date: {}", date);
-        List<Room> allRooms = roomRepository.findAll();
-        List<Bookings> allBookings = bookingsRepository.findAll();
+        log.info("Listing available rooms for date: {} with filter: {}", date, filter);
 
-        Set<Integer> bookedRoomIds = allBookings.stream()
-                .filter(booking -> booking.isActiveOn(date))
-                .map(booking -> booking.getRoom().getId())
-                .collect(Collectors.toSet());
+        try {
+            if (date == null) {
+                throw new HotelException(ErrorCode.VALIDATION_ERROR,
+                        "Дата не может быть пустой");
+            }
 
-        List<Room> availableRooms = allRooms.stream()
-                .filter(room -> !bookedRoomIds.contains(room.getId()))
-                .collect(Collectors.toList());
+            List<Room> allRooms = roomRepository.findAll();
+            List<Bookings> allBookings = bookingsRepository.findAll();
 
-        log.info("listAvailableRoomsByDate(): found {} available rooms for date {}",
-                availableRooms.size(), date);
-        return availableRooms;
+            Set<Integer> bookedRoomIds = allBookings.stream()
+                    .filter(booking -> booking.isActiveOn(date))
+                    .map(booking -> booking.getRoom().getId())
+                    .collect(Collectors.toSet());
+
+            List<Room> availableRooms = allRooms.stream()
+                    .filter(room -> !bookedRoomIds.contains(room.getId()))
+                    .collect(Collectors.toList());
+
+            if (filter != null) {
+                availableRooms.sort(filter.getComparator());
+            }
+
+            log.info("Found {} available rooms for date {}", availableRooms.size(), date);
+            return availableRooms;
+
+        } catch (HotelException e) {
+            throw e;
+        } catch (Exception e) {
+            log.error("Error while listing available rooms by date", e);
+            throw new HotelException(ErrorCode.DATABASE_QUERY_ERROR,
+                    "Ошибка при поиске доступных комнат на дату", e);
+        }
     }
 
     @Override
     public List<Room> sortRooms(RoomFilter filter) {
-        log.info("sortRooms() with filter: {}", filter);
-        List<Room> rooms = roomRepository.findAll();
-        if (filter != null) {
-            rooms.sort(filter.getComparator());
+        log.info("Sorting rooms with filter: {}", filter);
+
+        try {
+            List<Room> rooms = roomRepository.findAll();
+            if (filter != null) {
+                rooms.sort(filter.getComparator());
+            }
+            log.info("Sorted {} rooms", rooms.size());
+            return rooms;
+        } catch (Exception e) {
+            log.error("Error while sorting rooms", e);
+            throw new HotelException(ErrorCode.DATABASE_QUERY_ERROR,
+                    "Ошибка при сортировке комнат", e);
         }
-        log.info("sortRooms(): sorted {} rooms", rooms.size());
-        return rooms;
     }
 
     @Override
     public void requestListRoomAndPrice(RoomFilter filter) {
-        log.info("requestListRoomAndPrice() with filter: {}", filter);
-        roomRepository.requestListRoomAndPrice(filter);
-        log.info("requestListRoomAndPrice(): completed");
+        log.info("Requesting room list and price with filter: {}", filter);
+
+        try {
+            roomRepository.requestListRoomAndPrice(filter);
+            log.info("Room list request completed");
+        } catch (Exception e) {
+            log.error("Error while requesting room list", e);
+            throw new HotelException(ErrorCode.DATABASE_QUERY_ERROR,
+                    "Ошибка при формировании отчета по комнатам", e);
+        }
     }
 
     @Override
-    public void setTotalPrice(Integer roomNumber, BigDecimal newPrice) throws SQLException {
-        log.info("setTotalPrice() for room: {}, new price: {}", roomNumber, newPrice);
-        Room room = roomRepository.findById(roomNumber)
-                .orElseThrow(() -> new HotelException(ErrorCode.ROOM_NOT_FOUND,
-                        "Комната не найдена с номером: " + roomNumber));
+    public void setTotalPrice(Integer roomNumber, BigDecimal newPrice) {
+        log.info("Setting price for room {} to {}", roomNumber, newPrice);
 
-        room.setPrice(newPrice);
-        roomRepository.update(room);
+        try {
+            if (newPrice == null || newPrice.compareTo(BigDecimal.ZERO) <= 0) {
+                throw new HotelException(ErrorCode.ROOM_INVALID_DATA,
+                        "Цена должна быть положительным числом")
+                        .addDetail("providedPrice", newPrice);
+            }
 
-        log.info("setTotalPrice(): set price for room {} to {}", roomNumber, newPrice);
+            Room room = findById(roomNumber)
+                    .orElseThrow(() -> new RoomNotFoundException(roomNumber));
+
+            BigDecimal oldPrice = room.getPrice();
+            room.setPrice(newPrice);
+            roomRepository.update(room);
+
+            log.info("Price for room {} changed from {} to {}", roomNumber, oldPrice, newPrice);
+
+        } catch (HotelException e) {
+            throw e;
+        } catch (SQLException e) {
+            log.error("Database error while updating room price", e);
+            throw new HotelException(ErrorCode.DATABASE_QUERY_ERROR,
+                    "Ошибка при обновлении цены комнаты", e);
+        }
     }
 
     @Override
-    public Optional<Room> findById(Integer id) throws SQLException {
-        log.info("findById() for id: {}", id);
-        Optional<Room> room = roomRepository.findById(id);
-        log.info("findById(): room found: {}", room.isPresent());
-        return room;
+    public Optional<Room> findById(Integer id) {
+        log.debug("Finding room by id: {}", id);
+
+        try {
+            if (id == null) {
+                throw new HotelException(ErrorCode.VALIDATION_ERROR,
+                        "ID комнаты не может быть null");
+            }
+
+            Optional<Room> room = roomRepository.findById(id);
+            log.debug("Room found: {}", room.isPresent());
+            return room;
+
+        } catch (SQLException e) {
+            log.error("Database error while finding room by id: {}", id, e);
+            throw new HotelException(ErrorCode.DATABASE_QUERY_ERROR,
+                    "Ошибка при поиске комнаты", e);
+        }
     }
 
     @Override
     public List<Room> findAll() {
-        log.info("findAll()");
-        List<Room> rooms = roomRepository.findAll();
-        log.info("findAll(): found {} rooms", rooms.size());
-        return rooms;
+        log.info("Finding all rooms");
+
+        try {
+            List<Room> rooms = roomRepository.findAll();
+            log.info("Found {} rooms", rooms.size());
+            return rooms;
+        } catch (Exception e) {
+            log.error("Error while finding all rooms", e);
+            throw new HotelException(ErrorCode.DATABASE_QUERY_ERROR,
+                    "Ошибка при получении списка всех комнат", e);
+        }
     }
 
     @Override

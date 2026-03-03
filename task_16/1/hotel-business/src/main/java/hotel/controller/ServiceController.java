@@ -30,7 +30,7 @@ public class ServiceController {
 
     private final ServicesService servicesService;
 
-    @GetMapping("/finAll")
+    @GetMapping("/findAll")
     @Operation(
             summary = "Получить все услуги",
             description = """
