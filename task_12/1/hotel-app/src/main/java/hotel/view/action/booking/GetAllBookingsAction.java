@@ -46,7 +46,7 @@ public class GetAllBookingsAction extends BaseAction {
 
     private void printBookingSummary(Bookings booking) throws SQLException {
         System.out.println("ID: " + booking.getId() +
-                " | Клиент: " + clientService.findById(booking.getClient()).get() + "." +
+                " | Клиент: " + clientService.findById(booking.getClient().getId()).get() + "." +
                 " | Комната: №" + booking.getRoom() +
                 " | Заезд: " + booking.getCheckInDate() +
                 " | Выезд: " + booking.getCheckOutDate() +

@@ -61,8 +61,8 @@ public class DeleteBookingByIdAction extends BaseAction {
 
     private void printBookingDetails(Bookings booking) throws SQLException {
         System.out.println("ID бронирования: " + booking.getId());
-        System.out.println("Клиент: " + clientService.findById(booking.getClient()).get());
-        System.out.println("Комната: №" + roomService.findById(booking.getRoom()).get());
+        System.out.println("Клиент: " + clientService.findById(booking.getClient().getId()).get());
+        System.out.println("Комната: №" + roomService.findById(booking.getRoom().getId()).get());
         System.out.println("Дата заезда: " + booking.getCheckInDate());
         System.out.println("Дата выезда: " + booking.getCheckOutDate());
         System.out.println("Статус: " + booking.getStatus());

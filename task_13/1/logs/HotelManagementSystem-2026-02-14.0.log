@@ -1,0 +1,461 @@
+2026-02-14 22:10:09.141 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase()
+2026-02-14 22:10:09.151 [main] INFO  hotel.service.ClientService - sortClient()
+2026-02-14 22:10:09.234 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 22:10:09.723 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 22:10:09.880 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 22:10:09.885 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 22:10:09.886 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 22:10:09.886 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 22:10:09.889 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 22:10:10.158 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 22:10:10.744 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 22:10:10.891 [main] INFO  hotel.service.ClientService - sortClient(): sorted clients size: 5
+2026-02-14 22:10:10.891 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): clients size: 5
+2026-02-14 22:10:38.503 [main] INFO  hotel.service.RoomService - findById()
+2026-02-14 22:10:38.517 [main] INFO  hotel.service.RoomService - findById(): room: Optional.empty
+2026-02-14 22:10:53.861 [main] INFO  hotel.service.RoomService - findById()
+2026-02-14 22:10:53.875 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 22003
+2026-02-14 22:10:53.875 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Bad value for type int : ECONOMY
+2026-02-14 22:10:53.877 [main] INFO  o.h.e.i.DefaultLoadEventListener - HHH000327: Error performing load command
+org.hibernate.exception.DataException: Could not read entity state from ResultSet : EntityKey[hotel.model.room.Room#101]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:115)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl.loadFromResultSet(EntityReferenceInitializerImpl.java:357)
+	at org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl.hydrateEntityState(EntityReferenceInitializerImpl.java:269)
+	at org.hibernate.loader.plan.exec.process.internal.AbstractRowReader.readRow(AbstractRowReader.java:80)
+	at org.hibernate.loader.plan.exec.internal.EntityLoadQueryDetails$EntityLoaderRowReader.readRow(EntityLoadQueryDetails.java:288)
+	at org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl.extractRows(ResultSetProcessorImpl.java:157)
+	at org.hibernate.loader.plan.exec.process.internal.ResultSetProcessorImpl.extractResults(ResultSetProcessorImpl.java:94)
+	at org.hibernate.loader.plan.exec.internal.AbstractLoadPlanBasedLoader.executeLoad(AbstractLoadPlanBasedLoader.java:105)
+	at org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader.load(AbstractLoadPlanBasedEntityLoader.java:285)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:4550)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:4540)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:571)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:539)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:208)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:327)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:108)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:74)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:118)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1220)
+	at org.hibernate.internal.SessionImpl.access$2100(SessionImpl.java:202)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.doLoad(SessionImpl.java:2848)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.lambda$load$1(SessionImpl.java:2825)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.perform(SessionImpl.java:2781)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.load(SessionImpl.java:2825)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1019)
+	at hotel.dao.HibernateAbstractDao.findById(HibernateAbstractDao.java:65)
+	at hotel.repository.room.HibernateRoomRepository.findById(HibernateRoomRepository.java:47)
+	at hotel.service.RoomService.findById(RoomService.java:98)
+	at hotel.view.action.room.GetInfoAboutRoomAction.execute(GetInfoAboutRoomAction.java:21)
+	at hotel.view.Navigator.executeMenuItemAction(Navigator.java:85)
+	at hotel.view.Navigator.lambda$handleMenuSelection$4(Navigator.java:71)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at hotel.view.Navigator.handleMenuSelection(Navigator.java:69)
+	at hotel.view.Navigator.navigate(Navigator.java:52)
+	at hotel.view.MenuController.run(MenuController.java:20)
+	at hotel.Main.runHotelApplication(Main.java:60)
+	at hotel.Main.main(Main.java:48)
+Caused by: org.postgresql.util.PSQLException: Bad value for type int : ECONOMY
+	at org.postgresql.jdbc.PgResultSet.toInt(PgResultSet.java:3368)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2606)
+	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2962)
+	at org.hibernate.type.descriptor.sql.IntegerTypeDescriptor$2.doExtract(IntegerTypeDescriptor.java:62)
+	at org.hibernate.type.descriptor.sql.BasicExtractor.extract(BasicExtractor.java:47)
+	at org.hibernate.metamodel.model.convert.internal.OrdinalEnumValueConverter.readValue(OrdinalEnumValueConverter.java:66)
+	at org.hibernate.type.EnumType.nullSafeGet(EnumType.java:250)
+	at org.hibernate.type.CustomType.nullSafeGet(CustomType.java:119)
+	at org.hibernate.type.AbstractType.hydrate(AbstractType.java:91)
+	at org.hibernate.persister.entity.AbstractEntityPersister.hydrate(AbstractEntityPersister.java:3214)
+	at org.hibernate.persister.entity.Loadable.hydrate(Loadable.java:94)
+	at org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl.loadFromResultSet(EntityReferenceInitializerImpl.java:342)
+	... 36 common frames omitted
+2026-02-14 22:11:05.440 [main] INFO  hotel.service.RoomService - findAll()
+2026-02-14 22:11:05.444 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 22003
+2026-02-14 22:11:05.444 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Bad value for type int : ECONOMY
+2026-02-14 22:11:05.449 [main] ERROR hotel.service.RoomService - javax.persistence.PersistenceException: org.hibernate.exception.DataException: could not execute query
+2026-02-14 22:12:39.977 [main] INFO  hotel.service.RoomService - findAll()
+2026-02-14 22:12:40.028 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 22:12:40.389 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 22:12:40.515 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 22:12:40.518 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 22:12:40.519 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 22:12:40.519 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 22:12:40.521 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 22:12:40.705 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 22:12:41.292 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 22:12:41.414 [main] INFO  hotel.service.RoomService - findAll(): rooms size: 9
+2026-02-14 22:28:34.376 [main] INFO  hotel.service.RoomService - findById()
+2026-02-14 22:28:34.427 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 22:28:34.777 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 22:28:34.906 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 22:28:34.909 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 22:28:34.909 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 22:28:34.909 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 22:28:34.912 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 22:28:35.086 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 22:28:35.614 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 22:28:35.678 [main] INFO  hotel.service.RoomService - findById(): room: Optional.empty
+2026-02-14 22:28:46.742 [main] INFO  hotel.service.RoomService - findAll()
+2026-02-14 22:28:46.804 [main] INFO  hotel.service.RoomService - findAll(): rooms size: 9
+2026-02-14 22:28:52.945 [main] INFO  hotel.service.RoomService - findById()
+2026-02-14 22:28:52.946 [main] INFO  hotel.service.RoomService - findById(): room: Optional[Room{number=1245342, category=BUSINESS, status=AVAILABLE, type=STANDARD, capacity=15, price=6795.00}]
+2026-02-14 23:10:34.846 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:10:34.899 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:10:35.277 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:10:35.407 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:10:35.410 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:10:35.411 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:10:35.411 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:10:35.413 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:10:35.614 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:10:36.181 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 23:10:36.299 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-14 23:10:51.010 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate()
+2026-02-14 23:10:51.033 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703
+2026-02-14 23:10:51.033 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: столбец bookings0_.update_at не существует
+  Подсказка: Возможно, предполагалась ссылка на столбец "bookings0_.updated_at".
+  Позиция: 308
+2026-02-14 23:12:14.586 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:12:14.637 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:12:14.990 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:12:15.119 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:12:15.122 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:12:15.123 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:12:15.123 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:12:15.126 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:12:15.301 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:12:15.881 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 23:12:15.997 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-14 23:12:27.589 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate()
+2026-02-14 23:12:27.611 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 22003
+2026-02-14 23:12:27.611 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Bad value for type int : CONFIRMED
+2026-02-14 23:13:36.054 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:13:36.105 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:13:36.477 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:13:36.602 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:13:36.606 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:13:36.606 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:13:36.606 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:13:36.608 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:13:36.796 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:13:37.341 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 23:13:37.457 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-14 23:13:49.270 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate()
+2026-02-14 23:13:49.291 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate(): available rooms size: 9
+2026-02-14 23:13:52.860 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-14 23:13:52.864 [main] INFO  hotel.service.ServicesService - findAll(): services size: 6
+2026-02-14 23:13:55.456 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-14 23:13:55.458 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-14 23:13:55.489 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42804
+2026-02-14 23:13:55.489 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: столбец "status" имеет тип booking_status_type, а выражение - character varying
+  Подсказка: Перепишите выражение или преобразуйте его тип.
+  Позиция: 151
+2026-02-14 23:15:49.050 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:15:49.097 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:15:49.470 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:15:49.599 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:15:49.602 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:15:49.603 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:15:49.603 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:15:49.605 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:15:49.818 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:15:49.992 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:15:49.997 [main] ERROR hotel.util.HibernateUtil - Unable to load class [pgsql_enum]
+org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [pgsql_enum]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
+	at org.hibernate.boot.internal.ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:67)
+	at org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:536)
+	at org.hibernate.cfg.SetSimpleValueTypeSecondPass.doSecondPass(SetSimpleValueTypeSecondPass.java:25)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1653)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1621)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:86)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:479)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:85)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:709)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at hotel.util.HibernateUtil.<clinit>(HibernateUtil.java:30)
+	at hotel.dao.BaseDAO.getSession(BaseDAO.java:22)
+	at hotel.dao.HibernateAbstractDao.findAll(HibernateAbstractDao.java:57)
+	at hotel.repository.client.HibernateClientRepository.findAll(HibernateClientRepository.java:20)
+	at hotel.service.ClientService.findAll(ClientService.java:90)
+	at hotel.view.action.booking.CreateBookingAction.execute(CreateBookingAction.java:45)
+	at hotel.view.Navigator.executeMenuItemAction(Navigator.java:85)
+	at hotel.view.Navigator.lambda$handleMenuSelection$4(Navigator.java:71)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at hotel.view.Navigator.handleMenuSelection(Navigator.java:69)
+	at hotel.view.Navigator.navigate(Navigator.java:52)
+	at hotel.view.MenuController.run(MenuController.java:20)
+	at hotel.Main.runHotelApplication(Main.java:60)
+	at hotel.Main.main(Main.java:48)
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : pgsql_enum
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
+	... 25 common frames omitted
+2026-02-14 23:16:02.457 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:16:02.506 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:16:02.869 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:16:02.990 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:16:02.994 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:16:02.994 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:16:02.995 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:16:02.997 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:16:03.180 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:16:03.353 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:16:03.354 [main] ERROR hotel.util.HibernateUtil - Unable to load class [pgsql_enum]
+org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [pgsql_enum]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
+	at org.hibernate.boot.internal.ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:67)
+	at org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:536)
+	at org.hibernate.cfg.SetSimpleValueTypeSecondPass.doSecondPass(SetSimpleValueTypeSecondPass.java:25)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1653)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1621)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:86)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:479)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:85)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:709)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at hotel.util.HibernateUtil.<clinit>(HibernateUtil.java:30)
+	at hotel.dao.BaseDAO.getSession(BaseDAO.java:22)
+	at hotel.dao.HibernateAbstractDao.findAll(HibernateAbstractDao.java:57)
+	at hotel.repository.client.HibernateClientRepository.findAll(HibernateClientRepository.java:20)
+	at hotel.service.ClientService.findAll(ClientService.java:90)
+	at hotel.view.action.booking.CreateBookingAction.execute(CreateBookingAction.java:45)
+	at hotel.view.Navigator.executeMenuItemAction(Navigator.java:85)
+	at hotel.view.Navigator.lambda$handleMenuSelection$4(Navigator.java:71)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at hotel.view.Navigator.handleMenuSelection(Navigator.java:69)
+	at hotel.view.Navigator.navigate(Navigator.java:52)
+	at hotel.view.MenuController.run(MenuController.java:20)
+	at hotel.Main.runHotelApplication(Main.java:60)
+	at hotel.Main.main(Main.java:48)
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : pgsql_enum
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
+	... 25 common frames omitted
+2026-02-14 23:17:55.472 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:17:55.521 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:17:55.889 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:17:56.018 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:17:56.021 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:17:56.021 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:17:56.021 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:17:56.024 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:17:56.192 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:17:56.352 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:17:56.353 [main] ERROR hotel.util.HibernateUtil - Unable to load class [booking_status_type]
+org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [booking_status_type]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
+	at org.hibernate.boot.internal.ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:67)
+	at org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:536)
+	at org.hibernate.cfg.SetSimpleValueTypeSecondPass.doSecondPass(SetSimpleValueTypeSecondPass.java:25)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1653)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1621)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:86)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:479)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:85)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:709)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at hotel.util.HibernateUtil.<clinit>(HibernateUtil.java:30)
+	at hotel.dao.BaseDAO.getSession(BaseDAO.java:22)
+	at hotel.dao.HibernateAbstractDao.findAll(HibernateAbstractDao.java:57)
+	at hotel.repository.client.HibernateClientRepository.findAll(HibernateClientRepository.java:20)
+	at hotel.service.ClientService.findAll(ClientService.java:90)
+	at hotel.view.action.booking.CreateBookingAction.execute(CreateBookingAction.java:45)
+	at hotel.view.Navigator.executeMenuItemAction(Navigator.java:85)
+	at hotel.view.Navigator.lambda$handleMenuSelection$4(Navigator.java:71)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at hotel.view.Navigator.handleMenuSelection(Navigator.java:69)
+	at hotel.view.Navigator.navigate(Navigator.java:52)
+	at hotel.view.MenuController.run(MenuController.java:20)
+	at hotel.Main.runHotelApplication(Main.java:60)
+	at hotel.Main.main(Main.java:48)
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : booking_status_type
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
+	... 25 common frames omitted
+2026-02-14 23:21:25.695 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:21:25.747 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:21:26.130 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:21:26.265 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:21:26.270 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:21:26.270 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:21:26.270 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:21:26.274 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:21:26.471 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:21:26.655 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:21:26.656 [main] ERROR hotel.util.HibernateUtil - Unable to load class [booking_status_type]
+org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [booking_status_type]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:133)
+	at org.hibernate.boot.internal.ClassLoaderAccessImpl.classForName(ClassLoaderAccessImpl.java:67)
+	at org.hibernate.cfg.annotations.SimpleValueBinder.fillSimpleValue(SimpleValueBinder.java:536)
+	at org.hibernate.cfg.SetSimpleValueTypeSecondPass.doSecondPass(SetSimpleValueTypeSecondPass.java:25)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1653)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1621)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:295)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:86)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:479)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:85)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:709)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at hotel.util.HibernateUtil.<clinit>(HibernateUtil.java:30)
+	at hotel.dao.BaseDAO.getSession(BaseDAO.java:22)
+	at hotel.dao.HibernateAbstractDao.findAll(HibernateAbstractDao.java:57)
+	at hotel.repository.client.HibernateClientRepository.findAll(HibernateClientRepository.java:20)
+	at hotel.service.ClientService.findAll(ClientService.java:90)
+	at hotel.view.action.booking.CreateBookingAction.execute(CreateBookingAction.java:45)
+	at hotel.view.Navigator.executeMenuItemAction(Navigator.java:85)
+	at hotel.view.Navigator.lambda$handleMenuSelection$4(Navigator.java:71)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at hotel.view.Navigator.handleMenuSelection(Navigator.java:69)
+	at hotel.view.Navigator.navigate(Navigator.java:52)
+	at hotel.view.MenuController.run(MenuController.java:20)
+	at hotel.Main.runHotelApplication(Main.java:60)
+	at hotel.Main.main(Main.java:48)
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : booking_status_type
+	at org.hibernate.boot.registry.classloading.internal.AggregatedClassLoader.findClass(AggregatedClassLoader.java:210)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:469)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:130)
+	... 25 common frames omitted
+2026-02-14 23:21:42.045 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:21:42.094 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:21:42.462 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:21:42.586 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:21:42.591 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:21:42.591 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:21:42.591 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:21:42.594 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:21:42.771 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:21:43.331 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 23:21:43.456 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-14 23:24:30.330 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:24:30.380 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:24:30.754 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:24:30.890 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:24:30.895 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:24:30.895 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:24:30.895 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:24:30.897 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:24:31.082 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:24:31.644 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 23:24:31.770 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-14 23:24:46.351 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate()
+2026-02-14 23:24:46.370 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate(): available rooms size: 9
+2026-02-14 23:24:48.675 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-14 23:24:48.679 [main] INFO  hotel.service.ServicesService - findAll(): services size: 6
+2026-02-14 23:24:52.003 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-14 23:24:52.006 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-14 23:24:52.027 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42804
+2026-02-14 23:24:52.027 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ОШИБКА: столбец "status" имеет тип booking_status_type, а выражение - character varying
+  Подсказка: Перепишите выражение или преобразуйте его тип.
+  Позиция: 151
+2026-02-14 23:26:03.747 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:26:03.798 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:26:04.147 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:26:04.275 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:26:04.277 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:26:04.277 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:26:04.277 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:26:04.280 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:26:04.445 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:26:04.984 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 23:26:05.115 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-14 23:26:16.932 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate()
+2026-02-14 23:26:16.955 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate(): available rooms size: 9
+2026-02-14 23:26:18.657 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-14 23:26:18.662 [main] INFO  hotel.service.ServicesService - findAll(): services size: 6
+2026-02-14 23:26:19.819 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-14 23:26:19.821 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-14 23:26:19.853 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-14 23:29:17.278 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:29:17.330 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:29:17.698 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:29:17.817 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:29:17.819 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:29:17.819 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:29:17.819 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:29:17.822 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:29:18.086 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:29:18.644 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 23:29:18.763 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-14 23:29:29.518 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate()
+2026-02-14 23:29:29.537 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate(): available rooms size: 9
+2026-02-14 23:29:31.264 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-14 23:29:31.270 [main] INFO  hotel.service.ServicesService - findAll(): services size: 6
+2026-02-14 23:29:32.914 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-14 23:29:32.915 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-14 23:29:32.930 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-14 23:29:32.931 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 5000.00
+2026-02-14 23:29:32.938 [main] INFO  hotel.service.BookingService - createBooking(): booking: Optional[Bookings{id=16, client=Client{name=Сергей, surname=Пшеницын}, room=Room{number=101, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=2500.00}, checkInDate=2026-02-15, checkOutDate=2026-02-17, totalPrice=5000.00}]
+2026-02-14 23:29:49.099 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-14 23:35:16.160 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-14 23:35:16.218 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-14 23:35:16.604 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-14 23:35:16.736 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-14 23:35:16.738 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-14 23:35:16.739 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-14 23:35:16.739 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-14 23:35:16.741 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-14 23:35:16.917 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-14 23:35:17.449 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-14 23:35:17.739 [main] INFO  hotel.service.BookingService - getAllBookings(): bookings size: 4
+2026-02-14 23:35:17.753 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:35:17.762 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-14 23:35:17.777 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:35:17.780 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Dmitry, surname=Kuznetsov}]
+2026-02-14 23:35:17.784 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:35:17.786 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-14 23:35:17.787 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:35:17.789 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-14 23:37:26.782 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:37:26.787 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-14 23:37:39.631 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate()
+2026-02-14 23:37:39.636 [main] INFO  hotel.service.RoomService - listAvailableRoomsByDate(): available rooms size: 9
+2026-02-14 23:37:43.468 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-14 23:37:43.474 [main] INFO  hotel.service.ServicesService - findAll(): services size: 6
+2026-02-14 23:37:45.884 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-14 23:37:45.885 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-14 23:37:45.948 [main] INFO  hotel.service.BookingService - createBooking(): booking: Bookings{id=17, client=Client{name=Сергей, surname=Пшеницын}, room=Room{number=400, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=1000.00}, checkInDate=2026-02-15, checkOutDate=2026-02-17, totalPrice=2000.00}
+2026-02-14 23:38:14.863 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-14 23:38:14.865 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional.empty
+2026-02-14 23:38:27.716 [main] INFO  hotel.service.BookingService - getBookingById()
+2026-02-14 23:38:27.724 [main] INFO  hotel.service.BookingService - getBookingById(): booking: Optional[Bookings{id=4, client=Client{name=Dmitry, surname=Kuznetsov}, room=Room{number=102, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=2500.00}, checkInDate=2026-02-05, checkOutDate=2026-02-08, totalPrice=7500.00}]
+2026-02-14 23:38:27.726 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:38:27.727 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Dmitry, surname=Kuznetsov}]
+2026-02-14 23:38:27.728 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:38:27.729 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Dmitry, surname=Kuznetsov}]
+2026-02-14 23:38:27.729 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-14 23:38:27.732 [main] INFO  hotel.service.ClientService - findAll(): clients size: 5
+2026-02-14 23:38:30.403 [main] INFO  hotel.service.RoomService - findAll()
+2026-02-14 23:38:30.406 [main] INFO  hotel.service.RoomService - findAll(): rooms size: 9
+2026-02-14 23:38:39.327 [main] INFO  hotel.service.BookingService - getAllBookings()
+2026-02-14 23:38:39.330 [main] INFO  hotel.service.BookingService - getAllBookings(): bookings size: 4
+2026-02-14 23:38:39.333 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:38:39.334 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-14 23:38:39.337 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:38:39.339 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Dmitry, surname=Kuznetsov}]
+2026-02-14 23:38:39.342 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:38:39.342 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]
+2026-02-14 23:38:39.343 [main] INFO  hotel.service.ClientService - findById()
+2026-02-14 23:38:39.345 [main] INFO  hotel.service.ClientService - findById(): client: Optional[Client{name=Anna, surname=Smirnova}]

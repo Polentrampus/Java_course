@@ -1,9 +1,10 @@
 package hotel;
 
+import hotel.config.HotelConfiguration;
 import hotel.config.PropertiesConfiguration;
 import hotel.di.DIContainer;
 import hotel.model.room.Room;
-import hotel.repository.room.JdbcRoomRepository;
+import hotel.repository.room.HibernateRoomRepository;
 import hotel.service.AdvancedBookingService;
 import hotel.service.BookingService;
 import hotel.service.ClientService;
@@ -20,9 +21,10 @@ import hotel.view.Navigator;
 import java.io.IOException;
 import java.util.List;
 
+
 public class Main {
     public static void main(String[] args) throws Exception {
-        PropertiesConfiguration config = new PropertiesConfiguration();
+        HotelConfiguration config = new PropertiesConfiguration();
         DIContainer container = DIContainer.getInstance();
 
         container.init(List.of(
@@ -35,7 +37,7 @@ public class Main {
                 ServicesService.class,
                 AdvancedBookingService.class,
                 BookingService.class,
-                JdbcRoomRepository.class,
+                HibernateRoomRepository.class,
                 ConsoleMenuFactory.class,
                 Navigator.class,
                 Room.class), config);
