@@ -1,0 +1,210 @@
+2026-02-25 09:59:48.624 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 09:59:48.690 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 09:59:48.690 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:06:50.912 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:06:50.969 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:06:50.969 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:07:33.603 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:07:33.645 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:07:33.645 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:09:23.572 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:09:23.616 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:09:23.616 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:12:38.503 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:12:38.550 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:12:38.551 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:14:29.752 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:14:29.796 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:14:29.796 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:16:24.087 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:16:24.131 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:16:24.132 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:17:41.002 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:17:41.045 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:17:41.045 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:18:49.905 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:18:49.949 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:18:49.949 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:18:51.278 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:18:51.550 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:18:51.666 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:18:51.666 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:18:51.666 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:18:51.667 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:18:51.669 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:18:51.732 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:18:52.346 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5dae5a70] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:18:52.385 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:36:40.105 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:36:40.158 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:36:40.159 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:36:41.493 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:36:41.711 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:36:41.848 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:36:41.849 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:36:41.849 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:36:41.849 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:36:41.853 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:36:41.936 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:36:42.560 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5dae5a70] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:36:42.594 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:36:55.055 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-25 10:37:23.145 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:37:23.202 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:37:23.203 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:37:24.560 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:37:24.820 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:37:24.952 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:37:24.953 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:37:24.953 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:37:24.953 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:37:24.957 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:37:25.033 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:37:25.666 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6253e59a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:37:25.699 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:38:01.713 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-25 10:40:36.942 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in file [C:\my_program\Java_course\task_15\2\hotel-hibernate\target\classes\hotel\database\TransactionManager.class]: Failed to instantiate [hotel.database.TransactionManager]: Constructor threw exception
+2026-02-25 10:41:22.729 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:41:22.865 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:41:22.865 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:41:25.116 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:41:25.483 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:41:25.711 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:41:25.712 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:41:25.712 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:41:25.713 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:41:25.719 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:41:25.819 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:41:26.999 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5613247e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:41:27.052 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:41:44.675 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-25 10:42:07.978 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-25 10:42:09.166 [main] INFO  hotel.service.ClientService - sortClient(): sorted 2 clients
+2026-02-25 10:42:09.223 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 2 clients
+2026-02-25 10:43:15.440 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:43:15.483 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:43:15.483 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:43:16.798 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:43:17.020 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:43:17.114 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:43:17.114 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:43:17.114 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:43:17.114 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:43:17.116 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:43:17.170 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:43:17.753 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@678586f0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:43:17.788 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:49:26.085 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 10:49:26.200 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 10:49:30.485 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-25 10:49:30.501 [main] INFO  hotel.service.ClientService - findAll(): found 2 clients
+2026-02-25 10:49:50.573 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate() for date: 2026-03-01
+2026-02-25 10:49:50.585 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): found 6 available rooms for date 2026-03-01
+2026-02-25 10:49:54.693 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-25 10:49:54.699 [main] INFO  hotel.service.ServicesService - findAll(): found 4 services
+2026-02-25 10:49:57.727 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-25 10:49:57.727 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-25 10:49:57.799 [main] INFO  hotel.service.BookingService - Booking created with ID: 1
+2026-02-25 10:49:57.800 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-25 10:49:57.800 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 75000.00
+2026-02-25 10:49:57.800 [main] INFO  hotel.service.BookingService - Check calculated for booking 1: 75000.00
+2026-02-25 10:49:57.800 [main] INFO  hotel.service.BookingService - createBooking(): booking created successfully
+2026-02-25 10:50:01.643 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 10:50:01.653 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 10:50:06.452 [main] INFO  hotel.service.BookingService - getBookingById() for id: 1
+2026-02-25 10:50:06.455 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=1, client=Client{name=Anna, surname=Smirnova}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-03-01, checkOutDate=2026-03-06, totalPrice=75000.00}]
+2026-02-25 10:50:06.457 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 10:50:06.459 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 10:50:06.459 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 10:50:06.461 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 10:50:06.461 [main] INFO  hotel.service.ReadRoomService - findById() for id: 302
+2026-02-25 10:50:06.463 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-25 10:50:06.463 [main] INFO  hotel.service.ReadRoomService - findById() for id: 302
+2026-02-25 10:50:06.464 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-25 10:50:10.534 [main] INFO  hotel.service.BookingService - getBookingById() for id: 1
+2026-02-25 10:50:10.535 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=1, client=Client{name=Anna, surname=Smirnova}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-03-01, checkOutDate=2026-03-06, totalPrice=75000.00}]
+2026-02-25 10:50:10.538 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 10:50:10.539 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 10:50:10.540 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 10:50:10.542 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 10:50:10.543 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-25 10:50:10.544 [main] INFO  hotel.service.ClientService - findAll(): found 2 clients
+2026-02-25 10:50:12.628 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-25 10:50:12.630 [main] INFO  hotel.service.ReadRoomService - findAll(): found 6 rooms
+2026-02-25 10:50:14.588 [main] INFO  h.service.AdvancedBookingService - updateBooking()
+2026-02-25 10:50:14.608 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-25 10:50:14.609 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:09:56.853 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 11:09:56.899 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 11:09:56.899 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 11:09:58.109 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 11:09:58.296 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 11:09:58.417 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 11:09:58.417 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 11:09:58.417 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 11:09:58.417 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 11:09:58.424 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 11:09:58.492 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 11:09:59.058 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@678586f0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 11:09:59.100 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 11:10:02.384 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 11:10:02.517 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 11:10:05.108 [main] INFO  hotel.service.BookingService - getBookingById() for id: 1
+2026-02-25 11:10:05.115 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=1, client=Client{name=Dmitry, surname=Kuznetsov}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-03-01, checkOutDate=2026-03-06, totalPrice=75000.00}]
+2026-02-25 11:10:05.120 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-25 11:10:05.120 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:10:05.120 [main] INFO  hotel.service.ReadRoomService - findById() for id: 302
+2026-02-25 11:10:05.125 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-25 11:10:10.456 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-25 11:10:29.709 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-25 11:10:29.714 [main] INFO  hotel.service.ClientService - findAll(): found 2 clients
+2026-02-25 11:10:31.741 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-25 11:10:31.745 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:10:31.745 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-25 11:10:31.747 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:10:34.575 [main] INFO  hotel.service.ClientService - delete() for id: 5
+2026-02-25 11:10:34.581 [main] INFO  hotel.service.ClientService - delete(): result: true
+2026-02-25 11:10:38.975 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-25 11:10:38.975 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-25 11:10:39.008 [main] INFO  hotel.service.ClientService - sortClient(): sorted 1 clients
+2026-02-25 11:10:39.008 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 1 clients
+2026-02-25 11:12:24.330 [main] INFO  hotel.database.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 11:12:24.371 [main] INFO  hotel.database.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 11:12:24.371 [main] INFO  hotel.database.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 11:12:25.694 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 11:12:25.905 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 11:12:26.003 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 11:12:26.005 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 11:12:26.005 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 11:12:26.005 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 11:12:26.005 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 11:12:26.055 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 11:12:26.630 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@678586f0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 11:12:26.664 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 11:12:30.224 [main] INFO  hotel.service.BookingService - getBookingById() for id: 1
+2026-02-25 11:12:30.280 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional.empty
+2026-02-25 11:12:38.287 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 11:12:38.356 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 11:12:42.437 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-25 11:12:42.446 [main] INFO  hotel.service.ClientService - findAll(): found 1 clients
+2026-02-25 11:12:55.972 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate() for date: 2026-03-04
+2026-02-25 11:12:55.980 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): found 6 available rooms for date 2026-03-04
+2026-02-25 11:12:57.747 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-25 11:12:57.752 [main] INFO  hotel.service.ServicesService - findAll(): found 4 services
+2026-02-25 11:12:59.589 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-25 11:12:59.589 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - Booking created with ID: 2
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 2500.00
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - Check calculated for booking 2: 2500.00
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - createBooking(): booking created successfully
+2026-02-25 11:13:03.239 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 11:13:03.242 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 11:13:06.480 [main] INFO  hotel.service.BookingService - getBookingById() for id: 2
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=2, client=Client{name=Anna, surname=Smirnova}, room=Room{number=101, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=2500.00}, checkInDate=2026-03-04, checkOutDate=2026-03-05, totalPrice=2500.00}]
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.ReadRoomService - findById() for id: 101
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-25 11:13:09.487 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-25 11:13:09.487 [main] INFO  h.service.AdvancedBookingService - deleteBookingById(): booking: Bookings{id=2, client=Client{name=Anna, surname=Smirnova}, room=Room{number=101, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=2500.00}, checkInDate=2026-03-04, checkOutDate=2026-03-05, totalPrice=2500.00}
