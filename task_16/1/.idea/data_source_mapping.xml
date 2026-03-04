@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="DataSourcePerFileMappings">
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/ecc34486-964c-41ea-b388-e54e345dc1f4/console.sql" value="ecc34486-964c-41ea-b388-e54e345dc1f4" />
-    <file url="file://$PROJECT_DIR$/hotel-app/src/main/resources/db/changelog/v1.0/v1.0.1-insert_all_tables.sql" value="ecc34486-964c-41ea-b388-e54e345dc1f4" />
-  </component>
-</project>
