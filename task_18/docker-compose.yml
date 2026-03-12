@@ -1,0 +1,144 @@
+version: '3.8'
+
+services:
+  # --- Три брокера Kafka в режиме KRaft (без ZooKeeper) ---
+  kafka1: &kafka-base
+    image: apache/kafka:latest  # Рекомендую использовать официальный образ
+    container_name: kafka1
+    ports:
+      - "19092:9092"  # Внешний порт для клиентов
+    environment:
+      # Уникальный ID кластера (важно: должен быть одинаковым для всех брокеров!)
+      KAFKA_KRAFT_CLUSTER_ID: "5cdIS2oVR4CKJOWnqmLapw"  # Сгенерируй свой уникальный ID
+
+      # Настройки узла
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller  # Каждый узел и брокер, и контроллер
+
+      # Настройки слушателей
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092  # Для внутренней сети Docker
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+
+      # Кворум контроллеров (все три узла участвуют)
+      KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka1:9093,2@kafka2:9093,3@kafka3:9093"
+
+      # Директория для данных
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+
+      # Настройки топиков
+      KAFKA_NUM_PARTITIONS: 3  # По умолчанию 3 партиции (для твоего задания)
+      KAFKA_DEFAULT_REPLICATION_FACTOR: 3
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 3
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 3
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 2
+      KAFKA_MIN_INSYNC_REPLICAS: 2  # Для гарантии exactly-once
+    volumes:
+      - kafka-data-1:/var/lib/kafka/data
+    networks:
+      - kafka-net
+
+  kafka2:
+    <<: *kafka-base
+    container_name: kafka2
+    ports:
+      - "29092:9092"
+    environment:
+      <<: *kafka-base.environment
+      KAFKA_NODE_ID: 2
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9092
+      KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka1:9093,2@kafka2:9093,3@kafka3:9093"
+    volumes:
+      - kafka-data-2:/var/lib/kafka/data
+
+  kafka3:
+    <<: *kafka-base
+    container_name: kafka3
+    ports:
+      - "39092:9092"
+    environment:
+      <<: *kafka-base.environment
+      KAFKA_NODE_ID: 3
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:9092
+      KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka1:9093,2@kafka2:9093,3@kafka3:9093"
+    volumes:
+      - kafka-data-3:/var/lib/kafka/data
+
+  # --- UI для Kafka (опционально, но очень полезно) ---
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: kraft-cluster
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka1:9092,kafka2:9092,kafka3:9092
+      KAFKA_CLUSTERS_0_METRICS_PORT: 9999
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+    networks:
+      - kafka-net
+
+  # --- PostgreSQL (без изменений) ---
+  postgres:
+    image: postgres:14
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: bankdb
+      POSTGRES_USER: bank
+      POSTGRES_PASSWORD: bankpass
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - kafka-net
+
+  # --- Твой producer-app ---
+  producer-app:
+    build: ./producer
+    container_name: producer-app
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - postgres
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka1:9092,kafka2:9092,kafka3:9092
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/bankdb
+      SPRING_DATASOURCE_USERNAME: bank
+      SPRING_DATASOURCE_PASSWORD: bankpass
+    networks:
+      - kafka-net
+
+  # --- Твой consumer-app (3 реплики) ---
+  consumer-app:
+    build: ./consumer
+    deploy:
+      replicas: 3
+    depends_on:
+      - kafka1
+      - kafka2
+      - kafka3
+      - postgres
+    environment:
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka1:9092,kafka2:9092,kafka3:9092
+      SPRING_KAFKA_CONSUMER_GROUP_ID: payment-processors
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/bankdb
+      SPRING_DATASOURCE_USERNAME: bank
+      SPRING_DATASOURCE_PASSWORD: bankpass
+    networks:
+      - kafka-net
+
+networks:
+  kafka-net:
+    driver: bridge
+
+volumes:
+  kafka-data-1:
+  kafka-data-2:
+  kafka-data-3:
+  postgres-data:
