@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # Сервис базы данных Postgre
+  postgres:
+    image: postgres:15
+    container_name: hotel_management_postgres
+    environment:
+      POSTGRES_DB: hotel_management
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 8642
+    ports:
+      - "5433:5433"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # том для сохранения данных
+    restart: unless-stopped
+    networks:
+      - hotel_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d hotel_management"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Сервис приложения
+  app:
+    build: .
+    container_name: hotel_app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      # переменное окружение
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/hotel_management
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 8642
+
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      ROOM_STATUS_MODIFIABLE: "true"
+      BOOKINGS_DELETION_ALLOWED: "true"
+      BOOKINGS_HISTORY_ENABLED: "true"
+    restart: unless-stopped
+    networks:
+      - hotel_network
+
+# Определяем том для данных PostgreSQL
+volumes:
+  postgres_data:
+    name: hotel_postgres_data
+
+# Определяем сеть для взаимодействия контейнеров
+networks:
+  hotel_network:
+    driver: bridge
