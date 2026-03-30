@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/1/hotel-app/src/main/resources/db/changelog/v1.0/v1.0.0-create-all-tables.sql" value="b476f2f9-6403-4f76-ae0d-8cfd42b4ba04" />
+    <file url="file://$PROJECT_DIR$/1/hotel-app/src/main/resources/db/changelog/v1.0/v1.0.1-insert-all-tables.sql" value="b476f2f9-6403-4f76-ae0d-8cfd42b4ba04" />
+    <file url="file://$PROJECT_DIR$/1/hotel-app/src/main/resources/db/changelog/v1.0/v1.0.2-create-roles-and-login-password.sql" value="b476f2f9-6403-4f76-ae0d-8cfd42b4ba04" />
+  </component>
+</project>

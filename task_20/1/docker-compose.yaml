@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  # Сервис базы данных Postgre
+  postgres:
+    image: postgres:15
+    container_name: hotel_management_postgres
+    environment:
+      POSTGRES_DB: hotel_management
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 8642
+    ports:
+      - "5433:5432"  # Это правильный проброс портов (хост:контейнер)
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - hotel_network
+    healthcheck:
+      # Исправлен healthcheck: добавлен хост и порт
+      test: ["CMD-SHELL", "pg_isready -U postgres -d hotel_management -h localhost -p 5432"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s  # Добавлен период ожидания перед началом проверок
+
+  # Сервис приложения
+  app:
+    build: .
+    container_name: hotel_app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      # Эти переменные используются внутри Docker сети
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/hotel_management
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 8642
+
+      # Настройки Liquibase (добавьте их, если используете)
+      SPRING_LIQUIBASE_ENABLED: "true"
+      SPRING_LIQUIBASE_CHANGE_LOG: classpath:db/changelog/db.changelog-master.xml
+
+      # Настройки JPA
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: "true"  # Полезно для отладки
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
+
+      # Таймауты для подключения к БД
+      SPRING_DATASOURCE_HIKARI_CONNECTION_TIMEOUT: "30000"
+      SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE: "10"
+
+      # Логирование Liquibase для отладки
+      LOGGING_LEVEL_LIQUIBASE: DEBUG
+      LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_BOOT: INFO
+
+      # Ваши кастомные настройки
+      ROOM_STATUS_MODIFIABLE: "true"
+      BOOKINGS_DELETION_ALLOWED: "true"
+      BOOKINGS_HISTORY_ENABLED: "true"
+    restart: unless-stopped
+    networks:
+      - hotel_network
+
+# Определяем том для данных PostgreSQL
+volumes:
+  postgres_data:
+    name: hotel_postgres_data
+
+# Определяем сеть для взаимодействия контейнеров
+networks:
+  hotel_network:
+    driver: bridge
