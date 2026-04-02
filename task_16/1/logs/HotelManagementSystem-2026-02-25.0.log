@@ -1,0 +1,572 @@
+2026-02-25 09:59:48.624 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 09:59:48.690 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 09:59:48.690 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:06:50.912 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:06:50.969 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:06:50.969 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:07:33.603 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:07:33.645 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:07:33.645 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:09:23.572 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:09:23.616 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:09:23.616 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:12:38.503 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:12:38.550 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:12:38.551 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:14:29.752 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:14:29.796 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:14:29.796 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:16:24.087 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:16:24.131 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:16:24.132 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:17:41.002 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:17:41.045 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:17:41.045 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:18:49.905 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:18:49.949 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:18:49.949 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:18:51.278 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:18:51.550 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:18:51.666 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:18:51.666 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:18:51.666 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:18:51.667 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:18:51.669 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:18:51.732 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:18:52.346 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5dae5a70] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:18:52.385 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:36:40.105 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:36:40.158 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:36:40.159 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:36:41.493 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:36:41.711 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:36:41.848 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:36:41.849 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:36:41.849 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:36:41.849 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:36:41.853 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:36:41.936 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:36:42.560 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5dae5a70] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:36:42.594 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:36:55.055 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-25 10:37:23.145 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:37:23.202 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:37:23.203 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:37:24.560 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:37:24.820 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:37:24.952 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:37:24.953 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:37:24.953 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:37:24.953 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:37:24.957 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:37:25.033 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:37:25.666 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6253e59a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:37:25.699 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:38:01.713 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-25 10:40:36.942 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appConfig': Unsatisfied dependency expressed through field 'transactionManager': Error creating bean with name 'transactionManager' defined in file [C:\my_program\Java_course\task_15\2\hotel-hibernate\target\classes\hotel\database\TransactionManager.class]: Failed to instantiate [hotel.database.TransactionManager]: Constructor threw exception
+2026-02-25 10:41:22.729 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:41:22.865 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:41:22.865 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:41:25.116 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:41:25.483 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:41:25.711 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:41:25.712 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:41:25.712 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:41:25.713 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:41:25.719 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:41:25.819 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:41:26.999 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5613247e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:41:27.052 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:41:44.675 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-25 10:42:07.978 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-25 10:42:09.166 [main] INFO  hotel.service.ClientService - sortClient(): sorted 2 clients
+2026-02-25 10:42:09.223 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 2 clients
+2026-02-25 10:43:15.440 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 10:43:15.483 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 10:43:15.483 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 10:43:16.798 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 10:43:17.020 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 10:43:17.114 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 10:43:17.114 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 10:43:17.114 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 10:43:17.114 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 10:43:17.116 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 10:43:17.170 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 10:43:17.753 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@678586f0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 10:43:17.788 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 10:49:26.085 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 10:49:26.200 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 10:49:30.485 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-25 10:49:30.501 [main] INFO  hotel.service.ClientService - findAll(): found 2 clients
+2026-02-25 10:49:50.573 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate() for date: 2026-03-01
+2026-02-25 10:49:50.585 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): found 6 available rooms for date 2026-03-01
+2026-02-25 10:49:54.693 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-25 10:49:54.699 [main] INFO  hotel.service.ServicesService - findAll(): found 4 services
+2026-02-25 10:49:57.727 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-25 10:49:57.727 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-25 10:49:57.799 [main] INFO  hotel.service.BookingService - Booking created with ID: 1
+2026-02-25 10:49:57.800 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-25 10:49:57.800 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 75000.00
+2026-02-25 10:49:57.800 [main] INFO  hotel.service.BookingService - Check calculated for booking 1: 75000.00
+2026-02-25 10:49:57.800 [main] INFO  hotel.service.BookingService - createBooking(): booking created successfully
+2026-02-25 10:50:01.643 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 10:50:01.653 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 10:50:06.452 [main] INFO  hotel.service.BookingService - getBookingById() for id: 1
+2026-02-25 10:50:06.455 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=1, client=Client{name=Anna, surname=Smirnova}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-03-01, checkOutDate=2026-03-06, totalPrice=75000.00}]
+2026-02-25 10:50:06.457 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 10:50:06.459 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 10:50:06.459 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 10:50:06.461 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 10:50:06.461 [main] INFO  hotel.service.ReadRoomService - findById() for id: 302
+2026-02-25 10:50:06.463 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-25 10:50:06.463 [main] INFO  hotel.service.ReadRoomService - findById() for id: 302
+2026-02-25 10:50:06.464 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-25 10:50:10.534 [main] INFO  hotel.service.BookingService - getBookingById() for id: 1
+2026-02-25 10:50:10.535 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=1, client=Client{name=Anna, surname=Smirnova}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-03-01, checkOutDate=2026-03-06, totalPrice=75000.00}]
+2026-02-25 10:50:10.538 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 10:50:10.539 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 10:50:10.540 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 10:50:10.542 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 10:50:10.543 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-25 10:50:10.544 [main] INFO  hotel.service.ClientService - findAll(): found 2 clients
+2026-02-25 10:50:12.628 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-25 10:50:12.630 [main] INFO  hotel.service.ReadRoomService - findAll(): found 6 rooms
+2026-02-25 10:50:14.588 [main] INFO  h.service.AdvancedBookingService - updateBooking()
+2026-02-25 10:50:14.608 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-25 10:50:14.609 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:09:56.853 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 11:09:56.899 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 11:09:56.899 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 11:09:58.109 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 11:09:58.296 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 11:09:58.417 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 11:09:58.417 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 11:09:58.417 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 11:09:58.417 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 11:09:58.424 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 11:09:58.492 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 11:09:59.058 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@678586f0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 11:09:59.100 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 11:10:02.384 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 11:10:02.517 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 11:10:05.108 [main] INFO  hotel.service.BookingService - getBookingById() for id: 1
+2026-02-25 11:10:05.115 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=1, client=Client{name=Dmitry, surname=Kuznetsov}, room=Room{number=302, category=PREMIUM, status=AVAILABLE, type=PRESIDENTIAL, capacity=2, price=15000.00}, checkInDate=2026-03-01, checkOutDate=2026-03-06, totalPrice=75000.00}]
+2026-02-25 11:10:05.120 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-25 11:10:05.120 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:10:05.120 [main] INFO  hotel.service.ReadRoomService - findById() for id: 302
+2026-02-25 11:10:05.125 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-25 11:10:10.456 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-25 11:10:29.709 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-25 11:10:29.714 [main] INFO  hotel.service.ClientService - findAll(): found 2 clients
+2026-02-25 11:10:31.741 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-25 11:10:31.745 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:10:31.745 [main] INFO  hotel.service.ClientService - findById() for id: 5
+2026-02-25 11:10:31.747 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:10:34.575 [main] INFO  hotel.service.ClientService - delete() for id: 5
+2026-02-25 11:10:34.581 [main] INFO  hotel.service.ClientService - delete(): result: true
+2026-02-25 11:10:38.975 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-25 11:10:38.975 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-25 11:10:39.008 [main] INFO  hotel.service.ClientService - sortClient(): sorted 1 clients
+2026-02-25 11:10:39.008 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 1 clients
+2026-02-25 11:12:24.330 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 11:12:24.371 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 11:12:24.371 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 11:12:25.694 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 11:12:25.905 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 11:12:26.003 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 11:12:26.005 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 11:12:26.005 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 11:12:26.005 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 11:12:26.005 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 11:12:26.055 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 11:12:26.630 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@678586f0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 11:12:26.664 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 11:12:30.224 [main] INFO  hotel.service.BookingService - getBookingById() for id: 1
+2026-02-25 11:12:30.280 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional.empty
+2026-02-25 11:12:38.287 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 11:12:38.356 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 11:12:42.437 [main] INFO  hotel.service.ClientService - findAll()
+2026-02-25 11:12:42.446 [main] INFO  hotel.service.ClientService - findAll(): found 1 clients
+2026-02-25 11:12:55.972 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate() for date: 2026-03-04
+2026-02-25 11:12:55.980 [main] INFO  hotel.service.ReadRoomService - listAvailableRoomsByDate(): found 6 available rooms for date 2026-03-04
+2026-02-25 11:12:57.747 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-25 11:12:57.752 [main] INFO  hotel.service.ServicesService - findAll(): found 4 services
+2026-02-25 11:12:59.589 [main] INFO  hotel.service.BookingService - createBooking()
+2026-02-25 11:12:59.589 [main] DEBUG hotel.service.BookingService - Transaction started
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - Booking created with ID: 2
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - givOutCheck()
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - givOutCheck(): res: 2500.00
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - Check calculated for booking 2: 2500.00
+2026-02-25 11:12:59.619 [main] INFO  hotel.service.BookingService - createBooking(): booking created successfully
+2026-02-25 11:13:03.239 [main] DEBUG hotel.service.BookingService - getAllBookings()
+2026-02-25 11:13:03.242 [main] INFO  hotel.service.BookingService - bookings found
+2026-02-25 11:13:06.480 [main] INFO  hotel.service.BookingService - getBookingById() for id: 2
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.BookingService - getBookingById(): booking found: Optional[Bookings{id=2, client=Client{name=Anna, surname=Smirnova}, room=Room{number=101, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=2500.00}, checkInDate=2026-03-04, checkOutDate=2026-03-05, totalPrice=2500.00}]
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.ClientService - findById() for id: 4
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.ClientService - findById(): client found: true
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.ReadRoomService - findById() for id: 101
+2026-02-25 11:13:06.482 [main] INFO  hotel.service.ReadRoomService - findById(): room found: true
+2026-02-25 11:13:09.487 [main] INFO  h.service.AdvancedBookingService - deleteBookingById()
+2026-02-25 11:13:09.487 [main] INFO  h.service.AdvancedBookingService - deleteBookingById(): booking: Bookings{id=2, client=Client{name=Anna, surname=Smirnova}, room=Room{number=101, category=ECONOMY, status=AVAILABLE, type=STANDARD, capacity=2, price=2500.00}, checkInDate=2026-03-04, checkOutDate=2026-03-05, totalPrice=2500.00}
+2026-02-25 14:31:30.054 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 14:31:30.107 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 14:31:30.107 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 14:31:31.479 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 14:31:31.724 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 14:31:31.828 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 14:31:31.828 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 14:31:31.828 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 14:31:31.828 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 14:31:31.831 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 14:31:31.880 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 14:31:32.459 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@619c3546] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 14:31:32.505 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 14:31:37.739 [main] INFO  hotel.service.ServicesService - findAll()
+2026-02-25 14:31:37.864 [main] INFO  hotel.service.ServicesService - findAll(): found 4 services
+2026-02-25 14:57:51.567 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 14:57:51.618 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 14:57:51.618 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 14:57:53.078 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 14:57:53.297 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 14:57:53.405 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 14:57:53.405 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 14:57:53.405 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 14:57:53.405 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 14:57:53.409 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 14:57:53.582 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 14:57:53.833 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 14:57:53.835 [main] ERROR hotel.database.HibernateUtil - Ошибка при создании SessionFactory: javax/validation/ValidatorFactory
+java.lang.NoClassDefFoundError: javax/validation/ValidatorFactory
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3404)
+	at java.base/java.lang.Class.getMethodsRecursive(Class.java:3545)
+	at java.base/java.lang.Class.getMethod0(Class.java:3531)
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:113)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:300)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at hotel.database.HibernateUtil.init(HibernateUtil.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1921)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1874)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:92)
+	at hotel.Main.main(Main.java:13)
+Caused by: java.lang.ClassNotFoundException: javax.validation.ValidatorFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 73 common frames omitted
+2026-02-25 14:57:53.839 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consoleMenuFactory' defined in file [C:\my_program\Java_course\task_16\1\hotel-app\target\classes\hotel\view\ConsoleMenuFactory.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'clientService' defined in file [C:\my_program\Java_course\task_16\1\hotel-business\target\classes\hotel\service\ClientService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'transactionManager': Unsatisfied dependency expressed through field 'hibernateUtil': Error creating bean with name 'hibernateUtil' defined in hotel.config.AppConfig: Failed to create SessionFactory
+2026-02-25 16:07:16.986 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 16:07:17.036 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 16:07:17.036 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 16:07:18.643 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 16:07:18.869 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 16:07:18.970 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 16:07:18.970 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 16:07:18.971 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 16:07:18.971 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 16:07:18.973 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 16:07:19.027 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 16:07:19.288 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 16:07:19.289 [main] ERROR hotel.database.HibernateUtil - Ошибка при создании SessionFactory: javax/validation/ValidatorFactory
+java.lang.NoClassDefFoundError: javax/validation/ValidatorFactory
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3404)
+	at java.base/java.lang.Class.getMethodsRecursive(Class.java:3545)
+	at java.base/java.lang.Class.getMethod0(Class.java:3531)
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:113)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:300)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at hotel.database.HibernateUtil.init(HibernateUtil.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1921)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1874)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:92)
+	at hotel.Main.main(Main.java:9)
+Caused by: java.lang.ClassNotFoundException: javax.validation.ValidatorFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 59 common frames omitted
+2026-02-25 16:07:19.293 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientService' defined in file [C:\my_program\Java_course\task_16\1\hotel-business\target\classes\hotel\service\ClientService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'transactionManager': Unsatisfied dependency expressed through field 'hibernateUtil': Error creating bean with name 'hibernateUtil' defined in hotel.config.AppConfig: Failed to create SessionFactory
+2026-02-25 16:10:25.536 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 16:10:25.573 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 16:10:25.573 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 16:10:26.793 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 16:10:26.980 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 16:10:27.057 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 16:10:27.057 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 16:10:27.057 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 16:10:27.057 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 16:10:27.059 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 16:10:27.222 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 16:10:27.466 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 16:10:27.467 [main] ERROR hotel.database.HibernateUtil - Ошибка при создании SessionFactory: javax/validation/ValidatorFactory
+java.lang.NoClassDefFoundError: javax/validation/ValidatorFactory
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3404)
+	at java.base/java.lang.Class.getMethodsRecursive(Class.java:3545)
+	at java.base/java.lang.Class.getMethod0(Class.java:3531)
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:113)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:300)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at hotel.database.HibernateUtil.init(HibernateUtil.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1921)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1874)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1704)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:763)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1446)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:92)
+	at hotel.Main.main(Main.java:9)
+Caused by: java.lang.ClassNotFoundException: javax.validation.ValidatorFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 59 common frames omitted
+2026-02-25 16:10:27.469 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientService' defined in file [C:\my_program\Java_course\task_16\1\hotel-business\target\classes\hotel\service\ClientService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'transactionManager': Unsatisfied dependency expressed through field 'hibernateUtil': Error creating bean with name 'hibernateUtil' defined in hotel.config.AppConfig: Failed to create SessionFactory
+2026-02-25 16:12:45.739 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 16:12:45.777 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 16:12:45.778 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 16:12:46.980 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 16:12:47.154 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 16:12:47.250 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 16:12:47.253 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 16:12:47.253 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 16:12:47.253 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 16:12:47.254 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 16:12:47.310 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 16:12:47.552 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 16:12:47.552 [main] ERROR hotel.database.HibernateUtil - Ошибка при создании SessionFactory: javax/validation/ValidatorFactory
+java.lang.NoClassDefFoundError: javax/validation/ValidatorFactory
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3404)
+	at java.base/java.lang.Class.getMethodsRecursive(Class.java:3545)
+	at java.base/java.lang.Class.getMethod0(Class.java:3531)
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:113)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:300)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
+	at hotel.database.HibernateUtil.init(HibernateUtil.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1921)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1874)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1762)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1651)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1382)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:92)
+	at hotel.Main.main(Main.java:9)
+Caused by: java.lang.ClassNotFoundException: javax.validation.ValidatorFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 59 common frames omitted
+2026-02-25 16:12:47.567 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientService' defined in file [C:\my_program\Java_course\task_16\1\hotel-business\target\classes\hotel\service\ClientService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'transactionManager' defined in hotel.config.AppConfig: Unsatisfied dependency expressed through method 'transactionManager' parameter 0: Error creating bean with name 'hibernateUtil' defined in hotel.config.AppConfig: Failed to create SessionFactory
+2026-02-25 16:16:24.579 [main] INFO  hotel.config.LiquibaseConfig - Создание DataSource для БД: jdbc:postgresql://localhost:5432/hotel_management
+2026-02-25 16:16:24.615 [main] INFO  hotel.config.LiquibaseConfig - Инициализация Liquibase...
+2026-02-25 16:16:24.615 [main] INFO  hotel.config.LiquibaseConfig - Liquibase настроен. ChangeLog: db/changelog/db.changelog-master.xml
+2026-02-25 16:16:25.812 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-25 16:16:25.981 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-25 16:16:26.078 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-25 16:16:26.079 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-25 16:16:26.079 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}
+2026-02-25 16:16:26.079 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-25 16:16:26.081 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-25 16:16:26.138 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-25 16:16:26.773 [main] INFO  o.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66ab924] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-02-25 16:16:26.829 [main] INFO  hotel.database.HibernateUtil - Hibernate SessionFactory успешно создана
+2026-02-25 16:19:27.262 [main] WARN  o.s.w.c.s.AnnotationConfigWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.NoClassDefFoundError: jakarta/servlet/ServletRequest
+2026-02-25 16:20:00.845 [main] WARN  o.s.w.c.s.AnnotationConfigWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.NoClassDefFoundError: jakarta/servlet/ServletRequest
+2026-02-25 16:24:49.919 [main] WARN  o.s.w.c.s.AnnotationConfigWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.NoClassDefFoundError: jakarta/servlet/ServletRequest
+2026-02-25 16:26:26.577 [main] WARN  o.s.w.c.s.AnnotationConfigWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: java.lang.NoClassDefFoundError: jakarta/servlet/ServletRequest
