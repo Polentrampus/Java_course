@@ -1,0 +1,92 @@
+2026-02-19 18:18:06.301 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-19 18:18:06.953 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-19 18:18:07.059 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-19 18:18:07.065 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-19 18:18:07.066 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-19 18:18:07.066 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-19 18:18:07.069 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-19 18:18:07.280 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-19 18:18:07.986 [main] DEBUG hotel.service.ReadRoomService - >>> ReadRoomService CREATED with hash: 1276002922
+2026-02-19 18:18:07.986 [main] DEBUG hotel.service.ReadRoomService - >>> Stack trace:
+java.lang.Exception: Stack trace
+	at hotel.service.ReadRoomService.<init>(ReadRoomService.java:39)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:31)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:55)
+	at hotel.di.DIContainer.injectDependencies(DIContainer.java:43)
+	at hotel.di.DIContainer.createInstance(DIContainer.java:32)
+	at hotel.di.DIContainer.getOrCreateSingleton(DIContainer.java:20)
+	at hotel.di.DIContainer.getInstance(DIContainer.java:53)
+	at hotel.Main.main(Main.java:14)
+2026-02-19 18:24:29.777 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-19 18:24:29.845 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-19 18:24:30.003 [main] INFO  hotel.service.ClientService - sortClient(): sorted 5 clients
+2026-02-19 18:24:30.011 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 5 clients
+2026-02-19 19:00:54.718 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-19 19:00:55.246 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-19 19:00:55.387 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-19 19:00:55.391 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-19 19:00:55.392 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-19 19:00:55.392 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-19 19:00:55.397 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-19 19:00:55.616 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-19 19:23:57.207 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [hotel.util.AppConfig]
+2026-02-19 19:27:01.674 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [hotel.util.AppConfig]
+2026-02-19 19:35:24.750 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-19 19:35:25.077 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-19 19:35:25.197 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-19 19:35:25.201 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-19 19:35:25.202 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-19 19:35:25.202 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-19 19:35:25.209 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-19 19:35:25.391 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-19 19:35:25.935 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consoleMenuFactory' defined in file [C:\my_program\Java_course\task_14\1\hotel-app\target\classes\hotel\view\ConsoleMenuFactory.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'hotel.service.IRoomService' available: expected single matching bean but found 2: modifiableRoomService,readRoomService
+2026-02-19 19:35:32.075 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-19 19:35:32.438 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-19 19:35:32.578 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-19 19:35:32.588 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-19 19:35:32.588 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-19 19:35:32.589 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-19 19:35:32.598 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-19 19:35:32.806 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-19 19:35:33.369 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consoleMenuFactory' defined in file [C:\my_program\Java_course\task_14\1\hotel-app\target\classes\hotel\view\ConsoleMenuFactory.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'hotel.service.IRoomService' available: expected single matching bean but found 2: modifiableRoomService,readRoomService
+2026-02-19 19:35:59.594 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-19 19:35:59.928 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-19 19:36:00.057 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-19 19:36:00.060 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-19 19:36:00.061 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-19 19:36:00.061 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-19 19:36:00.065 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-19 19:36:00.269 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-19 19:36:00.795 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consoleMenuFactory' defined in file [C:\my_program\Java_course\task_14\1\hotel-app\target\classes\hotel\view\ConsoleMenuFactory.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'hotel.service.IRoomService' available: expected single matching bean but found 2: modifiableRoomService,readRoomService
+2026-02-19 19:39:00.526 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-19 19:39:00.850 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-19 19:39:00.979 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-19 19:39:00.984 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-19 19:39:00.984 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-19 19:39:00.984 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-19 19:39:00.991 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-19 19:39:01.218 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-19 19:39:01.781 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consoleMenuFactory' defined in file [C:\my_program\Java_course\task_14\1\hotel-app\target\classes\hotel\view\ConsoleMenuFactory.class]: Unsatisfied dependency expressed through constructor parameter 5: No qualifying bean of type 'hotel.view.Navigator' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-02-19 19:39:51.046 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-19 19:39:51.379 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-19 19:39:51.502 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2026-02-19 19:39:51.507 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hotel_management]
+2026-02-19 19:39:51.507 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, autocommit=false, user=postgres}
+2026-02-19 19:39:51.507 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2026-02-19 19:39:51.515 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+2026-02-19 19:39:51.794 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-02-19 19:39:58.747 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase() with filter: ID
+2026-02-19 19:39:58.802 [main] INFO  hotel.service.ClientService - sortClient() with filter: ID
+2026-02-19 19:39:59.008 [main] INFO  hotel.service.ClientService - sortClient(): sorted 5 clients
+2026-02-19 19:39:59.018 [main] INFO  hotel.service.ClientService - getInfoAboutClientDatabase(): found 5 clients
+2026-02-19 19:40:07.484 [main] INFO  hotel.service.ReadRoomService - findAll()
+2026-02-19 19:40:07.501 [main] INFO  hotel.service.ReadRoomService - findAll(): found 8 rooms
